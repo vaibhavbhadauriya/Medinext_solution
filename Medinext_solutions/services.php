@@ -29,7 +29,7 @@ require_once 'includes/header.php';
       Comprehensive<br><span class="svc-gradient-text">Medical Billing</span><br>Services
     </h1>
     <p class="svc-hero-sub" data-aos="fade-up" data-aos-delay="160">
-      15 specialized billing verticals. One trusted partner. Transform your practice revenue with a 98% clean claim rate and 30% average revenue increase.
+      24+ specialized billing verticals. One trusted partner. Transform your practice revenue with a 98% clean claim rate and 30% average revenue increase.
     </p>
     <div class="svc-hero-ctas" data-aos="fade-up" data-aos-delay="240">
       <a href="free-practice-audit.php" class="svc-btn-primary">
@@ -71,12 +71,12 @@ require_once 'includes/header.php';
   <div class="container">
     <div class="svc-section-header" data-aos="fade-up">
       <span class="svc-eyebrow">Our Specialties</span>
-      <h2 class="svc-section-title">15 Specialized Billing <span class="svc-gradient-text">Verticals</span></h2>
+      <h2 class="svc-section-title">24+ Specialized Billing <span class="svc-gradient-text">Verticals</span></h2>
       <p class="svc-section-sub">Every medical specialty has unique billing codes, common denials, and payer policies. Our dedicated teams handle each with precision.</p>
     </div>
 
     <?php
-      $medicalServices = [
+            $medicalServices = [
         ['icon'=>'bi-activity', 'color'=>'#0ea5e9', 'img'=>$baseUrl . '/assets/images/content/therapy-billing.jpg',
          'title'=>'Therapy Billing', 'tag'=>'ST &middot; PT &middot; OT',
          'desc'=>'Expert billing for Speech, Physical, and Occupational Therapy. 8-minute rule compliance, KX modifier, therapy cap management.',
@@ -88,7 +88,7 @@ require_once 'includes/header.php';
         ['icon'=>'bi-heart-pulse', 'color'=>'#EF4444', 'img'=>$baseUrl . '/assets/images/content/cardiovascular-billing.webp',
          'title'=>'Cardiovascular', 'tag'=>'Cardiology',
          'desc'=>'Echocardiography (93303-93352), cardiac catheterization, cardiology billing with zero unbundling penalties.',
-         'url'=>'cardiovascular-billing-services.php', 'kpi'=>'$200K+ recovered'],
+         'url'=>'cardiovascular-billing-services.php', 'kpi'=>'0K+ recovered'],
         ['icon'=>'bi-capsule', 'color'=>'#10B981', 'img'=>$baseUrl . '/assets/images/content/oncology-hematology.jpg',
          'title'=>'Oncology-Hematology', 'tag'=>'Precision',
          'desc'=>'Chemo administration (96401-96549), J-code drug buy-and-bill, oncology-specific payer policies.',
@@ -109,6 +109,54 @@ require_once 'includes/header.php';
          'title'=>'Radiology Billing', 'tag'=>'Imaging',
          'desc'=>'Diagnostic imaging billing for X-ray, MRI, CT scans. Automated workflow for high-volume radiology centers.',
          'url'=>'radiology-billing-services.php', 'kpi'=>'15-day AR turnaround'],
+        ['icon'=>'bi-droplet', 'color'=>'#0284c7', 'img'=>$baseUrl . '/assets/images/content/anesthesia-billing.webp',
+         'title'=>'Anesthesia Billing', 'tag'=>'Time-Unit Logic',
+         'desc'=>'Base units + time unit calculations, concurrency tracking, physical status modifiers (P1-P6), and ASA crosswalk compliance.',
+         'url'=>'anesthesia-billing.php', 'kpi'=>'Zero concurrency errors'],
+        ['icon'=>'bi-person-lines-fill', 'color'=>'#E11D48', 'img'=>$baseUrl . '/assets/images/content/dermatology-billing.avif',
+         'title'=>'Dermatology Billing', 'tag'=>'Mohs & Biopsies',
+         'desc'=>'Mohs micrographic surgery, complex lesion excision, pathology bundling rules, and cosmetic vs. medical billing demarcation.',
+         'url'=>'dermatology-billing.php', 'kpi'=>'99.1% clean claims'],
+        ['icon'=>'bi-lightning', 'color'=>'#F97316', 'img'=>$baseUrl . '/assets/images/content/emergency-medicine.jpeg',
+         'title'=>'Emergency Medicine', 'tag'=>'High-Acuity E/M',
+         'desc'=>'High-acuity Level 1-5 ED E/M coding (99281-99285), critical care time tracking (99291-99292), and trauma unbundling compliance.',
+         'url'=>'emergency-medicine-billing.php', 'kpi'=>'14-day AR cycle'],
+        ['icon'=>'bi-house-heart', 'color'=>'#10B981', 'img'=>$baseUrl . '/assets/images/content/family-medicine.jpg',
+         'title'=>'Family Medicine', 'tag'=>'Primary Care',
+         'desc'=>'Preventive medicine coding (99381-99397), chronic care management (CCM), transitional care (TCM), and AWV optimization.',
+         'url'=>'family-medicine-billing.php', 'kpi'=>'28% revenue lift'],
+        ['icon'=>'bi-scissors', 'color'=>'#8B5CF6', 'img'=>$baseUrl . '/assets/images/content/general-surgery.webp',
+         'title'=>'General Surgery', 'tag'=>'Surgical Modifiers',
+         'desc'=>'Global surgical package adherence, assistant surgeon modifiers (-80/-82), multiple procedure discounting (-51), and unbundled code resolution.',
+         'url'=>'general-surgery-billing.php', 'kpi'=>'Zero bundling penalties'],
+        ['icon'=>'bi-plus-circle', 'color'=>'#0ea5e9', 'img'=>$baseUrl . '/assets/images/content/internal-medicine.jpg',
+         'title'=>'Internal Medicine', 'tag'=>'Complex Disease',
+         'desc'=>'Multi-condition chronic disease management, advanced diagnostic coding, E/M complexity documentation, and MIPS compliance.',
+         'url'=>'internal-medicine-billing.php', 'kpi'=>'99% first-pass rate'],
+        ['icon'=>'bi-eye', 'color'=>'#06B6D4', 'img'=>$baseUrl . '/assets/images/content/Ophthalmology.jpeg',
+         'title'=>'Ophthalmology Billing', 'tag'=>'Eye Care & Surgery',
+         'desc'=>'Cataract surgery (66984), intravitreal injections (67028), diagnostic imaging (OCT, visual fields), and bilateral eye surgery coding.',
+         'url'=>'ophthalmology-billing.php', 'kpi'=>'30% faster reimbursement'],
+        ['icon'=>'bi-person-arms-up', 'color'=>'#3B82F6', 'img'=>$baseUrl . '/assets/images/content/orthopedic-billing.webp',
+         'title'=>'Orthopedic Billing', 'tag'=>'Musculoskeletal',
+         'desc'=>'Joint arthroplasty, fracture care global periods, arthroscopy, durable medical equipment (DME), and anatomical modifier accuracy.',
+         'url'=>'orthopedic-billing.php', 'kpi'=>'0K+ recovered'],
+        ['icon'=>'bi-house-add', 'color'=>'#14B8A6', 'img'=>$baseUrl . '/assets/images/content/home-health.avif',
+         'title'=>'Home Health Billing', 'tag'=>'PDGM Model',
+         'desc'=>'Patient-Driven Groupings Model (PDGM) compliance, Notice of Admission (NOA) submissions, OASIS accuracy, and episodic billing.',
+         'url'=>'home-health-billing.php', 'kpi'=>'Zero NOA late penalties'],
+        ['icon'=>'bi-shield-plus', 'color'=>'#EC4899', 'img'=>$baseUrl . '/assets/images/content/general-surgery.webp',
+         'title'=>'Wound Care Billing', 'tag'=>'Debridement & CTPs',
+         'desc'=>'Advanced skin substitutes (CTPs/15271-15278), surgical debridement (11042-11047), and hyperbaric oxygen therapy (HBOT) billing.',
+         'url'=>'wound-care-billing.php', 'kpi'=>'100% CTP reimbursement'],
+        ['icon'=>'bi-hospital', 'color'=>'#6366F1', 'img'=>$baseUrl . '/assets/images/content/hospital-billing.jpg',
+         'title'=>'Hospital Billing', 'tag'=>'UB-04 & Facility',
+         'desc'=>'Inpatient and outpatient facility billing, UB-04 claim scrubbing, DRG validation, APC optimization, and enterprise revenue cycle management.',
+         'url'=>'hospital-billing.php', 'kpi'=>'Enterprise-grade RCM'],
+        ['icon'=>'bi-person-arms-up', 'color'=>'#0EA5E9', 'img'=>$baseUrl . '/assets/images/content/occupational-therapy.webp',
+         'title'=>'Occupational Therapy', 'tag'=>'OT Billing',
+         'desc'=>'OT evaluation codes 97165-97167, therapeutic activities (97530), GO modifier expertise for occupational therapists.',
+         'url'=>'occupational-therapy-billing.php', 'kpi'=>'100% modifier compliance'],
         ['icon'=>'bi-currency-dollar', 'color'=>'#059669', 'img'=>$baseUrl . '/assets/images/content/revenue-cycle-management.webp',
          'title'=>'Revenue Cycle Management', 'tag'=>'Full-Service RCM',
          'desc'=>'End-to-end RCM: eligibility verification, charge capture, claim submission, payment posting, AR follow-up.',
@@ -129,10 +177,6 @@ require_once 'includes/header.php';
          'title'=>'Provider Credentialing', 'tag'=>'Enrollment',
          'desc'=>'CAQH management, PECOS enrollment, NPI registration, and continuous payer contracting surveillance.',
          'url'=>'provider-credentialing-services.php', 'kpi'=>'30-day enrollment'],
-        ['icon'=>'bi-person-arms-up', 'color'=>'#0EA5E9', 'img'=>$baseUrl . '/assets/images/content/occupational-therapy.webp',
-         'title'=>'Occupational Therapy', 'tag'=>'OT Billing',
-         'desc'=>'OT evaluation codes 97165-97167, therapeutic activities (97530), GO modifier expertise for occupational therapists.',
-         'url'=>'occupational-therapy-billing.php', 'kpi'=>'100% modifier compliance'],
       ];
 
       $dentalServices = [
