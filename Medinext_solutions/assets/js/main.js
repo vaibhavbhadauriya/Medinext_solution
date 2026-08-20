@@ -1059,34 +1059,6 @@ const BlogInsightsSwiper = {
 
 
 /* ==========================================================
-   MASTER INITIALIZATION
-   ========================================================== */
-document.addEventListener('DOMContentLoaded', () => {
-    PageLoader.init();
-    ScrollProgress.init();
-    Navbar.init();
-    BackToTop.init();
-    ScrollManager.init();
-    SmoothScroll.init();
-    RippleEffect.init();
-    PhoneFormatter.init();
-    FaqAccordion.init();
-    InteractiveUSMap.init();
-
-    // Initialize after slight delay for library loading
-    setTimeout(() => {
-        TypedInit.init();
-        CounterInit.init();
-        SwiperInit.init();
-        BlogInsightsSwiper.init();
-    TestimonialsShowcaseSwiper.init();
-        MockupAnimation.init();
-        ContactForm.init();
-        NewsletterForm.init();
-    }, 100);
-});
-
-/* ==========================================================
    19. TESTIMONIALS SHOWCASE SWIPER
    ========================================================== */
 const TestimonialsShowcaseSwiper = {
@@ -1115,3 +1087,31 @@ const TestimonialsShowcaseSwiper = {
         });
     }
 };
+
+/* ==========================================================
+   MASTER INITIALIZATION
+   ========================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    PageLoader.init();
+    ScrollProgress.init();
+    Navbar.init();
+    BackToTop.init();
+    ScrollManager.init();
+    SmoothScroll.init();
+    RippleEffect.init();
+    PhoneFormatter.init();
+    FaqAccordion.init();
+    InteractiveUSMap.init();
+
+    // Initialize after slight delay for library loading
+    setTimeout(() => {
+        TypedInit.init();
+        CounterInit.init();
+        SwiperInit.init();
+        BlogInsightsSwiper.init();
+        TestimonialsShowcaseSwiper.init();
+        MockupAnimation.init();
+        ContactForm.init();
+        NewsletterForm.init();
+    }, 100);
+});
