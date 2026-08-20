@@ -934,87 +934,89 @@ const PhoneFormatter = {
 
 
 /* ==========================================================
-   17. INTERACTIVE US COVERAGE MAP
+   17. INTERACTIVE US COVERAGE MAP (Centered + Mega-Menu Hover Tooltip)
    ========================================================== */
 const InteractiveUSMap = {
     init() {
         const mapSvg = document.getElementById('us-interactive-map');
-        if (!mapSvg) return;
+        const container = document.querySelector('.us-svg-responsive-container');
+        const popup = document.getElementById('us-state-hover-popup');
+        const popupName = document.getElementById('popup-state-name');
+        const popupProvidersText = document.getElementById('popup-providers-text');
+
+        if (!mapSvg || !container || !popup) return;
 
         const paths = mapSvg.querySelectorAll('.us-state-path');
         const labels = mapSvg.querySelectorAll('.us-state-label');
-        const filterBtns = document.querySelectorAll('.map-filter-btn');
 
-        const cardName = document.getElementById('card-state-name');
-        const cardAbbr = document.getElementById('card-state-abbr');
-        const cardRegion = document.getElementById('card-state-region');
-        const cardProviders = document.getElementById('card-state-providers');
-
-        function selectState(pathEl) {
+        function showStateTooltip(pathEl) {
             if (!pathEl) return;
             const code = pathEl.getAttribute('data-code');
             const name = pathEl.getAttribute('data-name');
-            const region = pathEl.getAttribute('data-region');
             const providers = pathEl.getAttribute('data-providers') || '15+';
 
-            // Remove active from all states & labels
+            // Remove active from all
             paths.forEach(p => p.classList.remove('active-state'));
             labels.forEach(l => l.classList.remove('active-label'));
 
-            // Add active to current
+            // Highlight current
             pathEl.classList.add('active-state');
             const labelEl = mapSvg.querySelector(`.state-label-${code.toLowerCase()}`);
             if (labelEl) labelEl.classList.add('active-label');
 
-            // Update card
-            if (cardName) cardName.textContent = name;
-            if (cardAbbr) cardAbbr.textContent = code;
-            if (cardRegion) cardRegion.textContent = region + ' Region';
-            if (cardProviders) cardProviders.textContent = providers + ' Practices';
-        }
+            // Update popup content
+            if (popupName) popupName.textContent = name;
+            if (popupProvidersText) popupProvidersText.textContent = providers + ' Active Practices';
 
-        // Set initial active state (New Jersey HQ)
-        const njPath = document.getElementById('state-nj');
-        if (njPath) {
-            selectState(njPath);
-        }
+            // Calculate position: center of the state relative to container
+            try {
+                const stateBBox = pathEl.getBBox();
+                const svgRect = mapSvg.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
 
-        // Event listeners for states
-        paths.forEach(path => {
-            path.addEventListener('mouseenter', () => selectState(path));
-            path.addEventListener('click', () => selectState(path));
-        });
+                // SVG viewBox is 0 0 959 593
+                const scaleX = svgRect.width / 959;
+                const scaleY = svgRect.height / 593;
 
-        // Event listeners for region filters
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                // Center of state in SVG pixels
+                const stateCenterX = (stateBBox.x + stateBBox.width / 2) * scaleX + (svgRect.left - containerRect.left);
+                const stateCenterY = stateBBox.y * scaleY + (svgRect.top - containerRect.top);
 
-                const region = btn.getAttribute('data-region');
-                paths.forEach(path => {
-                    path.classList.remove('region-highlight');
-                    if (region === 'all') {
-                        // Default all
-                    } else {
-                        const pathRegion = path.getAttribute('data-region') || '';
-                        if (pathRegion.includes(region)) {
-                            path.classList.add('region-highlight');
-                        }
-                    }
-                });
+                popup.style.left = `${stateCenterX}px`;
+                popup.style.top = `${stateCenterY}px`;
+                popup.classList.add('active');
 
-                // If a specific region is clicked, highlight the first state in that region
-                if (region !== 'all') {
-                    const firstInRegion = Array.from(paths).find(p => (p.getAttribute('data-region') || '').includes(region));
-                    if (firstInRegion) selectState(firstInRegion);
+                // Trigger mega-menu style entrance re-animation
+                const popupContent = popup.querySelector('.us-popup-content');
+                if (popupContent) {
+                    popupContent.style.animation = 'none';
+                    popupContent.offsetHeight; // Trigger reflow
+                    popupContent.style.animation = 'mnPopupEntrance 0.24s cubic-bezier(0.16, 1, 0.3, 1)';
                 }
-            });
+            } catch (e) {
+                // Fallback if getBBox fails
+                popup.classList.add('active');
+            }
+        }
+
+        function hideStateTooltip() {
+            popup.classList.remove('active');
+            paths.forEach(p => p.classList.remove('active-state'));
+            labels.forEach(l => l.classList.remove('active-label'));
+        }
+
+        // Attach hover listeners to each state path
+        paths.forEach(path => {
+            path.addEventListener('mouseenter', () => showStateTooltip(path));
+            path.addEventListener('touchstart', (e) => {
+                showStateTooltip(path);
+            }, { passive: true });
         });
+
+        // Hide when mouse leaves map container
+        mapSvg.addEventListener('mouseleave', hideStateTooltip);
     }
 };
-
-
 
 /* ==========================================================
    18. BLOG INSIGHTS SWIPER CAROUSEL

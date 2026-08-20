@@ -363,37 +363,22 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <section class="section nationwide-map-section" id="nationwide-coverage">
     <div class="container">
-        <!-- Section Header -->
+        <!-- Section Header (Cleaned & Centered) -->
         <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">
-                <i class="bi bi-geo-alt-fill"></i>
-                Nationwide RCM Network
-            </span>
             <h2 class="section-title">
                 Delivering RCM Excellence in <span class="gradient-text">All 50 States</span>
             </h2>
             <p class="section-subtitle">
                 From solo private practices to large multi-specialty health systems, MEDINEXT SOLUTIONS provides state-compliant medical coding, local payer credentialing, and 100% HIPAA-compliant billing coast to coast.
             </p>
-            
-            <!-- Regional Quick Filters -->
-            <div class="map-region-filter-wrap mt-4" data-aos="fade-up" data-aos-delay="100">
-                <button class="map-filter-btn active" data-region="all">All 50 States</button>
-                <button class="map-filter-btn" data-region="Northeast">Northeast (HQ)</button>
-                <button class="map-filter-btn" data-region="Southeast">Southeast</button>
-                <button class="map-filter-btn" data-region="Midwest">Midwest</button>
-                <button class="map-filter-btn" data-region="South Central">South Central</button>
-                <button class="map-filter-btn" data-region="West Coast">West &amp; Pacific</button>
-            </div>
         </div>
 
-        <!-- Map & Floating Details Card Container -->
-        <div class="row align-items-center g-4 mt-1">
-            <!-- Interactive Map Column -->
-            <div class="col-lg-9 col-md-12" data-aos="zoom-in" data-aos-delay="150">
-                <div class="us-map-card-wrapper">
+        <!-- Centered Interactive Map Container -->
+        <div class="row justify-content-center mt-3">
+            <div class="col-xl-10 col-lg-11 col-12" data-aos="zoom-in" data-aos-delay="100">
+                <div class="us-map-card-wrapper position-relative">
                     <!-- Map Top Legend -->
-                    <div class="us-map-top-bar">
+                    <div class="us-map-top-bar justify-content-center">
                         <div class="map-legend-item">
                             <span class="legend-dot hq-dot"></span>
                             <span>National HQ (Orlando, FL)</span>
@@ -408,8 +393,20 @@ require_once 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- SVG Map -->
-                    <div class="us-svg-responsive-container">
+                    <!-- SVG Map with Floating Dynamic Mega-Menu Style Popup -->
+                    <div class="us-svg-responsive-container position-relative">
+                        <!-- Floating State Hover Tooltip (Mega-Menu Style Animation) -->
+                        <div class="us-state-hover-popup" id="us-state-hover-popup" aria-hidden="true">
+                            <div class="us-popup-content">
+                                <div class="us-popup-state-name" id="popup-state-name">New York</div>
+                                <div class="us-popup-providers" id="popup-providers">
+                                    <i class="bi bi-hospital"></i>
+                                    <span id="popup-providers-text">58+ Active Practices</span>
+                                </div>
+                            </div>
+                            <div class="us-popup-arrow"></div>
+                        </div>
+
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959 593" class="us-nation-svg" id="us-interactive-map" aria-label="Interactive Map of United States Nationwide Medical Billing Coverage">
   <defs>
     <!-- Filter for state hover glow -->
@@ -467,95 +464,14 @@ require_once 'includes/header.php';
 </svg>
                     </div>
 
-                    <div class="us-map-hint">
-                        <i class="bi bi-cursor-fill"></i> Hover or tap any state to view local coverage &amp; compliance data
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dynamic State Info Card (Right Column) -->
-            <div class="col-lg-3 col-md-12" data-aos="fade-left" data-aos-delay="200">
-                <div class="us-state-detail-card" id="us-state-detail-panel">
-                    <div class="state-card-badge">
-                        <span class="pulse-dot"></span> Active Coverage
-                    </div>
-                    <div class="state-card-header">
-                        <h3 class="state-card-name" id="card-state-name">New Jersey</h3>
-                        <span class="state-card-abbr" id="card-state-abbr">NJ</span>
-                    </div>
-                    <p class="state-card-region" id="card-state-region">National Operations HQ</p>
-                    
-                    <div class="state-card-metrics">
-                        <div class="state-metric-row">
-                            <span class="metric-lbl"><i class="bi bi-shield-check text-primary"></i> Compliance</span>
-                            <span class="metric-val text-success">100% HIPAA</span>
-                        </div>
-                        <div class="state-metric-row">
-                            <span class="metric-lbl"><i class="bi bi-check2-circle text-primary"></i> Clean Claim Rate</span>
-                            <span class="metric-val">99.4%</span>
-                        </div>
-                        <div class="state-metric-row">
-                            <span class="metric-lbl"><i class="bi bi-speedometer2 text-primary"></i> A/R Turnaround</span>
-                            <span class="metric-val">&lt; 15 Days</span>
-                        </div>
-                        <div class="state-metric-row">
-                            <span class="metric-lbl"><i class="bi bi-building text-primary"></i> Provider Base</span>
-                            <span class="metric-val" id="card-state-providers">70+ Practices</span>
-                        </div>
-                    </div>
-
-                    <div class="state-card-cta">
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn-state-audit">
-                            <span>Request Practice Audit</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4 Nationwide KPI Pillars -->
-        <div class="row g-3 mt-4" data-aos="fade-up" data-aos-delay="250">
-            <div class="col-lg-3 col-6">
-                <div class="us-kpi-card">
-                    <div class="kpi-icon"><i class="bi bi-geo-alt"></i></div>
-                    <div class="kpi-info">
-                        <span class="kpi-num" data-countup="50" data-suffix=" / 50">50 / 50</span>
-                        <span class="kpi-label">States Covered</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6">
-                <div class="us-kpi-card">
-                    <div class="kpi-icon"><i class="bi bi-hospital"></i></div>
-                    <div class="kpi-info">
-                        <span class="kpi-num" data-countup="500" data-suffix="+">500+</span>
-                        <span class="kpi-label">Providers Nationwide</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6">
-                <div class="us-kpi-card">
-                    <div class="kpi-icon"><i class="bi bi-patch-check"></i></div>
-                    <div class="kpi-info">
-                        <span class="kpi-num" data-countup="99.4" data-decimals="1" data-suffix="%">99.4%</span>
-                        <span class="kpi-label">First-Pass Rate</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6">
-                <div class="us-kpi-card">
-                    <div class="kpi-icon"><i class="bi bi-clock-history"></i></div>
-                    <div class="kpi-info">
-                        <span class="kpi-num">&lt; 15 Days</span>
-                        <span class="kpi-label">A/R Turnaround</span>
+                    <div class="us-map-hint text-center">
+                        <i class="bi bi-cursor-fill"></i> Hover or tap any state to view local provider network
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <!-- ============================================ -->
 <!-- TESTIMONIALS -->
