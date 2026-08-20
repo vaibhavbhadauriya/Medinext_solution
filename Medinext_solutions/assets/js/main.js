@@ -932,6 +932,89 @@ const PhoneFormatter = {
 
 
 
+
+/* ==========================================================
+   17. INTERACTIVE US COVERAGE MAP
+   ========================================================== */
+const InteractiveUSMap = {
+    init() {
+        const mapSvg = document.getElementById('us-interactive-map');
+        if (!mapSvg) return;
+
+        const paths = mapSvg.querySelectorAll('.us-state-path');
+        const labels = mapSvg.querySelectorAll('.us-state-label');
+        const filterBtns = document.querySelectorAll('.map-filter-btn');
+
+        const cardName = document.getElementById('card-state-name');
+        const cardAbbr = document.getElementById('card-state-abbr');
+        const cardRegion = document.getElementById('card-state-region');
+        const cardProviders = document.getElementById('card-state-providers');
+
+        function selectState(pathEl) {
+            if (!pathEl) return;
+            const code = pathEl.getAttribute('data-code');
+            const name = pathEl.getAttribute('data-name');
+            const region = pathEl.getAttribute('data-region');
+            const providers = pathEl.getAttribute('data-providers') || '15+';
+
+            // Remove active from all states & labels
+            paths.forEach(p => p.classList.remove('active-state'));
+            labels.forEach(l => l.classList.remove('active-label'));
+
+            // Add active to current
+            pathEl.classList.add('active-state');
+            const labelEl = mapSvg.querySelector(`.state-label-${code.toLowerCase()}`);
+            if (labelEl) labelEl.classList.add('active-label');
+
+            // Update card
+            if (cardName) cardName.textContent = name;
+            if (cardAbbr) cardAbbr.textContent = code;
+            if (cardRegion) cardRegion.textContent = region + ' Region';
+            if (cardProviders) cardProviders.textContent = providers + ' Practices';
+        }
+
+        // Set initial active state (New Jersey HQ)
+        const njPath = document.getElementById('state-nj');
+        if (njPath) {
+            selectState(njPath);
+        }
+
+        // Event listeners for states
+        paths.forEach(path => {
+            path.addEventListener('mouseenter', () => selectState(path));
+            path.addEventListener('click', () => selectState(path));
+        });
+
+        // Event listeners for region filters
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const region = btn.getAttribute('data-region');
+                paths.forEach(path => {
+                    path.classList.remove('region-highlight');
+                    if (region === 'all') {
+                        // Default all
+                    } else {
+                        const pathRegion = path.getAttribute('data-region') || '';
+                        if (pathRegion.includes(region)) {
+                            path.classList.add('region-highlight');
+                        }
+                    }
+                });
+
+                // If a specific region is clicked, highlight the first state in that region
+                if (region !== 'all') {
+                    const firstInRegion = Array.from(paths).find(p => (p.getAttribute('data-region') || '').includes(region));
+                    if (firstInRegion) selectState(firstInRegion);
+                }
+            });
+        });
+    }
+};
+
+
 /* ==========================================================
    MASTER INITIALIZATION
    ========================================================== */
@@ -945,6 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
     RippleEffect.init();
     PhoneFormatter.init();
     FaqAccordion.init();
+    InteractiveUSMap.init();
 
     // Initialize after slight delay for library loading
     setTimeout(() => {
