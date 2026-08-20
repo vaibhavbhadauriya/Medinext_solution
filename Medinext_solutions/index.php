@@ -376,7 +376,7 @@ require_once 'includes/header.php';
         <!-- Centered Interactive Map Container -->
         <div class="row justify-content-center mt-3">
             <div class="col-xl-10 col-lg-11 col-12" data-aos="zoom-in" data-aos-delay="100">
-                <div class="us-map-card-wrapper position-relative">
+                <div class="us-map-free-wrapper position-relative">
                     <!-- Map Top Legend -->
                     <div class="us-map-top-bar justify-content-center">
                         <div class="map-legend-item">

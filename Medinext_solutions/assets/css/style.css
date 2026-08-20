@@ -5206,55 +5206,58 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 
 
 /* ==========================================================================
-   NATIONWIDE US MAP COVERAGE SECTION (Centered Clean Layout)
+   NATIONWIDE US MAP COVERAGE SECTION (Light Clean Theme & Open Floating Map)
    ========================================================================== */
 .nationwide-map-section {
-    background: linear-gradient(180deg, #071324 0%, #0b1c33 50%, #081527 100%);
-    padding: 6rem 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+    padding: 5.5rem 0;
     position: relative;
     overflow: hidden;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .nationwide-map-section::before {
     content: '';
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 900px;
-    height: 500px;
-    background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.12) 0%, rgba(2, 132, 199, 0.04) 50%, transparent 75%);
+    width: 850px;
+    height: 450px;
+    background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.07) 0%, rgba(2, 132, 199, 0.02) 50%, transparent 75%);
     pointer-events: none;
     z-index: 1;
 }
 
 .nationwide-map-section .section-title {
-    color: #ffffff !important;
+    color: #0f172a !important;
     font-size: clamp(2rem, 3.5vw, 2.75rem);
     font-weight: 700;
     margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
 }
 
 .nationwide-map-section .section-subtitle {
-    color: #94a3b8 !important;
+    color: #64748b !important;
     max-width: 650px;
     margin: 0 auto;
     font-size: 1.05rem;
     line-height: 1.6;
 }
 
-/* Map Card Container (Centered) */
-.us-map-card-wrapper {
-    background: rgba(11, 25, 46, 0.85);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    border-radius: 20px;
-    padding: 1.75rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
+/* Open Free Map Container (No Card / No Square Cage) */
+.us-map-card-wrapper,
+.us-map-free-wrapper {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
     position: relative;
     z-index: 2;
     margin: 0 auto;
+    max-width: 960px;
 }
 
 .us-map-top-bar {
@@ -5263,9 +5266,9 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding-bottom: 1.25rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .map-legend-item {
@@ -5273,7 +5276,7 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
     align-items: center;
     gap: 0.45rem;
     font-size: 0.82rem;
-    color: #94a3b8;
+    color: #64748b;
     font-weight: 500;
 }
 
@@ -5285,8 +5288,8 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 }
 
 .legend-dot.hq-dot {
-    background: #38bdf8;
-    box-shadow: 0 0 8px #38bdf8;
+    background: #0284c7;
+    box-shadow: 0 0 6px rgba(2, 132, 199, 0.6);
 }
 
 .legend-dot.active-dot {
@@ -5294,8 +5297,8 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 }
 
 .legend-dot.hub-dot {
-    background: #0284c7;
-    border: 1px solid #7dd3fc;
+    background: #38bdf8;
+    border: 1px solid #0284c7;
 }
 
 .us-svg-responsive-container {
@@ -5307,14 +5310,14 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
     width: 100%;
     height: auto;
     display: block;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 12px 25px rgba(15, 23, 42, 0.08));
 }
 
-/* State Paths & Hover Animation */
+/* State Paths & Hover Animation (Light Theme) */
 .us-state-path {
-    fill: #142a4a;
-    stroke: rgba(255, 255, 255, 0.35);
-    stroke-width: 0.85px;
+    fill: #e2e8f0;
+    stroke: #ffffff;
+    stroke-width: 1.2px;
     stroke-linejoin: round;
     stroke-linecap: round;
     transition: fill 0.22s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.22s ease, filter 0.22s ease;
@@ -5324,27 +5327,27 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 .us-state-path:hover,
 .us-state-path.active-state {
     fill: #0ea5e9 !important;
-    stroke: #38bdf8 !important;
-    stroke-width: 1.6px !important;
-    filter: drop-shadow(0 0 12px rgba(14, 165, 233, 0.85));
+    stroke: #0284c7 !important;
+    stroke-width: 1.8px !important;
+    filter: drop-shadow(0 6px 16px rgba(14, 165, 233, 0.45));
 }
 
-/* State 2-Letter Abbreviation Labels */
+/* State 2-Letter Abbreviation Labels (Light Theme) */
 .us-state-label {
-    fill: #e2e8f0;
+    fill: #334155;
     font-size: 9.5px;
     font-weight: 800;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
     letter-spacing: 0.04em;
     user-select: none;
     transition: fill 0.22s ease, font-weight 0.22s ease;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .us-state-label.active-label {
     fill: #ffffff !important;
     font-weight: 900 !important;
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.9), 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Radar Pulsing Hubs */
@@ -5353,13 +5356,13 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 }
 
 .hub-center-dot {
-    fill: #38bdf8;
-    filter: drop-shadow(0 0 6px #38bdf8);
+    fill: #0284c7;
+    filter: drop-shadow(0 0 4px #0284c7);
 }
 
 .hub-radar-ring {
     fill: none;
-    stroke: #38bdf8;
+    stroke: #0ea5e9;
     stroke-width: 1.5px;
     animation: radarPulse 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
     transform-origin: center;
@@ -5367,7 +5370,7 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 
 .hub-radar-ring-2 {
     fill: none;
-    stroke: #7dd3fc;
+    stroke: #38bdf8;
     stroke-width: 1px;
     animation: radarPulse 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite 1.2s;
     transform-origin: center;
@@ -5386,17 +5389,17 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 
 .us-map-hint {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: #64748b;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
 }
 
 .us-map-hint i {
-    color: #38bdf8;
+    color: #0284c7;
 }
 
 /* ==========================================================================
-   FLOATING HOVER TOOLTIP POPUP (Mega-Menu Style Animation)
+   FLOATING HOVER TOOLTIP POPUP (Light Theme + Mega-Menu Style Animation)
    ========================================================================== */
 .us-state-hover-popup {
     position: absolute;
@@ -5417,10 +5420,9 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 }
 
 .us-popup-content {
-    background: linear-gradient(135deg, rgba(15, 31, 56, 0.96), rgba(8, 20, 38, 0.96));
-    border: 1px solid rgba(56, 189, 248, 0.45);
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(14, 165, 233, 0.25);
-    backdrop-filter: blur(14px);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 12px 30px rgba(14, 165, 233, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
     padding: 0.65rem 1.1rem;
     display: flex;
@@ -5448,15 +5450,15 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 .us-popup-state-name {
     font-size: 1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     letter-spacing: -0.01em;
     white-space: nowrap;
 }
 
 .us-popup-providers {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 600;
-    color: #38bdf8;
+    color: #0284c7;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -5465,7 +5467,7 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
 
 .us-popup-providers i {
     font-size: 0.85rem;
-    color: #38bdf8;
+    color: #0284c7;
 }
 
 .us-popup-arrow {
@@ -5473,16 +5475,14 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
     height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 6px solid rgba(56, 189, 248, 0.5);
+    border-top: 6px solid #ffffff;
     margin: 0 auto;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.06));
 }
 
 @media (max-width: 991px) {
     .nationwide-map-section {
         padding: 4rem 0;
-    }
-    .us-map-card-wrapper {
-        padding: 1.1rem;
     }
 }
 
