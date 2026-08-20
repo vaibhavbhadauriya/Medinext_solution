@@ -77,3 +77,4 @@ Disallow: /
 
 # ---- Sitemap ----
 Sitemap: https://medinextsolutions.com/sitemap.xml
+Sitemap: https://medinextsolutions.com/sitemap-locations.xml

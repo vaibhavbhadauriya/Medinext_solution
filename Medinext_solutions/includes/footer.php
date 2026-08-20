@@ -75,6 +75,7 @@
                             <ul class="footer-links">
                                 <li><a href="<?php echo $baseUrl; ?>/">Home</a></li>
                                 <li><a href="<?php echo $baseUrl; ?>/medical-billing-services/">Services</a></li>
+                                <li><a href="<?php echo $baseUrl; ?>/locations/">Locations Directory</a></li>
                                 <li><a href="<?php echo $baseUrl; ?>/about/">About Us</a></li>
                                 <li><a href="<?php echo $baseUrl; ?>/contact/">Contact</a></li>
                                 <li><a href="<?php echo $baseUrl; ?>/#why-us">Why Choose Us</a></li>

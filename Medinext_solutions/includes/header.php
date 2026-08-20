@@ -102,10 +102,10 @@ $meta = $seoData[$requestUri] ?? ($seoData[rtrim($requestUri, '/')] ?? $seoData[
 $pageTitle = $pageTitle ?? $meta['title'];
 $pageDescription = $pageDescription ?? $meta['desc'];
 $pageKeywords = $pageKeywords ?? $meta['kws'];
-$pageRobots = $meta['robots'];
-$pageType = $meta['type'];
+$pageRobots = $pageRobots ?? $meta['robots'];
+$pageType = $pageType ?? $meta['type'];
 
-$canonicalUrl = "https://medinextsolutions.com" . ($requestUri === '/' ? '/' : rtrim($requestUri, '/') . '/');
+$canonicalUrl = $canonicalUrl ?? ("https://medinextsolutions.com" . ($requestUri === '/' ? '/' : rtrim($requestUri, '/') . '/'));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -132,11 +132,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="canonical" href="<?php echo $canonicalUrl; ?>">
     <meta name="author" content="MEDINEXT SOLUTIONS">
     <meta name="theme-color" content="#0052CC">
-    <!-- Search Engine Verification ? uncomment and replace placeholder values with real codes -->
+    <!-- Search Engine Verification – uncomment and replace placeholder values with real codes -->
 
     <!-- Geo-Targeting -->
-    <meta name="geo.region" content="US-FL">
-    <meta name="geo.placename" content="Orlando">
+    <meta name="geo.region" content="<?php echo sanitizeInput($geoRegion ?? 'US-FL'); ?>">
+    <meta name="geo.placename" content="<?php echo sanitizeInput($geoPlacename ?? 'Orlando'); ?>">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="<?php echo sanitizeInput($pageType); ?>">
@@ -603,6 +603,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link <?php echo isActivePage('locations'); ?>" href="<?php echo $baseUrl; ?>/locations/">Locations</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link <?php echo isActivePage('blog'); ?>" href="<?php echo $baseUrl; ?>/blog/">Blog</a>
                     </li>
                     <li class="nav-item">
@@ -642,6 +645,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="drawer-nav">
                 <li><a href="<?php echo $baseUrl; ?>/" class="<?php echo isActivePage('index'); ?>"><i class="bi bi-house-fill"></i> Home</a></li>
                 <li><a href="<?php echo $baseUrl; ?>/medical-billing-services/" class="<?php echo isActivePage('services'); ?>"><i class="ph ph-grid-four"></i> Services</a></li>
+                <li><a href="<?php echo $baseUrl; ?>/locations/" class="<?php echo isActivePage('locations'); ?>"><i class="ph ph-map-pin"></i> Locations</a></li>
                 <li><a href="<?php echo $baseUrl; ?>/about/" class="<?php echo isActivePage('about'); ?>"><i class="ph ph-info"></i> About</a></li>
                 <li><a href="<?php echo $baseUrl; ?>/#why-us"><i class="bi bi-star-fill"></i> Why Us</a></li>
                 <li><a href="<?php echo $baseUrl; ?>/blog/" class="<?php echo isActivePage('blog'); ?>"><i class="ph ph-article"></i> Blog</a></li>

@@ -39,6 +39,11 @@
     # Explicit mapping for URLs that don't match their PHP filename
     RewriteRule ^medical-billing-services/?$ services.php [L]
 
+    # Programmatic Location Routing
+    RewriteRule ^locations/?$ locations.php [L]
+    RewriteRule ^locations/([a-zA-Z0-9-]+)/?$ locations.php?state=$1 [L,QSA]
+    RewriteRule ^locations/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ locations.php?state=$1&city=$2 [L,QSA]
+
     # Core rewrite: Send /folder/ to /folder.php
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ $1.php [L]

@@ -9,8 +9,9 @@ $isHome = ($requestUri === '/' || $requestUri === '/index.php');
 
 $schemas = [];
 
-// 1. BreadcrumbList Schema (for all pages except home)
-if (!$isHome) {
+// 1. BreadcrumbList Schema (for all pages except home and location pages which have custom breadcrumbs)
+$isLocationPage = (strpos($requestUri, 'locations') !== false || isset($currentCity) || isset($currentState));
+if (!$isHome && !$isLocationPage && empty($skipDynamicBreadcrumb)) {
     // Basic breadcrumb logic
     $pathTokens = array_filter(explode('/', trim($requestUri, '/')));
     $itemListElement = [];

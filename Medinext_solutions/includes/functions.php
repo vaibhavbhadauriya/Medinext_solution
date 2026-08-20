@@ -403,3 +403,28 @@ function jsonResponse(bool $success, string $message, array $data = [], int $htt
     ], JSON_UNESCAPED_UNICODE);
     exit;
 }
+
+/**
+ * Get Base URL of website
+ */
+function getBaseUrl(): string
+{
+    static $baseUrl = null;
+    if ($baseUrl !== null) {
+        return $baseUrl;
+    }
+
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+               (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+    $scheme = $isHttps ? 'https' : 'http';
+
+    $isSubdir = strpos($_SERVER['REQUEST_URI'] ?? '', '/Medinext_solution/Medinext_solutions') === 0;
+    if ($isSubdir) {
+        $baseUrl = $scheme . '://' . $host . '/Medinext_solution/Medinext_solutions';
+    } else {
+        $baseUrl = $scheme . '://' . $host;
+    }
+
+    return $baseUrl;
+}

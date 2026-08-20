@@ -1,0 +1,371 @@
+{
+    "generated_at": "2026-08-20 21:04:05",
+    "total_cities": 31257,
+    "total_states": 52,
+    "states": [
+        {
+            "id": "AL",
+            "name": "Alabama",
+            "slug": "alabama",
+            "total_population": 4499400,
+            "city_count": 592
+        },
+        {
+            "id": "AK",
+            "name": "Alaska",
+            "slug": "alaska",
+            "total_population": 755969,
+            "city_count": 355
+        },
+        {
+            "id": "AZ",
+            "name": "Arizona",
+            "slug": "arizona",
+            "total_population": 9827017,
+            "city_count": 461
+        },
+        {
+            "id": "AR",
+            "name": "Arkansas",
+            "slug": "arkansas",
+            "total_population": 2755925,
+            "city_count": 621
+        },
+        {
+            "id": "CA",
+            "name": "California",
+            "slug": "california",
+            "total_population": 57682607,
+            "city_count": 1598
+        },
+        {
+            "id": "CO",
+            "name": "Colorado",
+            "slug": "colorado",
+            "total_population": 7607104,
+            "city_count": 477
+        },
+        {
+            "id": "CT",
+            "name": "Connecticut",
+            "slug": "connecticut",
+            "total_population": 4268699,
+            "city_count": 185
+        },
+        {
+            "id": "DE",
+            "name": "Delaware",
+            "slug": "delaware",
+            "total_population": 531279,
+            "city_count": 79
+        },
+        {
+            "id": "DC",
+            "name": "District of Columbia",
+            "slug": "district-of-columbia",
+            "total_population": 5230370,
+            "city_count": 1
+        },
+        {
+            "id": "FL",
+            "name": "Florida",
+            "slug": "florida",
+            "total_population": 31177997,
+            "city_count": 945
+        },
+        {
+            "id": "GA",
+            "name": "Georgia",
+            "slug": "georgia",
+            "total_population": 11063102,
+            "city_count": 670
+        },
+        {
+            "id": "HI",
+            "name": "Hawaii",
+            "slug": "hawaii",
+            "total_population": 1451905,
+            "city_count": 158
+        },
+        {
+            "id": "ID",
+            "name": "Idaho",
+            "slug": "idaho",
+            "total_population": 1850144,
+            "city_count": 236
+        },
+        {
+            "id": "IL",
+            "name": "Illinois",
+            "slug": "illinois",
+            "total_population": 17933757,
+            "city_count": 1456
+        },
+        {
+            "id": "IN",
+            "name": "Indiana",
+            "slug": "indiana",
+            "total_population": 6400695,
+            "city_count": 974
+        },
+        {
+            "id": "IA",
+            "name": "Iowa",
+            "slug": "iowa",
+            "total_population": 3367608,
+            "city_count": 1024
+        },
+        {
+            "id": "KS",
+            "name": "Kansas",
+            "slug": "kansas",
+            "total_population": 2628149,
+            "city_count": 738
+        },
+        {
+            "id": "KY",
+            "name": "Kentucky",
+            "slug": "kentucky",
+            "total_population": 3153126,
+            "city_count": 552
+        },
+        {
+            "id": "LA",
+            "name": "Louisiana",
+            "slug": "louisiana",
+            "total_population": 4689761,
+            "city_count": 489
+        },
+        {
+            "id": "ME",
+            "name": "Maine",
+            "slug": "maine",
+            "total_population": 594488,
+            "city_count": 66
+        },
+        {
+            "id": "MD",
+            "name": "Maryland",
+            "slug": "maryland",
+            "total_population": 7197301,
+            "city_count": 532
+        },
+        {
+            "id": "MA",
+            "name": "Massachusetts",
+            "slug": "massachusetts",
+            "total_population": 7991669,
+            "city_count": 125
+        },
+        {
+            "id": "MI",
+            "name": "Michigan",
+            "slug": "michigan",
+            "total_population": 10467252,
+            "city_count": 740
+        },
+        {
+            "id": "MN",
+            "name": "Minnesota",
+            "slug": "minnesota",
+            "total_population": 7388296,
+            "city_count": 904
+        },
+        {
+            "id": "MS",
+            "name": "Mississippi",
+            "slug": "mississippi",
+            "total_population": 2043876,
+            "city_count": 426
+        },
+        {
+            "id": "MO",
+            "name": "Missouri",
+            "slug": "missouri",
+            "total_population": 7643384,
+            "city_count": 1081
+        },
+        {
+            "id": "MT",
+            "name": "Montana",
+            "slug": "montana",
+            "total_population": 825974,
+            "city_count": 495
+        },
+        {
+            "id": "NE",
+            "name": "Nebraska",
+            "slug": "nebraska",
+            "total_population": 1942696,
+            "city_count": 593
+        },
+        {
+            "id": "NV",
+            "name": "Nevada",
+            "slug": "nevada",
+            "total_population": 4882687,
+            "city_count": 132
+        },
+        {
+            "id": "NH",
+            "name": "New Hampshire",
+            "slug": "new-hampshire",
+            "total_population": 803240,
+            "city_count": 41
+        },
+        {
+            "id": "NJ",
+            "name": "New Jersey",
+            "slug": "new-jersey",
+            "total_population": 6024651,
+            "city_count": 655
+        },
+        {
+            "id": "NM",
+            "name": "New Mexico",
+            "slug": "new-mexico",
+            "total_population": 2060586,
+            "city_count": 520
+        },
+        {
+            "id": "NY",
+            "name": "New York",
+            "slug": "new-york",
+            "total_population": 37151510,
+            "city_count": 970
+        },
+        {
+            "id": "NC",
+            "name": "North Carolina",
+            "slug": "north-carolina",
+            "total_population": 9506178,
+            "city_count": 771
+        },
+        {
+            "id": "ND",
+            "name": "North Dakota",
+            "slug": "north-dakota",
+            "total_population": 756983,
+            "city_count": 401
+        },
+        {
+            "id": "OH",
+            "name": "Ohio",
+            "slug": "ohio",
+            "total_population": 13688462,
+            "city_count": 1253
+        },
+        {
+            "id": "OK",
+            "name": "Oklahoma",
+            "slug": "oklahoma",
+            "total_population": 3864008,
+            "city_count": 839
+        },
+        {
+            "id": "OR",
+            "name": "Oregon",
+            "slug": "oregon",
+            "total_population": 5238934,
+            "city_count": 425
+        },
+        {
+            "id": "PA",
+            "name": "Pennsylvania",
+            "slug": "pennsylvania",
+            "total_population": 15003787,
+            "city_count": 1886
+        },
+        {
+            "id": "PR",
+            "name": "Puerto Rico",
+            "slug": "puerto-rico",
+            "total_population": 3867284,
+            "city_count": 281
+        },
+        {
+            "id": "RI",
+            "name": "Rhode Island",
+            "slug": "rhode-island",
+            "total_population": 1744858,
+            "city_count": 31
+        },
+        {
+            "id": "SC",
+            "name": "South Carolina",
+            "slug": "south-carolina",
+            "total_population": 4976512,
+            "city_count": 473
+        },
+        {
+            "id": "SD",
+            "name": "South Dakota",
+            "slug": "south-dakota",
+            "total_population": 738164,
+            "city_count": 482
+        },
+        {
+            "id": "TN",
+            "name": "Tennessee",
+            "slug": "tennessee",
+            "total_population": 6447959,
+            "city_count": 501
+        },
+        {
+            "id": "TX",
+            "name": "Texas",
+            "slug": "texas",
+            "total_population": 35374017,
+            "city_count": 1836
+        },
+        {
+            "id": "UT",
+            "name": "Utah",
+            "slug": "utah",
+            "total_population": 5419952,
+            "city_count": 332
+        },
+        {
+            "id": "VT",
+            "name": "Vermont",
+            "slug": "vermont",
+            "total_population": 258291,
+            "city_count": 107
+        },
+        {
+            "id": "VA",
+            "name": "Virginia",
+            "slug": "virginia",
+            "total_population": 8404245,
+            "city_count": 680
+        },
+        {
+            "id": "WA",
+            "name": "Washington",
+            "slug": "washington",
+            "total_population": 10432766,
+            "city_count": 633
+        },
+        {
+            "id": "WV",
+            "name": "West Virginia",
+            "slug": "west-virginia",
+            "total_population": 1067431,
+            "city_count": 439
+        },
+        {
+            "id": "WI",
+            "name": "Wisconsin",
+            "slug": "wisconsin",
+            "total_population": 5832123,
+            "city_count": 792
+        },
+        {
+            "id": "WY",
+            "name": "Wyoming",
+            "slug": "wyoming",
+            "total_population": 478443,
+            "city_count": 204
+        }
+    ]
+}
