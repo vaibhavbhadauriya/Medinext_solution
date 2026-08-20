@@ -25,21 +25,21 @@ $_show_reviews = isset($showAggregateRating) && $showAggregateRating === true;
             "width": 300, "height": 80
           },
           "image": "https://medinextsolutions.com/assets/images/og-image.jpg",
-          "telephone": "+1-908-829-0133",
-          "email": "Info@medinextsolutions.com",
+          "telephone": "+1-862-799-2199",
+          "email": "info@medinextsolutions.com",
           "foundingDate": "2015",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "234 Old Stage Rd",
-            "addressLocality": "East Brunswick",
-            "addressRegion": "NJ",
-            "postalCode": "08816",
+            "streetAddress": "1317 Edgewater Dr #3520",
+            "addressLocality": "Orlando",
+            "addressRegion": "FL",
+            "postalCode": "32804",
             "addressCountry": "US"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 40.4390,
-            "longitude": -74.4143
+            "latitude": 28.5630,
+            "longitude": -81.3890
           },
           "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",

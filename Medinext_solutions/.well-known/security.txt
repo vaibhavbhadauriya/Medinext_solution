@@ -2,8 +2,8 @@
 # https://medinextsolutions.com/.well-known/security.txt
 # Last Updated: 2026-03-05
 
-Contact: mailto:Info@medinextsolutions.com
-Contact: tel:+19088290133
+Contact: mailto:info@medinextsolutions.com
+Contact: tel:+18627992199
 Expires: 2027-03-05T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://medinextsolutions.com/.well-known/security.txt

@@ -34,9 +34,9 @@ $_ph_base_f  = ($_ph_is_local_f ? 'http://' . $_ph_host_f . '/Medinext_solution/
 
     <!-- Sticky Mobile CTA Bar (Component 5) -->
     <div class="ph-mobile-cta" id="ph-mobile-cta" role="complementary" aria-label="Quick contact options">
-      <a href="tel:+19088290133"
+      <a href="tel:+18627992199"
          class="ph-mobile-cta-btn ph-mobile-cta-call"
-         aria-label="Call MEDINEXT SOLUTIONS now at 908-829-0133"
+         aria-label="Call MEDINEXT SOLUTIONS now at 862-799-2199"
          data-cta="mobile-call">
         &#128222; Call Now
       </a>

@@ -25,7 +25,7 @@ require_once 'includes/header.php';
             <p class="lead mb-4">Maximize facility reimbursements. Our ASC billing experts navigate complex Medicare OPPS rules, specialized device-intensive procedure modifiers, and multi-specialty coding to ensure your center captures every dollar of facility fees.</p>
             <div class="hero-cta">
                 <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary me-3 mb-2">Get Free ASC Audit</a>
-                <a href="tel:9088290133" class="btn btn-outline-light btn-lg mb-2"><i class="ph ph-phone"></i> 908-829-0133</a>
+                <a href="tel:8627992199" class="btn btn-outline-light btn-lg mb-2"><i class="ph ph-phone"></i> 862-799-2199</a>
             </div>
         </div>
     </header>
@@ -153,7 +153,7 @@ require_once 'includes/header.php';
                             <div class="card-body p-4 text-center">
                                 <h3 class="h5 fw-bold mb-3">Need Immediate Help?</h3>
                                 <p class="small mb-4">Speak with an ASC billing expert today. Maximize your facility reimbursement.</p>
-                                <a href="tel:9088290133" class="btn btn-light text-primary w-100 mb-2 py-2 fw-bold"><i class="ph ph-phone-call"></i> Call 908-829-0133</a>
+                                <a href="tel:8627992199" class="btn btn-light text-primary w-100 mb-2 py-2 fw-bold"><i class="ph ph-phone-call"></i> Call 862-799-2199</a>
                                 <a href="contact/" class="btn btn-outline-light w-100 py-2">Contact Us</a>
                             </div>
                         </div>

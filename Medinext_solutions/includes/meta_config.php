@@ -144,8 +144,8 @@ return [
     ],
     '/contact/' => [
         'title' => 'Contact Us | MEDINEXT SOLUTIONS',
-        'desc' => 'Contact MEDINEXT SOLUTIONS for 24/7 dedicated support. Call 908-829-0133 to discuss optimizing your practice revenue cycle today.',
-        'kws' => 'contact MEDINEXT SOLUTIONS, medical billing support, RCM consultation, healthcare billing contact, medical billing phone number, MEDINEXT SOLUTIONS email, East Brunswick billing company, contact RCM experts, request billing quote, healthcare billing inquiry',
+        'desc' => 'Contact MEDINEXT SOLUTIONS for 24/7 dedicated support. Call 862-799-2199 to discuss optimizing your practice revenue cycle today.',
+        'kws' => 'contact MEDINEXT SOLUTIONS, medical billing support, RCM consultation, healthcare billing contact, medical billing phone number, MEDINEXT SOLUTIONS email, Orlando billing company, contact RCM experts, request billing quote, healthcare billing inquiry',
         'robots' => 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
         'type' => 'website'
     ],

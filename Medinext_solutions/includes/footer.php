@@ -105,15 +105,15 @@
                             <ul class="footer-contact">
                                 <li>
                                     <i class="ph ph-map-pin"></i>
-                                    <span>234 Old Stage Rd<br>East Brunswick, NJ 08816 USA</span>
+                                    <span>1317 Edgewater Dr #3520<br>Orlando, FL 32804 USA</span>
                                 </li>
                                 <li>
                                     <i class="ph ph-phone"></i>
-                                    <a href="tel:+19088290133">908-829-0133</a>
+                                    <a href="tel:+18627992199">862-799-2199</a>
                                 </li>
                                 <li>
                                     <i class="ph ph-envelope-simple"></i>
-                                    <a href="mailto:info@medinextsolutions.com">Info@medinextsolutions.com</a>
+                                    <a href="mailto:info@medinextsolutions.com">info@medinextsolutions.com</a>
                                 </li>
                                 <li>
                                     <i class="ph ph-clock"></i>

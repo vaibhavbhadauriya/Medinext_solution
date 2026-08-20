@@ -135,8 +135,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Search Engine Verification ? uncomment and replace placeholder values with real codes -->
 
     <!-- Geo-Targeting -->
-    <meta name="geo.region" content="US-NJ">
-    <meta name="geo.placename" content="East Brunswick">
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.placename" content="Orlando">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="<?php echo sanitizeInput($pageType); ?>">
@@ -654,8 +654,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
             </div>
             <div class="drawer-contact">
-                <p><i class="bi bi-telephone"></i> 908-829-0133</p>
-                <p><i class="ph ph-envelope-simple"></i> Info@medinextsolutions.com</p>
+                <p><i class="bi bi-telephone"></i> 862-799-2199</p>
+                <p><i class="ph ph-envelope-simple"></i> info@medinextsolutions.com</p>
             </div>
         </div>
     </div>

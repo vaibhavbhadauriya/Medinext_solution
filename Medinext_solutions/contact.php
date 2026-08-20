@@ -149,7 +149,7 @@ require_once 'includes/header.php';
                 <!-- Map -->
                 <div class="map-wrapper">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573291249!2d-73.98823492422648!3d40.75797933440898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1702000000000!5m2!1sen!2sus"
+                        src="https://maps.google.com/maps?q=1317+Edgewater+Dr+%233520,+Orlando,+FL+32804&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
@@ -165,8 +165,7 @@ require_once 'includes/header.php';
                     <div>
                         <div class="contact-info-label">Office Address</div>
                         <div class="contact-info-value">
-                            234 Old Stage Rd<br>
-                            East Brunswick, NJ 08816 USA
+                            1317 Edgewater Dr #3520<br>Orlando, FL 32804 USA
                         </div>
                     </div>
                 </div>
@@ -178,7 +177,7 @@ require_once 'includes/header.php';
                     <div>
                         <div class="contact-info-label">Phone Number</div>
                         <div class="contact-info-value">
-                            <a href="tel:+19088290133">908-829-0133</a>
+                            <a href="tel:+18627992199">862-799-2199</a>
                         </div>
                     </div>
                 </div>
@@ -190,7 +189,7 @@ require_once 'includes/header.php';
                     <div>
                         <div class="contact-info-label">Email Address</div>
                         <div class="contact-info-value">
-                            <a href="mailto:info@medinextsolutions.com">Info@medinextsolutions.com</a>
+                            <a href="mailto:info@medinextsolutions.com">info@medinextsolutions.com</a>
                         </div>
                     </div>
                 </div>

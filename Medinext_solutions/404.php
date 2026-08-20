@@ -69,12 +69,12 @@ require_once 'includes/header.php';
                     <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: var(--fs-sm);">
                         Our expert billing team is available 24/7 to assist you.
                     </p>
-                    <a href="tel:+19088290133" style="color: var(--secondary); font-weight: 600; font-size: var(--fs-md); text-decoration: none;">
-                        <i class="ph ph-phone-call"></i> (908) 829-0133
+                    <a href="tel:+18627992199" style="color: var(--secondary); font-weight: 600; font-size: var(--fs-md); text-decoration: none;">
+                        <i class="ph ph-phone-call"></i> (862) 799-2199
                     </a>
                     <br>
-                    <a href="mailto:Info@medinextsolutions.com" style="color: var(--secondary-light); font-size: var(--fs-sm); text-decoration: none; margin-top: 0.5rem; display: inline-block;">
-                        Info@medinextsolutions.com
+                    <a href="mailto:info@medinextsolutions.com" style="color: var(--secondary-light); font-size: var(--fs-sm); text-decoration: none; margin-top: 0.5rem; display: inline-block;">
+                        info@medinextsolutions.com
                     </a>
                 </div>
 

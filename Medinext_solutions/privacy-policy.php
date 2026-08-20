@@ -64,8 +64,8 @@ require_once 'includes/header.php';
                             <p class="mb-2">If you have any questions or concerns regarding our privacy practices, HIPAA compliance, or a BAA, please contact our Compliance Department:</p>
                             <ul class="list-unstyled mb-0">
                                 <li><strong>Email:</strong> Compliance@medinextsolutions.com</li>
-                                <li><strong>Phone:</strong> +1 (908) 829-0133</li>
-                                <li><strong>Mail:</strong> MEDINEXT SOLUTIONS LLC <br> Attention: Privacy Officer <br> East Brunswick, New Jersey 08816, USA</li>
+                                <li><strong>Phone:</strong> +1 (862) 799-2199</li>
+                                <li><strong>Mail:</strong> MEDINEXT SOLUTIONS LLC <br> Attention: Privacy Officer <br> 1317 Edgewater Dr #3520, Orlando, Florida 32804, USA</li>
                             </ul>
                         </div>
 

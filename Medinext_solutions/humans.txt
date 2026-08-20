@@ -1,10 +1,10 @@
 /* TEAM */
 
 Company: MEDINEXT SOLUTIONS LLC
-Location: East Brunswick, New Jersey 08816, USA
+Location: 1317 Edgewater Dr #3520, Orlando, Florida 32804, USA
 Website: https://medinextsolutions.com
-Contact: Info@medinextsolutions.com
-Phone: (908) 829-0133
+Contact: info@medinextsolutions.com
+Phone: (862) 799-2199
 
 /* SERVICES */
 

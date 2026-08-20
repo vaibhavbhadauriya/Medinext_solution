@@ -396,7 +396,7 @@ require_once 'includes/header.php';
                     <div class="us-map-top-bar">
                         <div class="map-legend-item">
                             <span class="legend-dot hq-dot"></span>
-                            <span>National HQ (East Brunswick, NJ)</span>
+                            <span>National HQ (Orlando, FL)</span>
                         </div>
                         <div class="map-legend-item">
                             <span class="legend-dot active-dot"></span>
@@ -434,8 +434,8 @@ require_once 'includes/header.php';
   </g>
   
   <!-- Key Hub Pulsing Radar Markers -->
-  <!-- HQ: East Brunswick, NJ -->
-  <g class="us-map-hub hub-hq" transform="translate(834, 216)" data-bs-toggle="tooltip" title="Medinext National Operations HQ - East Brunswick, NJ">
+  <!-- HQ: Orlando, FL -->
+  <g class="us-map-hub hub-hq" transform="translate(834, 216)" data-bs-toggle="tooltip" title="Medinext National Operations HQ - Orlando, FL">
     <circle class="hub-radar-ring" r="14"></circle>
     <circle class="hub-radar-ring-2" r="8"></circle>
     <circle class="hub-center-dot" r="4.5"></circle>
@@ -929,7 +929,7 @@ require_once 'includes/header.php';
       "name": "How do I get started with MEDINEXT SOLUTIONS?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Starting with MEDINEXT SOLUTIONS is immediate, risk-free, and incredibly straightforward. You begin by requesting a complimentary, comprehensive practice revenue audit. With 10+ years of RCM analytics, our experts evaluate your current AR aging and coding practices to pinpoint exact areas of revenue leakage. Since we require zero long-term contracts and provide 24/7 dedicated support, transitioning is painless. Call us directly at +1-908-829-0133 or email Info@medinextsolutions.com to schedule your free audit and maximize collections."
+        "text": "Starting with MEDINEXT SOLUTIONS is immediate, risk-free, and incredibly straightforward. You begin by requesting a complimentary, comprehensive practice revenue audit. With 10+ years of RCM analytics, our experts evaluate your current AR aging and coding practices to pinpoint exact areas of revenue leakage. Since we require zero long-term contracts and provide 24/7 dedicated support, transitioning is painless. Call us directly at +1-862-799-2199 or email info@medinextsolutions.com to schedule your free audit and maximize collections."
       }
     }
   ]
