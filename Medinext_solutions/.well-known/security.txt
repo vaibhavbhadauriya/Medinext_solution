@@ -1,0 +1,20 @@
+# Medinext Solutions — Security Contact Information
+# https://medinextsolutions.com/.well-known/security.txt
+# Last Updated: 2026-03-05
+
+Contact: mailto:Info@medinextsolutions.com
+Contact: tel:+19088290133
+Expires: 2027-03-05T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://medinextsolutions.com/.well-known/security.txt
+Policy: https://medinextsolutions.com/privacy-policy/
+Hiring: https://medinextsolutions.com/careers/
+
+# If you discover a security vulnerability affecting Medinext Solutions,
+# please report it responsibly via the contact above.
+# We are committed to working with security researchers to verify and
+# address any potential vulnerabilities.
+# We ask that you:
+#   - Allow reasonable time for us to fix issues before public disclosure
+#   - Make a good faith effort to avoid privacy violations and data destruction
+#   - Do not access or modify data that does not belong to you

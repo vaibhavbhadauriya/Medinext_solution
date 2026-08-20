@@ -1,0 +1,11 @@
+# Large uncompressed video backups (to prevent exceeding GitHub 100MB limit)
+*hero-original.mp4
+*hero-bg.mp4
+Medinext_solutions/assets/hero.mp4
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

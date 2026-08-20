@@ -1,0 +1,45 @@
+/* TEAM */
+
+Company: MEDINEXT SOLUTIONS LLC
+Location: East Brunswick, New Jersey 08816, USA
+Website: https://medinextsolutions.com
+Contact: Info@medinextsolutions.com
+Phone: (908) 829-0133
+
+/* SERVICES */
+
+Revenue Cycle Management (RCM)
+Medical Billing & Coding (ICD-10, CPT, HCPCS Level II)
+Provider Credentialing & Insurance Enrollment
+Denial Management & Accounts Receivable Recovery
+Prior Authorization Services
+Practice Management Consulting
+
+Specialties:
+  Therapy Billing (Speech, Physical, Occupational)
+  Pain Management Billing
+  Cardiovascular / Cardiology Billing
+  Oncology-Hematology Billing
+  Dental Billing
+  Behavioral Health Billing (ABA, Psychiatry, Counseling)
+  DME Billing (BrightTree)
+  Neurology Billing
+  Radiology Billing
+
+/* TECHNOLOGY */
+
+Platform: PHP, HTML5, CSS3, JavaScript (Vanilla)
+Server: Apache (XAMPP)
+Design: Custom dark theme with WebGL animations
+Animations: GSAP, AOS, Swiper.js, WebGL Shaders
+Fonts: Plus Jakarta Sans, Inter, Syne (Google Fonts)
+
+/* COMPLIANCE */
+
+HIPAA Compliant Infrastructure
+AAPC Certified Coding Professionals
+ICD-10 Certified
+
+/* LAST UPDATED */
+
+2026-03-05

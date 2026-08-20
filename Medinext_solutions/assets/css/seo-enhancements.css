@@ -1,0 +1,588 @@
+/* ==========================================================================
+   Medinext Solutions — SEO Enhancement Styles v1.0
+   File: assets/css/seo-enhancements.css
+   Purpose: Additive styles only — loads AFTER main stylesheet
+   ========================================================================== */
+
+/* ── Custom Properties ─────────────────────────────────────────── */
+:root {
+    --ph-primary: #2C74B3;
+    --ph-primary-dark: #144272;
+    --ph-accent: #00A8CC;
+    --ph-accent-hover: #007A94;
+    --ph-dark: #1a1a2e;
+    --ph-gray: #6B7280;
+    --ph-light: #f8f9fa;
+    --ph-white: #ffffff;
+    --ph-success: #10B981;
+    --ph-error: #EF4444;
+    --ph-border: #e5e7eb;
+    --ph-shadow: rgba(0, 82, 204, 0.15);
+    --ph-radius: 10px;
+    --ph-transition: 0.3s ease;
+}
+
+/* ── 1. Skip Navigation ─────────────────────────────────────────── */
+.ph-skip-nav {
+    position: fixed !important;
+    top: -120% !important;
+    left: 1rem;
+    z-index: 10000;
+    background: var(--ph-primary);
+    color: var(--ph-white) !important;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0 0 var(--ph-radius) var(--ph-radius);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: top var(--ph-transition);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--ph-primary-dark);
+}
+
+.ph-skip-nav:focus {
+    top: 0 !important;
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* ── 2. Screen Reader Only Utility ──────────────────────────────── */
+.ph-sr-only,
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* ── 3. Focus Ring Improvements ─────────────────────────────────── */
+*:focus-visible {
+    outline: 3px solid var(--ph-primary);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--ph-primary);
+    outline-offset: 3px;
+}
+
+/* ── 4. FAQ Accordion (for <details>/<summary>) ──────────────────── */
+.seo-faq {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.seo-faq details {
+    border: 1px solid var(--ph-border);
+    border-radius: var(--ph-radius);
+    margin-bottom: 0.7rem;
+    background: var(--ph-white);
+    overflow: hidden;
+    transition: box-shadow var(--ph-transition);
+}
+
+.seo-faq details:hover {
+    box-shadow: 0 4px 20px var(--ph-shadow);
+}
+
+.seo-faq summary {
+    padding: 1.1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ph-dark);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color var(--ph-transition), background var(--ph-transition);
+}
+
+.seo-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.seo-faq summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--ph-primary);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform var(--ph-transition);
+    line-height: 1;
+}
+
+.seo-faq details[open] summary {
+    color: var(--ph-primary);
+    border-bottom: 1px solid var(--ph-border);
+}
+
+.seo-faq details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.seo-faq details[open]>*:not(summary) {
+    padding: 1rem 1.5rem 1.25rem;
+    color: var(--ph-gray);
+    line-height: 1.75;
+    font-size: 0.96rem;
+    animation: ph-faq-open 0.25s ease;
+}
+
+@keyframes ph-faq-open {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── 5. Trust Badges Bar ─────────────────────────────────────────── */
+.ph-trust-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background: var(--ph-primary);
+    padding: 1rem;
+    width: 100%;
+}
+
+.ph-trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--ph-white);
+    padding: 0.55rem 1.4rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    flex: 0 0 auto;
+}
+
+.ph-trust-badge:last-child {
+    border-right: none;
+}
+
+.ph-trust-badge-icon {
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.ph-trust-badge-text strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.ph-trust-badge-text span {
+    font-size: 0.76rem;
+    opacity: 0.82;
+}
+
+@media (max-width: 768px) {
+    .ph-trust-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ph-trust-badge {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        justify-content: center;
+    }
+
+    .ph-trust-badge:last-child {
+        border-bottom: none;
+    }
+
+    .ph-trust-badge:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* ── 6. Sticky Mobile CTA Bar ───────────────────────────────────── */
+.ph-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    height: 58px;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.22);
+    transform: translateY(0);
+    transition: transform var(--ph-transition);
+    will-change: transform;
+}
+
+.ph-mobile-cta.ph-cta-hidden {
+    transform: translateY(100%);
+}
+
+.ph-mobile-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    color: var(--ph-white);
+    letter-spacing: 0.02em;
+    gap: 0.4rem;
+    border: none;
+    transition: filter var(--ph-transition);
+    float: left;
+}
+
+.ph-mobile-cta-btn:hover {
+    filter: brightness(1.12);
+}
+
+.ph-mobile-cta-call {
+    background: var(--ph-primary);
+}
+
+.ph-mobile-cta-audit {
+    background: var(--ph-accent);
+}
+
+@media (max-width: 768px) {
+    .ph-mobile-cta {
+        display: flex;
+    }
+}
+
+/* ── 7. Cookie Consent Banner ───────────────────────────────────── */
+.ph-cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--ph-dark);
+    color: var(--ph-white);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.4);
+    animation: ph-slide-up 0.4s ease;
+}
+
+.ph-cookie-banner.ph-cookie-visible {
+    display: block;
+}
+
+@keyframes ph-slide-up {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.ph-cookie-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.ph-cookie-inner p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.ph-cookie-inner a {
+    color: #60a5fa;
+}
+
+.ph-cookie-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.ph-cookie-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all var(--ph-transition);
+}
+
+.ph-cookie-btn-accept {
+    background: var(--ph-primary);
+    color: var(--ph-white);
+    border-color: var(--ph-primary);
+}
+
+.ph-cookie-btn-accept:hover {
+    background: var(--ph-primary-dark);
+}
+
+.ph-cookie-btn-essential {
+    background: transparent;
+    color: var(--ph-white);
+}
+
+.ph-cookie-btn-essential:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 640px) {
+    .ph-cookie-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ph-cookie-actions {
+        width: 100%;
+    }
+
+    .ph-cookie-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/* ── 8. Back to Top Button ──────────────────────────────────────── */
+.ph-back-to-top {
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+    z-index: 9997;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--ph-primary);
+    color: var(--ph-white);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px var(--ph-shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition: opacity var(--ph-transition), visibility var(--ph-transition), transform var(--ph-transition), background var(--ph-transition);
+    will-change: transform, opacity;
+}
+
+.ph-back-to-top.ph-btt-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.ph-back-to-top:hover {
+    background: var(--ph-primary-dark);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .ph-back-to-top {
+        bottom: 4.5rem;
+        right: 1rem;
+    }
+}
+
+/* ── 9. Announcement Bar ────────────────────────────────────────── */
+.ph-announce-bar {
+    width: 100%;
+    background: var(--ph-primary);
+    color: var(--ph-white);
+    text-align: center;
+    padding: 0.55rem 3rem;
+    font-size: 0.88rem;
+    position: relative;
+    z-index: 1060;
+    line-height: 1.5;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.ph-announce-bar.ph-announce-closed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ph-announce-bar a {
+    color: #FFD700;
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.ph-announce-close {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--ph-white);
+    cursor: pointer;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+    transition: opacity var(--ph-transition);
+}
+
+.ph-announce-close:hover {
+    opacity: 1;
+}
+
+@media (max-width: 576px) {
+    .ph-announce-bar {
+        font-size: 0.8rem;
+        padding: 0.55rem 2.5rem;
+    }
+}
+
+/* ── 10. Footer SEO Block ───────────────────────────────────────── */
+.ph-footer-seo {
+    padding: 3rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ph-footer-seo-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.ph-footer-seo-col h3,
+.ph-footer-seo-col h4 {
+    margin-bottom: 1rem;
+}
+
+.ph-footer-seo-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0;
+    flex-direction: column;
+}
+
+.ph-footer-seo-links a {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    transition: color var(--ph-transition);
+}
+
+.ph-footer-seo address {
+    font-style: normal;
+    line-height: 1.8;
+    font-size: 0.88rem;
+}
+
+@media (max-width: 992px) {
+    .ph-footer-seo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .ph-footer-seo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── 11. Reading Progress Bar ───────────────────────────────────── */
+.ph-reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--ph-primary), var(--ph-accent));
+    transition: width 0.1s linear;
+    pointer-events: none;
+}
+
+/* ── 12. Print Stylesheet ───────────────────────────────────────── */
+@media print {
+
+    .ph-mobile-cta,
+    .ph-cookie-banner,
+    .ph-back-to-top,
+    .ph-announce-bar,
+    .ph-reading-progress,
+    nav,
+    .navbar,
+    .footer-bottom,
+    [class*="cta-"],
+    [class*="-cta"] {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #555;
+    }
+
+    a[href^="tel:"]::after,
+    a[href^="mailto:"]::after {
+        content: "";
+    }
+}
+
+/* ── 13. Reduced Motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .ph-reading-progress {
+        transition: none;
+    }
+}

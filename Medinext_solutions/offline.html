@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>You're Offline ? MEDINEXT SOLUTIONS</title>
+  <style>
+    :root {
+      --ph-primary: #0052CC;
+      --ph-dark:    #1a1a2e;
+      --ph-gray:    #6B7280;
+      --ph-light:   #f8f9fa;
+      --ph-white:   #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--ph-light);
+      color: var(--ph-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .offline-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      filter: grayscale(0.3);
+    }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: var(--ph-dark);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    p {
+      font-size: 1.05rem;
+      color: var(--ph-gray);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+    }
+    .btn-primary {
+      background: var(--ph-primary);
+      color: var(--ph-white);
+      box-shadow: 0 4px 14px rgba(0,82,204,0.35);
+    }
+    .btn-primary:hover { background: #003D99; transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--ph-primary); border: 2px solid var(--ph-primary); }
+    .btn-secondary:hover { background: var(--ph-light); }
+    .divider {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--ph-primary), #00C9A7);
+      border-radius: 2px;
+      margin: 0 auto 2rem;
+    }
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ph-primary);
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="brand">MEDINEXT SOLUTIONS</div>
+  <div class="offline-icon" aria-hidden="true">?</div>
+  <h1>You Appear to Be Offline</h1>
+  <div class="divider"></div>
+  <p>
+    It looks like your internet connection is unavailable right now. 
+    Please check your Wi-Fi or mobile data and try again.
+    Your previously visited pages may still be available below.
+  </p>
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="window.location.reload()">
+      ? Try Again
+    </button>
+    <a href="/" class="btn btn-secondary">? Go to Homepage</a>
+  </div>
+  <p class="footer-note">
+    Need immediate help? Call us at 
+    <a href="tel:+19088290133" style="color:#0052CC;">908-829-0133</a> 
+    or email 
+    <a href="mailto:Info@medinextsolutions.com" style="color:#0052CC;">Info@medinextsolutions.com</a>
+  </p>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- ============================== -->
+    <!-- HOMEPAGE — Priority 1.0, Daily -->
+    <!-- ============================== -->
+    <url>
+        <loc>https://medinextsolutions.com/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- ============================== -->
+    <!-- CORE PAGES — Priority 0.9, Weekly -->
+    <!-- ============================== -->
+    <url>
+        <loc>https://medinextsolutions.com/about/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/medical-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/contact/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- ============================== -->
+    <!-- SERVICE PAGES — Priority 0.9, Weekly -->
+    <!-- ============================== -->
+    <url>
+        <loc>https://medinextsolutions.com/therapy-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/speech-therapy-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/physical-therapy-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/occupational-therapy-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/pain-management-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/cardiovascular-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/oncology-hematology-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/dental-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/behavioral-health-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/dme-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/neurology-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/radiology-billing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/provider-credentialing-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/revenue-cycle-management/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/denial-management-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/prior-authorization-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/medical-coding-services/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/free-practice-audit/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/testimonials/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/case-studies/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- ============================== -->
+    <!-- BLOG — Priority 0.6, Weekly -->
+    <!-- ============================== -->
+    <url>
+        <loc>https://medinextsolutions.com/blog/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/medical-billing-outsourcing-guide/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/claim-denial-reasons-and-fixes/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/how-to-choose-medical-billing-company/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/inhouse-vs-outsourced-billing/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/provider-credentialing-guide/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/revenue-cycle-management-guide/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/behavioral-health-billing-guide/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/physical-therapy-billing-guide/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/medical-billing-kpis/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/blog/cost-of-billing-errors/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ============================== -->
+    <!-- UTILITY PAGES — Priority 0.5, Monthly -->
+    <!-- ============================== -->
+
+    <url>
+        <loc>https://medinextsolutions.com/privacy-policy/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://medinextsolutions.com/terms-of-service/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
