@@ -3291,46 +3291,61 @@ textarea.form-control {
 
 /* FAQ Accordion */
 .faq-section {
-    background: var(--dark);
+    background: transparent;
 }
 
 .accordion-item {
-    background: var(--gradient-card);
-    border: 1px solid var(--glass-border) !important;
+    background: #ffffff;
+    border: 1px solid var(--border-color) !important;
     border-radius: var(--radius-lg) !important;
     margin-bottom: var(--space-3);
     overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+    border-color: rgba(var(--primary-rgb), 0.3) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .accordion-button {
-    background: transparent;
-    color: var(--light);
+    background: #ffffff;
+    color: #0f172a !important;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: var(--fs-base);
     padding: var(--space-5) var(--space-6);
     box-shadow: none !important;
     border: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.accordion-button:hover {
+    color: var(--primary-dark) !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background: rgba(var(--primary-rgb), 0.05);
-    color: var(--primary-light);
+    background: rgba(var(--primary-rgb), 0.06);
+    color: var(--primary-dark) !important;
+    font-weight: 700;
 }
 
 .accordion-button::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2394A3B8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2364748B'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.2s ease-in-out;
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230056D2'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230284C7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .accordion-body {
-    padding: 0 var(--space-6) var(--space-5);
-    color: var(--text-muted);
+    padding: var(--space-3) var(--space-6) var(--space-5);
+    color: #475569;
     font-size: var(--fs-sm);
     line-height: 1.8;
+    background: #ffffff;
 }
 
 
