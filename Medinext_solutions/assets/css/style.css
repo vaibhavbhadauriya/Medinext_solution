@@ -2708,14 +2708,15 @@ p:last-child {
    15. FOOTER
    ========================================================== */
 .prisma-footer {
-    background: var(--dark);
-    border-top: none;
+    background: #d8dade;
+    border-top: 1px solid #c2c7ce;
+    color: #1e293b;
     position: relative;
     overflow: hidden;
 }
 
 .footer-top {
-    padding: var(--space-10) 0 var(--space-9);
+    padding: var(--space-10) 0 var(--space-8);
 }
 
 .footer-brand {
@@ -2729,7 +2730,7 @@ p:last-child {
     text-decoration: none;
     font-family: var(--font-heading);
     font-size: var(--fs-lg);
-    color: var(--light);
+    color: #0f172a;
     margin-bottom: var(--space-4);
 }
 
@@ -2739,10 +2740,11 @@ p:last-child {
 
 .footer-tagline {
     font-size: var(--fs-sm);
-    color: var(--light);
+    color: #334155;
     line-height: 1.7;
     margin-bottom: var(--space-6);
     max-width: 320px;
+    font-weight: 400;
 }
 
 .footer-socials {
@@ -2754,19 +2756,20 @@ p:last-child {
     width: 40px;
     height: 40px;
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #cbd5e1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
+    color: #1e293b;
     font-size: 1.1rem;
+    background: #ffffff;
     transition: all var(--transition-smooth);
 }
 
 .social-link:hover {
-    background: rgba(var(--primary-rgb), 0.1);
+    background: var(--primary);
     border-color: var(--primary);
-    color: var(--primary-light);
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -2774,7 +2777,7 @@ p:last-child {
     font-family: var(--font-heading);
     font-size: var(--fs-base);
     font-weight: 700;
-    color: var(--light);
+    color: #0f172a;
     margin-bottom: var(--space-5);
     position: relative;
     padding-bottom: var(--space-3);
@@ -2803,15 +2806,17 @@ p:last-child {
 
 .footer-links a {
     font-size: var(--fs-sm);
-    color: var(--light);
+    color: #1f2937;
+    font-weight: 400;
     transition: all var(--transition-fast);
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
+    text-decoration: none;
 }
 
 .footer-links a:hover {
-    color: var(--primary-light);
+    color: var(--primary-dark);
     transform: translateX(4px);
 }
 
@@ -2826,22 +2831,25 @@ p:last-child {
     gap: var(--space-3);
     margin-bottom: var(--space-4);
     font-size: var(--fs-sm);
-    color: var(--light);
+    color: #1f2937;
+    line-height: 1.5;
 }
 
 .footer-contact i {
-    color: var(--primary-light);
-    font-size: 1rem;
+    color: var(--primary-dark);
+    font-size: 1.1rem;
     flex-shrink: 0;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
 .footer-contact a {
-    color: var(--light);
+    color: #1f2937;
+    text-decoration: none;
+    transition: color var(--transition-fast);
 }
 
 .footer-contact a:hover {
-    color: var(--primary-light);
+    color: var(--primary-dark);
 }
 
 /* Newsletter */
@@ -2852,15 +2860,17 @@ p:last-child {
 .footer-newsletter h6 {
     font-family: var(--font-heading);
     font-size: var(--fs-sm);
-    font-weight: 600;
-    color: var(--light);
+    font-weight: 700;
+    color: #0f172a;
     margin-bottom: var(--space-3);
 }
 
 .newsletter-form .input-group {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
     border-radius: var(--radius-md);
     overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     transition: border-color var(--transition-fast);
 }
 
@@ -2869,25 +2879,33 @@ p:last-child {
 }
 
 .newsletter-form .form-control {
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff;
     border: none;
-    color: var(--light);
+    color: #0f172a;
     font-size: var(--fs-sm);
     padding: var(--space-3) var(--space-4);
 }
 
 .newsletter-form .form-control::placeholder {
-    color: var(--gray-300);
+    color: #94a3b8;
 }
 
 .newsletter-form .form-control:focus {
     box-shadow: none;
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff;
 }
 
 .newsletter-form .btn {
     border-radius: 0;
     padding: var(--space-3) var(--space-4);
+    background: var(--primary-dark);
+    color: #ffffff;
+    border: none;
+}
+
+.newsletter-form .btn:hover {
+    background: var(--primary);
+    color: #ffffff;
 }
 
 .newsletter-feedback {
@@ -2897,28 +2915,29 @@ p:last-child {
 }
 
 .newsletter-feedback.success {
-    color: var(--secondary);
+    color: #16a34a;
 }
 
 .newsletter-feedback.error {
-    color: var(--accent);
+    color: #dc2626;
 }
 
 /* Footer Bottom */
 .footer-bottom {
     padding: var(--space-5) 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #c2c7ce;
 }
 
 .copyright {
     font-size: var(--fs-sm);
-    color: var(--text-muted);
+    color: #334155;
     margin: 0;
+    font-weight: 400;
 }
 
 .footer-badges {
     display: flex;
-    gap: var(--space-4);
+    gap: var(--space-3);
     justify-content: flex-end;
     flex-wrap: wrap;
 }
@@ -2929,15 +2948,16 @@ p:last-child {
     gap: var(--space-2);
     font-size: var(--fs-xs);
     font-weight: 600;
-    color: var(--secondary);
+    color: #0f172a;
     padding: var(--space-2) var(--space-3);
-    background: rgba(var(--secondary-rgb), 0.08);
-    border: 1px solid rgba(var(--secondary-rgb), 0.15);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #94a3b8;
     border-radius: var(--radius-sm);
 }
 
 .compliance-badge i {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: var(--primary-dark);
 }
 
 
@@ -3965,23 +3985,22 @@ body {
 
 .footer-socials .icon-container {
     display: inline-flex;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     transition: all 0.3s ease;
     position: relative;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #333a42;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: none;
 }
 
 .footer-socials .social-svg {
     width: 20px;
     height: 20px;
-    color: #4b5563;
-    /* Dark gray for visibility on white */
+    color: #ffffff;
     transition: all 0.3s ease;
 }
 

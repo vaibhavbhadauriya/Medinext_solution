@@ -11,9 +11,6 @@
     <!-- ============================================ -->
     <footer class="prisma-footer" id="footer">
 
-    <!-- Aurora WebGL Background -->
-    <canvas id="footer-aurora-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%); mask-image: linear-gradient(to bottom, transparent 0%, black 15%);"></canvas>
-
         <div class="footer-top">
             <div class="container">
                 <div class="row g-4 g-lg-5">
