@@ -1015,6 +1015,47 @@ const InteractiveUSMap = {
 };
 
 
+
+/* ==========================================================
+   18. BLOG INSIGHTS SWIPER CAROUSEL
+   ========================================================== */
+const BlogInsightsSwiper = {
+    init() {
+        const container = document.querySelector('.swiper-blog-insights');
+        if (!container || typeof Swiper === 'undefined') return;
+
+        new Swiper('.swiper-blog-insights', {
+            slidesPerView: 1.15,
+            spaceBetween: 20,
+            grabCursor: true,
+            scrollbar: {
+                el: '.blog-swiper-scrollbar',
+                draggable: true,
+                dragSize: 'auto'
+            },
+            navigation: {
+                nextEl: '.blog-swiper-next',
+                prevEl: '.blog-swiper-prev'
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2.15,
+                    spaceBetween: 22
+                },
+                992: {
+                    slidesPerView: 3.15,
+                    spaceBetween: 24
+                },
+                1200: {
+                    slidesPerView: 3.4,
+                    spaceBetween: 28
+                }
+            }
+        });
+    }
+};
+
+
 /* ==========================================================
    MASTER INITIALIZATION
    ========================================================== */
@@ -1035,6 +1076,7 @@ document.addEventListener('DOMContentLoaded', () => {
         TypedInit.init();
         CounterInit.init();
         SwiperInit.init();
+        BlogInsightsSwiper.init();
         MockupAnimation.init();
         ContactForm.init();
         NewsletterForm.init();

@@ -611,6 +611,177 @@ require_once 'includes/header.php';
     </div>
 </section>
 
+
+<!-- ============================================ -->
+<!-- BLOG / NEWS & INSIGHTS CAROUSEL SECTION -->
+<!-- ============================================ -->
+<section class="section home-blog-insights-section" id="blog-insights">
+    <div class="container">
+        <!-- Section Header Row: Title on Left, View More on Right -->
+        <div class="home-blog-header" data-aos="fade-up">
+            <h2 class="home-blog-title">Dental &amp; Medical RCM News &amp; Insights</h2>
+            <a href="<?php echo $baseUrl; ?>/blog/" class="btn-view-more-articles">
+                VIEW MORE ARTICLES
+            </a>
+        </div>
+
+        <!-- Swiper Carousel Container -->
+        <div class="swiper swiper-blog-insights mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/dental-billing-services/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/dental-billing.jpg" alt="Dental Billing Best Practices for Faster Insurance Payments" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">Dental Billing Best Practices for Faster Insurance Payments</h3>
+                            <p class="home-blog-card-desc">Even small dental billing errors can quickly turn into lost revenue, delayed payments, and unhappy patients. Learn key protocols for faster reimbursement.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Jan 21, 2026</span>
+                                <span class="home-blog-category">Dental Billing &amp; Coding</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/dermatology-billing/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/dermatology-billing.avif" alt="Dermatology Billing: How to Avoid Revenue Loss" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">Dermatology Billing: How to Avoid Revenue Loss and Stay Audit-Ready</h3>
+                            <p class="home-blog-card-desc">Optimize your dermatology medical billing with expert tips on Mohs coding, complex lesion excision, pathology bundling, and common denial triggers.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Jun 11, 2025</span>
+                                <span class="home-blog-category">Specialty Billing</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/dental-insurance-verification/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/dental-insurance.jpg" alt="Your Dental Insurance Verification Guide & Checklist" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">Your Dental Insurance Verification Guide &amp; Checklist</h3>
+                            <p class="home-blog-card-desc">Read our breakdown of everything you need to know about dental insurance verification &mdash; including breakdown of benefits, avoiding same-day write-offs, and pre-authorizations.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Jun 4, 2025</span>
+                                <span class="home-blog-category">Dental Insurance Verification</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/blog/revenue-cycle-management-guide/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/blog-rcm-guide.jpg" alt="An End-to-End Approach to Revenue Cycle Management" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">An End-to-End Approach to Healthcare Revenue Cycle Management</h3>
+                            <p class="home-blog-card-desc">Healthcare and dental providers rely on comprehensive Revenue Cycle Management to safeguard cash flow, reduce denials, and accelerate insurance collections.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">May 8, 2025</span>
+                                <span class="home-blog-category">Medical RCM</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/blog/claim-denial-reasons-and-fixes/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/blog-denials.jpg" alt="Top 10 Claim Denial Reasons & How to Fix Them Fast" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">Top 10 Claim Denial Reasons &amp; How to Fix Them Fast</h3>
+                            <p class="home-blog-card-desc">Stop losing revenue to preventable denials. Our billing experts break down the most common CO and PR denial codes with proven appeal strategies.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Jan 18, 2025</span>
+                                <span class="home-blog-category">Denials &amp; Appeals</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/blog/medical-billing-outsourcing-guide/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/blog-outsourcing.jpg" alt="The Complete Guide to Medical Billing Outsourcing" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">The Complete Guide to Medical Billing Outsourcing in 2025</h3>
+                            <p class="home-blog-card-desc">Everything you need to know before outsourcing your medical billing &mdash; cost analysis, vetting checklist, red flags, and transition timelines.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Feb 14, 2025</span>
+                                <span class="home-blog-category">Outsourcing Guide</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/blog/behavioral-health-billing-guide/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/blog-behavioral.jpg" alt="Behavioral Health Billing: Mental Health Claims" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">Behavioral Health Billing: Complete Guide to Mental Health Claims</h3>
+                            <p class="home-blog-card-desc">CPT codes, parity laws, telehealth billing rules, and denial prevention strategies for behavioral health and mental health practices.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Jan 30, 2025</span>
+                                <span class="home-blog-category">Behavioral Health</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="swiper-slide">
+                    <a href="<?php echo $baseUrl; ?>/blog/inhouse-vs-outsourced-billing/" class="home-blog-card">
+                        <div class="home-blog-card-thumb">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/content/blog-inhouse-vs-outsourced.jpg" alt="In-House vs Outsourced Medical Billing" loading="lazy">
+                        </div>
+                        <div class="home-blog-card-body">
+                            <h3 class="home-blog-card-title">In-House vs Outsourced Medical Billing: True Cost Comparison</h3>
+                            <p class="home-blog-card-desc">Side-by-side financial analysis of keeping billing internal vs. outsourcing: salary, software, training, denial rates, and net revenue impact.</p>
+                            <div class="home-blog-card-meta">
+                                <span class="home-blog-date">Dec 22, 2024</span>
+                                <span class="home-blog-category">Cost Analysis</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Custom Scrollbar & Nav Track matching screenshot -->
+            <div class="home-blog-slider-footer mt-4">
+                <button class="blog-swiper-arrow blog-swiper-prev" aria-label="Previous articles">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="blog-swiper-scrollbar-track">
+                    <div class="swiper-scrollbar blog-swiper-scrollbar"></div>
+                </div>
+                <button class="blog-swiper-arrow blog-swiper-next" aria-label="Next articles">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- ============================================ -->
 <!-- CTA BANNER SECTION -->
 <!-- ============================================ -->
