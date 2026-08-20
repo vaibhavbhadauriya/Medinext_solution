@@ -555,51 +555,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
 
 
-                    <!-- Mega Menu: Company -->
-                    <li class="nav-item dropdown mega-dropdown">
-                        <a class="nav-link dropdown-toggle <?php echo isActivePage('about'); ?>" href="<?php echo $baseUrl; ?>/about/" id="companyDropdown" aria-expanded="false" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-                            Company
-                        </a>
-                        <div class="dropdown-menu mega-menu company-mega-menu" aria-labelledby="companyDropdown">
-                            <div class="mega-menu-content d-flex">
-                                <ul class="mega-menu-list flex-grow-1 p-3">
-                                    <li>
-                                        <a href="<?php echo $baseUrl; ?>/about/" class="mega-menu-link">
-                                            <div class="mega-menu-icon">
-                                                <i class="ph ph-users"></i>
-                                            </div>
-                                            <div class="mega-menu-text">
-                                                <span class="mega-title">About Us</span>
-                                                <span class="mega-desc">Learn about our story & expert team</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $baseUrl; ?>/#why-us" class="mega-menu-link">
-                                            <div class="mega-menu-icon">
-                                                <i class="bi bi-star-fill"></i>
-                                            </div>
-                                            <div class="mega-menu-text">
-                                                <span class="mega-title">Why Medinext</span>
-                                                <span class="mega-desc">See how we help practices succeed</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="mega-menu-link">
-                                            <div class="mega-menu-icon">
-                                                <i class="ph ph-handshake"></i>
-                                            </div>
-                                            <div class="mega-menu-text">
-                                                <span class="mega-title">Partnerships</span>
-                                                <span class="mega-desc">Collaborate for mutual growth</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                
-                            </div>
-                        </div>
+                    <!-- About Link -->
+                    <li class="nav-item">
+                        <a class="nav-link <?php echo isActivePage('about'); ?>" href="<?php echo $baseUrl; ?>/about/">About</a>
                     </li>
 
                     <li class="nav-item">
