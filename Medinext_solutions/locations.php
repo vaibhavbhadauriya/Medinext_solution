@@ -15,18 +15,24 @@ require_once __DIR__ . '/includes/location-helper.php';
 $baseUrl = getBaseUrl();
 
 // Detect State and City from GET or URL parameters
-$stateSlug = isset($_GET['state']) ? trim(strtolower((string)$_GET['state'])) : null;
-$citySlug  = isset($_GET['city']) ? trim(strtolower((string)$_GET['city'])) : null;
+$rawState = isset($_GET['state']) ? trim(strtolower((string)$_GET['state'])) : null;
+$rawCity  = isset($_GET['city']) ? trim(strtolower((string)$_GET['city'])) : null;
+
+// Sanitize slugs (letters, numbers, hyphens only)
+$stateSlug = $rawState !== null ? preg_replace('/[^a-zA-Z0-9-]/', '', $rawState) : null;
+$citySlug  = $rawCity !== null ? preg_replace('/[^a-zA-Z0-9-]/', '', $rawCity) : null;
 
 // Determine View Mode
 $viewMode = 'national';
 $currentState = null;
 $currentCity = null;
+$macData = null;
 
 if ($stateSlug && $citySlug) {
     $currentCity = getCityBySlug($stateSlug, $citySlug);
     if ($currentCity) {
         $currentState = getStateBySlug($stateSlug);
+        $macData = getMacJurisdiction($currentCity['state_id'] ?? $currentCity['state_slug'] ?? $stateSlug);
         $viewMode = 'city';
     } else {
         // City not found -> send 404
@@ -37,6 +43,7 @@ if ($stateSlug && $citySlug) {
 } elseif ($stateSlug) {
     $currentState = getStateBySlug($stateSlug);
     if ($currentState) {
+        $macData = getMacJurisdiction($currentState['id'] ?? $currentState['slug'] ?? $stateSlug);
         $viewMode = 'state';
     } else {
         // State not found -> send 404
@@ -113,7 +120,7 @@ require_once __DIR__ . '/includes/header.php';
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white-50 text-decoration-none">Home</a></li>
                     <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/" class="text-white-50 text-decoration-none">Locations</a></li>
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/<?php echo $stateSlug; ?>/" class="text-white-50 text-decoration-none"><?php echo htmlspecialchars($stateName); ?></a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($stateSlug); ?>/" class="text-white-50 text-decoration-none"><?php echo htmlspecialchars($stateName); ?></a></li>
                     <li class="breadcrumb-item active text-white fw-bold" aria-current="page"><?php echo htmlspecialchars($cityName); ?></li>
                 </ol>
             </nav>
@@ -255,6 +262,125 @@ require_once __DIR__ . '/includes/header.php';
                             <?php endforeach; ?>
                         </div>
 
+                        <!-- Regional Medicare Administrative Contractor (MAC) & State Payer Compliance Section -->
+                        <?php if (!empty($macData)): ?>
+                        <div class="card border-0 shadow-sm rounded-4 p-4 my-5 bg-white border-start border-4 border-primary">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 pb-3 border-bottom">
+                                <div>
+                                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-2 rounded-pill bg-primary bg-opacity-10 text-primary small fw-bold">
+                                        <i class="ph ph-shield-check-fill text-primary"></i>
+                                        <span>Regional MAC &amp; State Payer Compliance Hub</span>
+                                    </div>
+                                    <h3 class="h4 fw-bold text-dark mb-1">
+                                        <?php echo htmlspecialchars($stateName); ?> Medicare &amp; Medicaid Compliance (<?php echo htmlspecialchars($macData['code']); ?>)
+                                    </h3>
+                                    <p class="text-muted small mb-0">
+                                        Authoritative Part A/B Medicare contractor guidelines &amp; state payer compliance parameters for healthcare providers in <?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?>.
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill fw-semibold">
+                                        <i class="bi bi-check-circle-fill me-1"></i> 98.2% Clean Claim Target
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- MAC Contractor & Provider Portal Details -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-3 bg-light h-100 border">
+                                        <div class="small text-muted text-uppercase fw-bold mb-1">Medicare Administrative Contractor (MAC)</div>
+                                        <div class="h6 fw-bold text-primary mb-1">
+                                            <?php echo htmlspecialchars($macData['jurisdiction_name']); ?> &bull; <?php echo htmlspecialchars($macData['contractor']); ?>
+                                        </div>
+                                        <div class="small text-muted mb-2">
+                                            <i class="ph ph-buildings me-1"></i> Headquarters: <?php echo htmlspecialchars($macData['headquarters']); ?>
+                                        </div>
+                                        <div class="small">
+                                            <span class="text-muted">Official Portal:</span>
+                                            <a href="<?php echo htmlspecialchars($macData['portal_url']); ?>" target="_blank" rel="noopener noreferrer" class="fw-semibold text-primary text-decoration-none">
+                                                <?php echo htmlspecialchars($macData['portal_name']); ?> <i class="bi bi-box-arrow-up-right small ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 rounded-3 bg-light h-100 border">
+                                        <div class="small text-muted text-uppercase fw-bold mb-1">State Medicaid &amp; Secondary Payer</div>
+                                        <div class="h6 fw-bold text-dark mb-1">
+                                            <?php echo htmlspecialchars($macData['medicaid_program']); ?>
+                                        </div>
+                                        <div class="small text-muted mb-2">
+                                            <i class="ph ph-bank me-1"></i> Agency: <?php echo htmlspecialchars($macData['medicaid_agency']); ?>
+                                        </div>
+                                        <div class="small text-muted">
+                                            <span>Timely Filing:</span>
+                                            <strong class="text-dark"><?php echo htmlspecialchars($macData['medicaid_timely_filing']); ?></strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Key Filing & Appeals Benchmarks -->
+                            <div class="row g-3 mb-4 text-center">
+                                <div class="col-sm-4">
+                                    <div class="p-3 rounded-3 bg-white border shadow-none">
+                                        <div class="small text-muted fw-semibold mb-1">Medicare Timely Filing</div>
+                                        <div class="fw-bold text-primary"><?php echo htmlspecialchars($macData['medicare_timely_filing']); ?></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="p-3 rounded-3 bg-white border shadow-none">
+                                        <div class="small text-muted fw-semibold mb-1">Redetermination Appeals</div>
+                                        <div class="fw-bold text-primary"><?php echo htmlspecialchars($macData['appeals_deadline']); ?></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="p-3 rounded-3 bg-white border shadow-none">
+                                        <div class="small text-muted fw-semibold mb-1">First-Pass Target</div>
+                                        <div class="fw-bold text-success">98.2% MAC Scrubber Rate</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Key Local Coverage Determinations (LCDs) -->
+                            <?php if (!empty($macData['key_lcds'])): ?>
+                                <div class="mb-4">
+                                    <h4 class="h6 fw-bold text-dark mb-2">
+                                        <i class="ph ph-file-text-fill text-primary me-1"></i> Key Local Coverage Determinations (LCDs) Enforced in <?php echo htmlspecialchars($stateId); ?>:
+                                    </h4>
+                                    <div class="row g-2">
+                                        <?php foreach ($macData['key_lcds'] as $lcd): ?>
+                                            <div class="col-md-6">
+                                                <div class="d-flex align-items-start gap-2 p-2 rounded bg-light border-0 small">
+                                                    <span class="badge bg-primary bg-opacity-20 text-primary font-monospace"><?php echo htmlspecialchars($lcd['id']); ?></span>
+                                                    <span class="text-dark fw-medium"><?php echo htmlspecialchars($lcd['name']); ?></span>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- Regional Billing Nuances -->
+                            <?php if (!empty($macData['billing_nuances'])): ?>
+                                <div class="p-3 rounded-3 bg-light bg-opacity-75 border-0">
+                                    <h4 class="h6 fw-bold text-dark mb-2">
+                                        <i class="ph ph-info-fill text-primary me-1"></i> Regional <?php echo htmlspecialchars($stateName); ?> Billing Nuances &amp; Audit Safeguards:
+                                    </h4>
+                                    <ul class="list-unstyled mb-0 small text-muted">
+                                        <?php foreach ($macData['billing_nuances'] as $nuance): ?>
+                                            <li class="d-flex align-items-start gap-2 mb-1">
+                                                <i class="bi bi-arrow-right-circle-fill text-primary mt-1 flex-shrink-0"></i>
+                                                <span><?php echo htmlspecialchars($nuance); ?></span>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
+
                         <!-- Local FAQs -->
                         <h2 class="h3 fw-bold text-primary mt-5 mb-4">
                             Frequently Asked Questions &bull; <?php echo htmlspecialchars($cityName); ?> Billing
@@ -327,13 +453,13 @@ require_once __DIR__ . '/includes/header.php';
                                 </h4>
                                 <div class="d-flex flex-wrap gap-2">
                                     <?php foreach ($nearbyCities as $near): ?>
-                                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo $near['state_slug']; ?>/<?php echo $near['city_slug']; ?>/" class="btn btn-sm btn-outline-secondary text-truncate" style="max-width: 140px;" title="<?php echo htmlspecialchars($near['city']); ?>, <?php echo htmlspecialchars($near['state_id']); ?>">
+                                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($near['state_slug']); ?>/<?php echo htmlspecialchars($near['city_slug']); ?>/" class="btn btn-sm btn-outline-secondary text-truncate" style="max-width: 140px;" title="<?php echo htmlspecialchars($near['city']); ?>, <?php echo htmlspecialchars($near['state_id']); ?>">
                                             <?php echo htmlspecialchars($near['city']); ?>
                                         </a>
                                     <?php endforeach; ?>
                                 </div>
                                 <div class="mt-3 pt-2 border-top">
-                                    <a href="<?php echo $baseUrl; ?>/locations/<?php echo $stateSlug; ?>/" class="small fw-bold text-primary text-decoration-none">
+                                    <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($stateSlug); ?>/" class="small fw-bold text-primary text-decoration-none">
                                         View All <?php echo htmlspecialchars($stateName); ?> Locations &rarr;
                                     </a>
                                 </div>
@@ -347,96 +473,103 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Local JSON-LD Schemas -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": ["MedicalBusiness", "ProfessionalService"],
-          "@id": "<?php echo $canonicalUrl; ?>#medicalbusiness",
-          "name": "MEDINEXT SOLUTIONS - <?php echo htmlspecialchars($cityName); ?> Medical Billing Services",
-          "description": "AAPC-certified medical billing and RCM services for clinics and healthcare providers in <?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateName); ?>.",
-          "url": "<?php echo $canonicalUrl; ?>",
-          "telephone": "+1-862-799-2199",
-          "email": "info@medinextsolutions.com",
-          "priceRange": "$$",
-          "areaServed": [
-            {
-              "@type": "City",
-              "name": "<?php echo htmlspecialchars($cityName); ?>"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "<?php echo htmlspecialchars($county); ?> County"
-            },
-            {
-              "@type": "State",
-              "name": "<?php echo htmlspecialchars($stateName); ?>"
-            }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "<?php echo htmlspecialchars($cityName); ?>",
-            "addressRegion": "<?php echo htmlspecialchars($stateId); ?>",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": <?php echo (float)$currentCity['lat']; ?>,
-            "longitude": <?php echo (float)$currentCity['lng']; ?>
-          }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "<?php echo $canonicalUrl; ?>#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://medinextsolutions.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Locations",
-              "item": "https://medinextsolutions.com/locations/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "<?php echo htmlspecialchars($stateName); ?>",
-              "item": "https://medinextsolutions.com/locations/<?php echo $stateSlug; ?>/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "<?php echo htmlspecialchars($cityName); ?>",
-              "item": "<?php echo $canonicalUrl; ?>"
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "<?php echo $canonicalUrl; ?>#faq",
-          "mainEntity": [
-            <?php 
-            $faqEntities = [];
-            foreach ($faqs as $faq) {
-                $faqEntities[] = json_encode([
-                    '@type' => 'Question',
-                    'name' => $faq['q'],
-                    'acceptedAnswer' => [
-                        '@type' => 'Answer',
-                        'text' => $faq['a']
+    <?php
+    $knowsAboutList = !empty($macData['knows_about']) ? $macData['knows_about'] : [
+        'Revenue Cycle Management (RCM)',
+        'Medical Billing Services',
+        'AAPC-Certified Medical Coding',
+        'Medicare & Medicaid Claim Adjudication',
+        'Denial Management & Appeals'
+    ];
+
+    $citySchemaGraph = [
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            [
+                '@type' => ['MedicalBusiness', 'ProfessionalService'],
+                '@id' => $canonicalUrl . '#medicalbusiness',
+                'name' => "MEDINEXT SOLUTIONS - {$cityName} Medical Billing Services",
+                'description' => "AAPC-certified medical billing and RCM services for clinics and healthcare providers in {$cityName}, {$stateName} under " . (!empty($macData['contractor_short']) ? "{$macData['contractor_short']} ({$macData['code']})" : "Medicare MAC") . " guidelines.",
+                'url' => $canonicalUrl,
+                'telephone' => '+1-862-799-2199',
+                'email' => 'info@medinextsolutions.com',
+                'priceRange' => '$$',
+                'areaServed' => [
+                    [
+                        '@type' => 'City',
+                        'name' => $cityName
+                    ],
+                    [
+                        '@type' => 'AdministrativeArea',
+                        'name' => "{$county} County"
+                    ],
+                    [
+                        '@type' => 'State',
+                        'name' => $stateName
                     ]
-                ], JSON_UNESCAPED_SLASHES);
-            }
-            echo implode(",\n", $faqEntities);
-            ?>
-          ]
-        }
-      ]
-    }
+                ],
+                'knowsAbout' => $knowsAboutList,
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'addressLocality' => $cityName,
+                    'addressRegion' => $stateId,
+                    'addressCountry' => 'US'
+                ],
+                'geo' => [
+                    '@type' => 'GeoCoordinates',
+                    'latitude' => (float)$currentCity['lat'],
+                    'longitude' => (float)$currentCity['lng']
+                ]
+            ],
+            [
+                '@type' => 'BreadcrumbList',
+                '@id' => $canonicalUrl . '#breadcrumb',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://medinextsolutions.com/'
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Locations',
+                        'item' => 'https://medinextsolutions.com/locations/'
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 3,
+                        'name' => $stateName,
+                        'item' => "https://medinextsolutions.com/locations/{$stateSlug}/"
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 4,
+                        'name' => $cityName,
+                        'item' => $canonicalUrl
+                    ]
+                ]
+            ],
+            [
+                '@type' => 'FAQPage',
+                '@id' => $canonicalUrl . '#faq',
+                'mainEntity' => array_map(function ($faq) {
+                    return [
+                        '@type' => 'Question',
+                        'name' => $faq['q'],
+                        'acceptedAnswer' => [
+                            '@type' => 'Answer',
+                            'text' => $faq['a']
+                        ]
+                    ];
+                }, $faqs)
+            ]
+        ]
+    ];
+
+    echo json_encode($citySchemaGraph, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
     </script>
 
 
@@ -459,7 +592,7 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small">
                         <i class="ph ph-flag-fill text-warning"></i>
-                        <span>Statewide Healthcare RCM Coverage &bull; <?php echo number_format($cityCount); ?> Cities &amp; Towns</span>
+                        <span>Statewide Healthcare RCM Coverage &bull; <?php echo number_format((int)$cityCount); ?> Cities &amp; Towns</span>
                     </div>
                     <h1 class="display-4 fw-bold mb-3">
                         Medical Billing &amp; RCM Services in <span class="text-warning"><?php echo htmlspecialchars($stateName); ?></span>
@@ -480,6 +613,129 @@ require_once __DIR__ . '/includes/header.php';
         </div>
     </header>
 
+    <!-- Regional Medicare Administrative Contractor (MAC) & Statewide Compliance Section -->
+    <?php if (!empty($macData)): ?>
+    <section class="py-5 bg-white border-bottom">
+        <div class="container">
+            <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-white border-start border-4 border-primary">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 pb-3 border-bottom">
+                    <div>
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-2 rounded-pill bg-primary bg-opacity-10 text-primary small fw-bold">
+                            <i class="ph ph-shield-check-fill text-primary"></i>
+                            <span>Statewide Regulatory &amp; MAC Compliance Hub</span>
+                        </div>
+                        <h2 class="h3 fw-bold text-dark mb-1">
+                            <?php echo htmlspecialchars($stateName); ?> Medicare MAC Jurisdiction &amp; Payer Regulations (<?php echo htmlspecialchars($macData['code']); ?>)
+                        </h2>
+                        <p class="text-muted small mb-0">
+                            Comprehensive Part A/B Medicare contractor policies, LCD standards, and state Medicaid filing rules for <?php echo htmlspecialchars($stateName); ?> medical practices.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill fw-semibold">
+                            <i class="bi bi-shield-lock-fill me-1"></i> 98.2% First-Pass Clean Claim Rate
+                        </span>
+                    </div>
+                </div>
+
+                <!-- MAC Operator & Portal Grid -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-3 bg-light h-100 border">
+                            <div class="small text-muted text-uppercase fw-bold mb-1">Medicare Administrative Contractor (MAC)</div>
+                            <h3 class="h5 fw-bold text-primary mb-2">
+                                <?php echo htmlspecialchars($macData['jurisdiction_name']); ?>
+                            </h3>
+                            <p class="small text-muted mb-2">
+                                <strong>Contractor:</strong> <?php echo htmlspecialchars($macData['contractor']); ?> (HQ: <?php echo htmlspecialchars($macData['headquarters']); ?>)
+                            </p>
+                            <div class="small">
+                                <span class="text-muted">Electronic Portal:</span>
+                                <a href="<?php echo htmlspecialchars($macData['portal_url']); ?>" target="_blank" rel="noopener noreferrer" class="fw-semibold text-primary text-decoration-none">
+                                    <?php echo htmlspecialchars($macData['portal_name']); ?> <i class="bi bi-box-arrow-up-right small ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-4 rounded-3 bg-light h-100 border">
+                            <div class="small text-muted text-uppercase fw-bold mb-1">State Medicaid &amp; Public Health Agency</div>
+                            <h3 class="h5 fw-bold text-dark mb-2">
+                                <?php echo htmlspecialchars($macData['medicaid_program']); ?>
+                            </h3>
+                            <p class="small text-muted mb-2">
+                                <strong>Governing Agency:</strong> <?php echo htmlspecialchars($macData['medicaid_agency']); ?>
+                            </p>
+                            <div class="small text-muted">
+                                <span>Medicaid Timely Filing:</span>
+                                <strong class="text-dark"><?php echo htmlspecialchars($macData['medicaid_timely_filing']); ?></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timely Filing, Appeals, and Compliance Metrics -->
+                <div class="row g-3 mb-4 text-center">
+                    <div class="col-md-4">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <div class="small text-muted fw-semibold mb-1">Medicare Timely Filing Window</div>
+                            <div class="fw-bold text-primary"><?php echo htmlspecialchars($macData['medicare_timely_filing']); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <div class="small text-muted fw-semibold mb-1">First-Level Appeals (Redetermination)</div>
+                            <div class="fw-bold text-primary"><?php echo htmlspecialchars($macData['appeals_deadline']); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded-3 bg-light border">
+                            <div class="small text-muted fw-semibold mb-1">First-Pass Clean Claim Target</div>
+                            <div class="fw-bold text-success">98.2% Scrubber Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LCD List -->
+                <?php if (!empty($macData['key_lcds'])): ?>
+                    <div class="mb-4">
+                        <h3 class="h6 fw-bold text-dark mb-3">
+                            <i class="ph ph-file-text-fill text-primary me-1"></i> Active Local Coverage Determinations (LCDs) in <?php echo htmlspecialchars($stateName); ?> (<?php echo htmlspecialchars($macData['code']); ?>):
+                        </h3>
+                        <div class="row g-3">
+                            <?php foreach ($macData['key_lcds'] as $lcd): ?>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start gap-2 p-3 rounded bg-light border small h-100">
+                                        <span class="badge bg-primary text-white font-monospace"><?php echo htmlspecialchars($lcd['id']); ?></span>
+                                        <span class="text-dark fw-medium"><?php echo htmlspecialchars($lcd['name']); ?></span>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Regional Billing Nuances -->
+                <?php if (!empty($macData['billing_nuances'])): ?>
+                    <div class="p-3 rounded-3 bg-light border">
+                        <h3 class="h6 fw-bold text-dark mb-2">
+                            <i class="ph ph-info-fill text-primary me-1"></i> Regional Billing Nuances &amp; Compliance Safeguards:
+                        </h3>
+                        <ul class="list-unstyled mb-0 small text-muted">
+                            <?php foreach ($macData['billing_nuances'] as $nuance): ?>
+                                <li class="d-flex align-items-start gap-2 mb-2">
+                                    <i class="bi bi-arrow-right-circle-fill text-primary mt-1 flex-shrink-0"></i>
+                                    <span><?php echo htmlspecialchars($nuance); ?></span>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+
     <!-- State Cities Directory Grid -->
     <section class="py-5" id="state-cities">
         <div class="container">
@@ -491,7 +747,7 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row g-3">
                 <?php foreach ($stateCities as $city): ?>
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo $stateSlug; ?>/<?php echo $city['city_slug']; ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all">
+                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($stateSlug); ?>/<?php echo htmlspecialchars($city['city_slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <h3 class="h6 fw-bold text-primary mb-1"><?php echo htmlspecialchars($city['city']); ?></h3>
@@ -512,31 +768,67 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Schema for State -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "@id": "<?php echo $canonicalUrl; ?>#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://medinextsolutions.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Locations",
-          "item": "https://medinextsolutions.com/locations/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "<?php echo htmlspecialchars($stateName); ?>",
-          "item": "<?php echo $canonicalUrl; ?>"
-        }
-      ]
-    }
+    <?php
+    $stateKnowsAbout = !empty($macData['knows_about']) ? $macData['knows_about'] : [
+        'Revenue Cycle Management (RCM)',
+        'Statewide Medical Billing Services',
+        'AAPC-Certified Medical Coding',
+        'Medicare MAC Compliance',
+        'Medicaid Reimbursement Optimization'
+    ];
+
+    $stateSchemaGraph = [
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            [
+                '@type' => ['MedicalBusiness', 'ProfessionalService'],
+                '@id' => $canonicalUrl . '#medicalbusiness',
+                'name' => "MEDINEXT SOLUTIONS - {$stateName} Medical Billing & RCM Services",
+                'description' => "Statewide medical billing, AAPC-certified coding, and Medicare MAC " . (!empty($macData['code']) ? $macData['code'] : 'compliance') . " guidelines for healthcare practices across {$stateName}.",
+                'url' => $canonicalUrl,
+                'telephone' => '+1-862-799-2199',
+                'email' => 'info@medinextsolutions.com',
+                'priceRange' => '$$',
+                'areaServed' => [
+                    '@type' => 'State',
+                    'name' => $stateName
+                ],
+                'knowsAbout' => $stateKnowsAbout,
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'addressRegion' => $stateId,
+                    'addressCountry' => 'US'
+                ]
+            ],
+            [
+                '@type' => 'BreadcrumbList',
+                '@id' => $canonicalUrl . '#breadcrumb',
+                'itemListElement' => [
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => 'https://medinextsolutions.com/'
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => 'Locations',
+                        'item' => 'https://medinextsolutions.com/locations/'
+                    ],
+                    [
+                        '@type' => 'ListItem',
+                        'position' => 3,
+                        'name' => $stateName,
+                        'item' => $canonicalUrl
+                    ]
+                ]
+            ]
+        ]
+    ];
+
+    echo json_encode($stateSchemaGraph, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
     </script>
 
 
@@ -591,7 +883,7 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row g-3">
                 <?php foreach ($topMetros as $metro): ?>
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo $metro['state_slug']; ?>/<?php echo $metro['city_slug']; ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all">
+                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($metro['state_slug']); ?>/<?php echo htmlspecialchars($metro['city_slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <h3 class="h6 fw-bold text-primary mb-1"><?php echo htmlspecialchars($metro['city']); ?>, <?php echo htmlspecialchars($metro['state_id']); ?></h3>
@@ -618,7 +910,7 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row g-3">
                 <?php foreach ($allStates as $st): ?>
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo $st['slug']; ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all border-start border-primary border-3">
+                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($st['slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all border-start border-primary border-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <h3 class="h6 fw-bold text-dark mb-1"><?php echo htmlspecialchars($st['name']); ?> (<?php echo htmlspecialchars($st['id']); ?>)</h3>
@@ -635,25 +927,28 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Schema for National Directory -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "@id": "<?php echo $canonicalUrl; ?>#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://medinextsolutions.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Locations",
-          "item": "<?php echo $canonicalUrl; ?>"
-        }
-      ]
-    }
+    <?php
+    $nationalSchemaGraph = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        '@id' => $canonicalUrl . '#breadcrumb',
+        'itemListElement' => [
+            [
+                '@type' => 'ListItem',
+                'position' => 1,
+                'name' => 'Home',
+                'item' => 'https://medinextsolutions.com/'
+            ],
+            [
+                '@type' => 'ListItem',
+                'position' => 2,
+                'name' => 'Locations',
+                'item' => $canonicalUrl
+            ]
+        ]
+    ];
+    echo json_encode($nationalSchemaGraph, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    ?>
     </script>
 
 <?php endif; ?>
