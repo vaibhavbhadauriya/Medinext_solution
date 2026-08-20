@@ -1079,8 +1079,39 @@ document.addEventListener('DOMContentLoaded', () => {
         CounterInit.init();
         SwiperInit.init();
         BlogInsightsSwiper.init();
+    TestimonialsShowcaseSwiper.init();
         MockupAnimation.init();
         ContactForm.init();
         NewsletterForm.init();
     }, 100);
 });
+
+/* ==========================================================
+   19. TESTIMONIALS SHOWCASE SWIPER
+   ========================================================== */
+const TestimonialsShowcaseSwiper = {
+    init() {
+        const swiperEl = document.querySelector('.swiper-testimonials-showcase');
+        if (!swiperEl || typeof Swiper === 'undefined') return;
+
+        new Swiper('.swiper-testimonials-showcase', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 600,
+            pagination: {
+                el: '.tm-swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.tm-swiper-next',
+                prevEl: '.tm-swiper-prev',
+            },
+        });
+    }
+};

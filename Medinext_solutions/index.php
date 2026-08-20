@@ -474,59 +474,190 @@ require_once 'includes/header.php';
 </section>
 
 <!-- ============================================ -->
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS SECTION (Matching Reference Design) -->
 <!-- ============================================ -->
 <section class="section testimonials-section" id="testimonials">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <!-- Section Header -->
+        <div class="section-header text-center" data-aos="fade-up">
             <p class="tm-eyebrow">What Our Clients Say</p>
-            <h2 class="tm-heading">Healthcare leaders trust us<br>with their revenue cycle</h2>
+            <h2 class="tm-heading">Healthcare Leaders Trust Us<br>With Their <span class="gradient-text">Revenue Cycle</span></h2>
         </div>
 
-        <div class="row g-4 align-items-stretch" data-aos="fade-up">
-            <!-- Featured testimonial (left) -->
-            <div class="col-lg-5">
-                <div class="tm-card tm-card-featured h-100">
-                    <blockquote class="tm-quote-featured">
-                        &ldquo;MEDINEXT SOLUTIONS transformed our billing process completely. Our claim acceptance rate jumped from 82% to 98% within three months. Their team handles complex surgical bundling with the kind of precision we couldn&rsquo;t find anywhere else.&rdquo;
-                    </blockquote>
-                    <div class="tm-author">
-                        <p class="tm-name">Dr. Rachel Thompson</p>
-                        <p class="tm-role">Managing Partner, Orthopedic Surgery Practice</p>
+        <!-- Swiper Testimonial Showcase -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-10 col-xl-9" data-aos="zoom-in" data-aos-delay="100">
+                <div class="swiper swiper-testimonials-showcase">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="tm-showcase-wrapper">
+                                <div class="tm-bg-circle-1"></div>
+                                <div class="tm-bg-circle-2"></div>
+                                
+                                <!-- Top-Right Speech Bubble (Cyan/Blue Theme) -->
+                                <div class="tm-quote-bubble tm-bubble-top-right">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true">
+                                        <defs>
+                                            <linearGradient id="tm-bubble-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#0ea5e9" />
+                                                <stop offset="100%" stop-color="#0284c7" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <!-- Bottom-Left Speech Bubble (Cyan/Blue Theme) -->
+                                <div class="tm-quote-bubble tm-bubble-bottom-left">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true" style="transform: rotate(180deg);">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <!-- Main White Box -->
+                                <div class="tm-showcase-box">
+                                    <h3 class="tm-showcase-title">Testimonial</h3>
+                                    <p class="tm-showcase-quote">
+                                        &ldquo;MEDINEXT SOLUTIONS transformed our billing process completely. Our claim acceptance rate jumped from 82% to 98% within three months. Their team handles complex surgical bundling with the kind of precision we couldn&rsquo;t find anywhere else.&rdquo;
+                                    </p>
+                                    <div class="tm-showcase-stars" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="tm-showcase-author">Dr. Rachel Thompson &mdash; Managing Partner, Orthopedic Surgery</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="tm-showcase-wrapper">
+                                <div class="tm-bg-circle-1"></div>
+                                <div class="tm-bg-circle-2"></div>
+                                
+                                <div class="tm-quote-bubble tm-bubble-top-right">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <div class="tm-quote-bubble tm-bubble-bottom-left">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true" style="transform: rotate(180deg);">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <div class="tm-showcase-box">
+                                    <h3 class="tm-showcase-title">Testimonial</h3>
+                                    <p class="tm-showcase-quote">
+                                        &ldquo;Their cardiovascular billing specialists recovered over $200,000 in previously uncollected claims. The mastery of catheterization coding, angiography mapping, and modifier logic is simply unmatched.&rdquo;
+                                    </p>
+                                    <div class="tm-showcase-stars" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="tm-showcase-author">Dr. James Williams &mdash; Chief Medical Officer, Heart &amp; Vascular Center</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="tm-showcase-wrapper">
+                                <div class="tm-bg-circle-1"></div>
+                                <div class="tm-bg-circle-2"></div>
+                                
+                                <div class="tm-quote-bubble tm-bubble-top-right">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <div class="tm-quote-bubble tm-bubble-bottom-left">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true" style="transform: rotate(180deg);">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <div class="tm-showcase-box">
+                                    <h3 class="tm-showcase-title">Testimonial</h3>
+                                    <p class="tm-showcase-quote">
+                                        &ldquo;Switching to MEDINEXT was the best decision for our multi-location dental practice. Insurance eligibility turnaround dropped from days to minutes with zero billing backlog and instant aging recovery.&rdquo;
+                                    </p>
+                                    <div class="tm-showcase-stars" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="tm-showcase-author">Dr. Amanda Patel, DDS &mdash; Founder, Family Dental Associates</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="tm-showcase-wrapper">
+                                <div class="tm-bg-circle-1"></div>
+                                <div class="tm-bg-circle-2"></div>
+                                
+                                <div class="tm-quote-bubble tm-bubble-top-right">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <div class="tm-quote-bubble tm-bubble-bottom-left">
+                                    <svg viewBox="0 0 100 100" class="tm-bubble-svg" aria-hidden="true" style="transform: rotate(180deg);">
+                                        <path d="M 50 8 C 26.8 8 8 26.8 8 50 C 8 73.2 26.8 92 50 92 C 59.5 92 68.3 88.8 75.4 83.5 C 78 93 72 98 67 100 C 84 98 94 84 92 68 C 92 68 92 68 92 50 C 92 26.8 73.2 8 50 8 Z" fill="url(#tm-bubble-grad-1)" />
+                                    </svg>
+                                </div>
+
+                                <div class="tm-showcase-box">
+                                    <h3 class="tm-showcase-title">Testimonial</h3>
+                                    <p class="tm-showcase-quote">
+                                        &ldquo;The 15-day average AR turnaround and 99.4% clean claim accuracy have transformed our practice cash flow. Having dedicated AAPC-certified specialists assigned to our accounts makes all the difference.&rdquo;
+                                    </p>
+                                    <div class="tm-showcase-stars" aria-label="5 out of 5 stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="tm-showcase-author">Dr. Michael Chang, MD &mdash; Director, Multi-Specialty Health Network</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination Bullets & Navigation -->
+                    <div class="tm-swiper-controls mt-4">
+                        <button class="tm-swiper-btn tm-swiper-prev" aria-label="Previous Testimonial">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <div class="swiper-pagination tm-swiper-pagination"></div>
+                        <button class="tm-swiper-btn tm-swiper-next" aria-label="Next Testimonial">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-
-            <!-- Two smaller testimonials (right, stacked) -->
-            <div class="col-lg-7">
-                <div class="tm-card mb-4">
-                    <blockquote class="tm-quote">
-                        &ldquo;Their cardiovascular billing specialists recovered over $200,000 in previously uncollected claims. The mastery of catheterization coding and modifier logic is simply unmatched.&rdquo;
-                    </blockquote>
-                    <div class="tm-author">
-                        <p class="tm-name">Dr. James Williams</p>
-                        <p class="tm-role">Chief Medical Officer, Heart &amp; Vascular Center</p>
-                    </div>
-                </div>
-
-                <div class="tm-card">
-                    <blockquote class="tm-quote">
-                        &ldquo;Switching to MEDINEXT was the best decision for our multi-location dental practice. Insurance eligibility turnaround dropped from days to minutes with zero billing backlog.&rdquo;
-                    </blockquote>
-                    <div class="tm-author">
-                        <p class="tm-name">Dr. Amanda Patel, DDS</p>
-                        <p class="tm-role">Founder, Family Dental Associates</p>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <div class="tm-footer-line" data-aos="fade-up">
+        <div class="tm-footer-line text-center mt-5" data-aos="fade-up">
             <p>Trusted by <strong>500+ healthcare practices</strong> across the United States</p>
         </div>
     </div>
 </section>
-
 
 <!-- ============================================ -->
 <!-- BLOG / NEWS & INSIGHTS CAROUSEL SECTION -->
