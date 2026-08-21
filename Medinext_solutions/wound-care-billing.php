@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Wound%20Care.webp') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Highest Audit Risk in Medicine</h2>
                         <p>Wound care has become one of the most heavily scrutinized specialties by Medicare's Recovery Audit Contractors (RACs) and the OIG. The incredibly high cost of advanced biologics, combined with complex size and depth calculations, creates a massive target for clawbacks. A single discrepancy between the billed wound size and the physician's documentation can trigger a full-scale audit.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> for independent wound care clinics and hospital outpatient wound centers. We provide rigorous, pre-bill auditing of your clinical documentation to ensure absolute alignment with the latest local coverage determinations (LCDs). By mastering the 2026 CPT and HCPCS overhauls, we protect your margins and maintain a <strong>98% clean claim rate</strong>.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-mart-production-7089632.jpg" alt="Specialized clinical wound care nurse applying cellular tissue products and advanced dressings" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Accurate coding for surgical debridement, skin substitutes (Q-codes), and hyperbaric oxygen therapy.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Surviving the 2026 Skin Substitute (CTP) Overhaul</h2>
                         <p>The 2026 CMS final rule completely restructured how Cellular and/or Tissue-Based Products (CTPs) are reimbursed, ending the era of massive markups on specific product brands.</p>

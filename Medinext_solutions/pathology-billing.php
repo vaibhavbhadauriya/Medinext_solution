@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pavel-danilyuk-8442105.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">High-Volume, High-Complexity RCM</h2>
                         <p>Pathology and clinical laboratory billing is characterized by massive transaction volumes, razor-thin margins per accession, and incredibly complex National and Local Coverage Determinations (NCDs/LCDs). Denials for "lack of medical necessity" due to missing or invalid diagnosis codes from the referring physician are the number one cause of revenue leakage in pathology.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for independent laboratories and pathology groups. We implement robust front-end scrubbing to catch invalid ICD-10 codes before claims drop, and we master the complex application of Technical Component (TC) and Professional Component (26) modifiers. Our aggressive denial management maintains a <strong>98% clean claim rate</strong>, ensuring your lab's cash flow remains strong.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-jw-medicare-pvt-ltd-2157283432-34642915.jpg" alt="Pathology laboratory technician running automated clinical chemistry analyzers and specimen assays" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Precision coding for surgical pathology levels, flow cytometry, and automated laboratory panels.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Integrating 2026 Genomic and Microbiology Updates</h2>
                         <p>The 2026 CPT code set introduced significant updates in the rapidly expanding fields of genomics and microbiology. Using outdated codes results in immediate bundled denials.</p>

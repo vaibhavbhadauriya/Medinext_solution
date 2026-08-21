@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-stephentcandrews-9408868.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Revenue Paralysis of Bad Credentialing</h2>
                         <p>Before a physician, nurse practitioner, or allied health professional can bill a single commercial payer or government program, they must pass through an exhausting, bureaucratic maze of primary source verification and specific payer contracting. The credentialing and enrollment process (often called "paneling") routinely takes 90 to 180 days. A minor paperwork error?such as an improperly loaded NPI, a missing medical school transcript, or a blank line on an application?will instantly send your enrollment to the back of the queue, losing your practice months of legal collections.</p>
                         <p>MEDINEXT SOLUTIONS's standalone <strong>Provider Credentialing and Enrollment Division</strong> eliminates this administrative nightmare. We handle the brutal data entry, track every expiration date across your entire clinical staff, and aggressively follow up with Medicare, Medicaid, and commercial networks. We ensure your providers exist perfectly in the payer's system, allowing your cash flow to initiate the very first day a new doctor sees a patient.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-officialdesign-africa-2148145889-35043676.jpg" alt="Healthcare provider credentialing specialist completing CAQH profiles and commercial payer enrollment" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Comprehensive credentialing, re-attestation, and hospital privilege management for medical providers.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Comprehensive CAQH ProView Management</h2>
                         <p>The Council for Affordable Quality Healthcare (CAQH) ProView database is the central nervous system of commercial credentialing. Almost all major payers (Blue Cross, Aetna, Cigna, UHC) pull their verification data directly from it.</p>

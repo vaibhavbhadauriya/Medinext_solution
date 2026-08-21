@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-5327865.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Administrative Burden of Mental Health Care</h2>
                         <p>Behavioral health and mental health billing operates under a completely different paradigm than traditional medicine. Rather than physical procedures, providers primarily bill for documented time, clinical evaluations, and complex psychotherapeutic modalities. Insurers weaponize this by enforcing strict session limits, exhaustive credentialing hurdles, and intense scrutiny over medical necessity documentation. Maintaining an in-house billing process often results in unmanageable AR aging and widespread revenue loss for therapists, psychiatrists, and ABA clinics.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized, end-to-end <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for behavioral health professionals. From managing complex Medicare/Medicaid carve-outs to aggressively fighting authorization denials, our AAPC-certified coders assume total control of your financial backend. We boast a <strong>98% clean claim rate</strong>, allowing your clinicians to focus their energy entirely on patient well-being rather than fighting insurance companies.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-laura-james-6097750.jpg" alt="Behavioral health clinician reviewing psychiatric diagnostic documentation and patient chart" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Behavioral health documentation, psychotherapy time tracking, and mental health coding</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering Behavioral Health CPT Codes</h2>
                         <p>Psychiatric and psychological coding requires strict adherence to time constraints. Billing a 60-minute code for a 40-minute session is a severe compliance violation, while consistently undercoding robs your practice of rightful compensation.</p>

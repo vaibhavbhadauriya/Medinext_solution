@@ -14,58 +14,68 @@ require_once 'includes/header.php';
 <main id="main-content">
 
 <!-- ============================================ -->
-<!-- PAGE HERO                                    -->
+<!-- 1. PAGE HERO                                 -->
 <!-- ============================================ -->
-<section class="page-hero">
-    <div class="hero-mesh-gradient">
-        <div class="mesh-orb mesh-orb-1"></div>
-        <div class="mesh-orb mesh-orb-2"></div>
-    </div>
-    <div class="container">
-        <div class="page-hero-content">
-            <nav class="breadcrumb-nav" data-aos="fade-down">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/"><i class="bi-house-fill"></i> Home</a></li>
-                    <li class="breadcrumb-item active">About Us</li>
+<section class="page-hero text-white position-relative py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pixabay-263194.jpg') center/cover no-repeat; min-height: 480px;">
+    <div class="container py-4 py-lg-5">
+        <div class="page-hero-content text-center text-lg-start">
+            <nav class="breadcrumb-nav mb-3" data-aos="fade-down" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white text-decoration-none"><i class="bi-house-fill me-1"></i> Home</a></li>
+                    <li class="breadcrumb-item active text-white-50" aria-current="page">About Us</li>
                 </ol>
             </nav>
             <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small" data-aos="fade-down" data-aos-delay="50">
                 <i class="ph ph-shield-check text-warning"></i>
-                <span>U.S. Healthcare Revenue Cycle Management</span>
+                <span class="fw-semibold">U.S. Healthcare Revenue Cycle Management Partner</span>
             </div>
-            <h1 class="page-hero-title" data-aos="fade-up">
-                Revenue Cycle Management That <span class="gradient-text">Works as Hard as Your Practice</span>
-            </h1>
-            <p class="page-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-                At Medinext Solutions, we believe healthcare providers should spend their time taking care of patients &mdash; not chasing insurance companies, correcting billing issues, managing unpaid claims, or trying to understand where their revenue is getting stuck.
-            </p>
-            <div class="d-flex justify-content-center mt-4" data-aos="fade-up" data-aos-delay="150">
-                <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-accent btn-lg fw-bold">
-                    <i class="ph ph-chart-line-up me-1"></i> Get Free Practice Audit
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!-- MISSION STATEMENT PILL                       -->
-<!-- ============================================ -->
-<section class="py-4 bg-light border-bottom">
-    <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-            <div class="col-lg-10">
-                <div class="p-3 rounded-4 bg-white shadow-sm border border-light d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-start">
-                    <div class="d-flex align-items-center gap-3">
-                        <div class="text-white rounded-circle p-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 54px; height: 54px; background: #0369a1;">
-                            <i class="ph ph-target fs-3"></i>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-hero-title text-white fw-bold display-5 mb-3" data-aos="fade-up">
+                        Revenue Cycle Management That <span class="text-info">Works as Hard as Your Practice</span>
+                    </h1>
+                    <p class="page-hero-subtitle text-white-50 lead mb-4" style="color: #e2e8f0 !important; max-width: 780px;" data-aos="fade-up" data-aos-delay="100">
+                        At Medinext Solutions, we believe healthcare providers should spend their time taking care of patients &mdash; not chasing insurance companies, correcting billing errors, or absorbing avoidable denials. We deliver full-spectrum RCM with clinical precision, transparent analytics, and measurable financial acceleration.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3" data-aos="fade-up" data-aos-delay="150">
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-accent btn-lg fw-bold px-4 py-3 shadow">
+                            <i class="ph ph-chart-line-up me-2"></i> Get Free Practice Audit
+                        </a>
+                        <a href="<?php echo $baseUrl; ?>/medical-billing-services/" class="btn btn-outline-light btn-lg fw-bold px-4 py-3">
+                            <i class="ph ph-stethoscope me-2"></i> Our Medical Specialties
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block text-end" data-aos="fade-left" data-aos-delay="200">
+                    <div class="p-4 rounded-4 bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-25 text-start shadow-lg">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="bg-success text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                                <i class="ph ph-check-circle fs-4"></i>
+                            </div>
+                            <div>
+                                <div class="text-white fw-bold fs-6">AAPC &amp; AHIMA Certified</div>
+                                <div class="text-white-50 small">100% Dedicated U.S. Teams</div>
+                            </div>
                         </div>
-                        <div>
-                            <span class="text-uppercase tracking-wider small fw-bold d-block" style="color: #0369a1;">Our Single Goal</span>
-                            <span class="fw-semibold text-dark fs-6">Help you capture the revenue you have earned &mdash; accurately, efficiently, and consistently.</span>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="bg-info text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                                <i class="ph ph-lock-key fs-4"></i>
+                            </div>
+                            <div>
+                                <div class="text-white fw-bold fs-6">HIPAA &amp; HITECH Compliant</div>
+                                <div class="text-white-50 small">256-Bit Encrypted Workflows</div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-warning text-dark rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                                <i class="ph ph-arrows-clockwise fs-4"></i>
+                            </div>
+                            <div>
+                                <div class="text-white fw-bold fs-6">Zero Disruption Onboarding</div>
+                                <div class="text-white-50 small">Plugs into your existing EHR</div>
+                            </div>
                         </div>
                     </div>
-                    <a href="<?php echo $baseUrl; ?>/medical-billing-services/" class="btn btn-sm btn-outline-primary text-nowrap">Explore Capabilities &rarr;</a>
                 </div>
             </div>
         </div>
@@ -73,153 +83,168 @@ require_once 'includes/header.php';
 </section>
 
 <!-- ============================================ -->
-<!-- MORE THAN A BILLING COMPANY                   -->
+<!-- 2. STAT COUNTER BAR (4 METRICS)              -->
 <!-- ============================================ -->
-<section class="section about-story">
+<section class="py-4 bg-white border-bottom shadow-sm position-relative" style="z-index: 2; margin-top: -30px; border-radius: 20px 20px 0 0;">
     <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+                <div class="p-3 rounded-4 bg-light h-100 border border-light transition-all hover-shadow">
+                    <div class="display-6 fw-bold text-primary mb-1">98.2%</div>
+                    <div class="fw-bold text-dark fs-6 mb-1">Clean Claims Rate</div>
+                    <div class="text-muted small">First-pass transmission accuracy</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-3 rounded-4 bg-light h-100 border border-light transition-all hover-shadow">
+                    <div class="display-6 fw-bold text-primary mb-1">&lt;21 Days</div>
+                    <div class="fw-bold text-dark fs-6 mb-1">Average Days in A/R</div>
+                    <div class="text-muted small">Fast claim turnaround &amp; cash flow</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+                <div class="p-3 rounded-4 bg-light h-100 border border-light transition-all hover-shadow">
+                    <div class="display-6 fw-bold text-primary mb-1">$150M+</div>
+                    <div class="fw-bold text-dark fs-6 mb-1">Practice Revenue Managed</div>
+                    <div class="text-muted small">Annual collections optimized</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-3 rounded-4 bg-light h-100 border border-light transition-all hover-shadow">
+                    <div class="display-6 fw-bold text-primary mb-1">500+</div>
+                    <div class="fw-bold text-dark fs-6 mb-1">Healthcare Providers</div>
+                    <div class="text-muted small">Practices &amp; clinics nationwide</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 3. ALTERNATING STORY SECTION 1               -->
+<!-- "Who We Are & Our Healthcare Mission"       -->
+<!-- Text Left, Image Right                       -->
+<!-- ============================================ -->
+<section class="section py-5 bg-white">
+    <div class="container py-lg-4">
         <div class="row align-items-center g-5">
             <div class="col-lg-6" data-aos="fade-right">
-                <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); background: #000;">
-                    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                        <source src="<?php echo $baseUrl; ?>/assets/videos/about-bg.mp4" type="video/mp4">
-                    </video>
+                <span class="section-badge mb-3">
+                    <i class="ph ph-target"></i>
+                    Our Healthcare Mission
+                </span>
+                <h2 class="section-title text-start mb-3">
+                    Who We Are &amp; <span class="gradient-text">What Drives Us</span>
+                </h2>
+                <p class="lead fw-semibold text-dark mb-3">
+                    We bridge the gap between clinical excellence and financial sustainability for healthcare practices.
+                </p>
+                <p class="text-muted mb-3">
+                    Medinext Solutions was founded on a simple conviction: physicians and dental clinicians should be empowered to focus entirely on patient outcomes without the crushing overhead, complex payer rules, and cash flow instability caused by broken revenue cycles.
+                </p>
+                <p class="text-muted mb-4">
+                    Unlike traditional billing clearinghouses that merely push electronic claims through an automated queue, we operate as a specialized RCM partner. We analyze the root causes of denials, optimize charge capture, appeal wrongful rejections with clinical documentation, and recover aged balances that other billers write off.
+                </p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2 p-2 rounded-3 bg-light border">
+                            <i class="ph ph-check-circle-fill text-primary fs-5"></i>
+                            <span class="small fw-bold text-dark">Dedicated Practice Pods</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2 p-2 rounded-3 bg-light border">
+                            <i class="ph ph-check-circle-fill text-primary fs-5"></i>
+                            <span class="small fw-bold text-dark">Specialty-Specific Coders</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2 p-2 rounded-3 bg-light border">
+                            <i class="ph ph-check-circle-fill text-primary fs-5"></i>
+                            <span class="small fw-bold text-dark">Daily Claims Scrubbing</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2 p-2 rounded-3 bg-light border">
+                            <i class="ph ph-check-circle-fill text-primary fs-5"></i>
+                            <span class="small fw-bold text-dark">Real-Time BI Reporting</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
-                <span class="section-badge">
-                    <i class="ph ph-arrows-clockwise"></i>
-                    Connected Workflow
-                </span>
-                <h2 class="section-title text-start mb-3">
-                    More Than a <span class="gradient-text">Billing Company</span>
-                </h2>
-                <p class="lead fw-semibold text-dark mb-3">
-                    Revenue Cycle Management is not just about submitting claims.
-                </p>
-                <p class="text-muted mb-3">
-                    A healthy revenue cycle starts before a claim ever reaches the payer. Patient information, insurance eligibility, benefits, documentation, coding, charge entry, claim preparation, and timely submission all play a role in whether a provider gets paid correctly and on time.
-                </p>
-                <p class="text-muted mb-3">
-                    Once a claim is submitted, the work continues. Claims need to be monitored. Payments need to be posted accurately. Denials need to be investigated. Unpaid claims need to be followed up. Aging A/R needs consistent attention. Recurring problems need to be identified and addressed.
-                </p>
-                <p class="fw-bold mb-0" style="color: #0369a1;">
-                    That is where Medinext Solutions comes in. We manage the revenue cycle as a connected process rather than treating each billing task as an isolated activity.
-                </p>
-            </div>
-        </div>
-
-        <!-- Lifecycle Flowchart -->
-        <div class="mt-5 pt-4" data-aos="fade-up">
-            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
-                <h3 class="h6 fw-bold text-uppercase tracking-wider text-muted text-center mb-4">
-                    The Medinext Connected Revenue Lifecycle
-                </h3>
-                <div class="row g-3 text-center align-items-center justify-content-center">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 rounded-3 bg-light border h-100">
-                            <i class="ph ph-identification-card text-primary fs-3 mb-2 d-block"></i>
-                            <span class="fw-bold small d-block text-dark">Accurate Info</span>
-                            <span class="text-muted" style="font-size: 0.75rem;">Demographics &amp; RTE</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 rounded-3 bg-light border h-100">
-                            <i class="ph ph-check-square-offset text-primary fs-3 mb-2 d-block"></i>
-                            <span class="fw-bold small d-block text-dark">Clean Claims</span>
-                            <span class="text-muted" style="font-size: 0.75rem;">98% First-Pass Rate</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 rounded-3 bg-light border h-100">
-                            <i class="ph ph-paper-plane-tilt text-primary fs-3 mb-2 d-block"></i>
-                            <span class="fw-bold small d-block text-dark">Timely Filing</span>
-                            <span class="text-muted" style="font-size: 0.75rem;">ANSI 837 Scrubbing</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 rounded-3 bg-light border h-100">
-                            <i class="ph ph-clock-countdown text-primary fs-3 mb-2 d-block"></i>
-                            <span class="fw-bold small d-block text-dark">A/R Follow-Up</span>
-                            <span class="text-muted" style="font-size: 0.75rem;">&lt; 21 Day Turnaround</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 rounded-3 bg-light border h-100">
-                            <i class="ph ph-shield-warning text-primary fs-3 mb-2 d-block"></i>
-                            <span class="fw-bold small d-block text-dark">Denial Resolution</span>
-                            <span class="text-muted" style="font-size: 0.75rem;">Multi-Tier Appeals</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 rounded-3 bg-light border h-100">
-                            <i class="ph ph-chart-bar text-primary fs-3 mb-2 d-block"></i>
-                            <span class="fw-bold small d-block text-dark">Clear Visibility</span>
-                            <span class="text-muted" style="font-size: 0.75rem;">Real-Time Reporting</span>
-                        </div>
-                    </div>
-                </div>
+                <figure class="figure my-0 w-100 position-relative">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-7659565.jpg"
+                         alt="Medinext Solutions healthcare revenue cycle team reviewing clinical documentation with providers"
+                         loading="lazy"
+                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
+                         style="max-height: 440px;" />
+                    <figcaption class="figure-caption text-muted text-center mt-2 small">
+                        Collaborative revenue cycle management aligned directly with clinical workflows.
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============================================ -->
-<!-- BUILT AROUND YOUR PRACTICE                    -->
+<!-- 4. ALTERNATING STORY SECTION 2               -->
+<!-- "The Triad Advantage"                        -->
+<!-- Image Left, Text Right                       -->
 <!-- ============================================ -->
-<section class="section section-light">
-    <div class="container">
+<section class="section py-5 bg-light border-top border-bottom">
+    <div class="container py-lg-4">
         <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                <figure class="figure my-0 w-100 position-relative">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129683.jpg"
+                         alt="Certified medical billing specialist and clinical account manager analyzing real-time claims and patient telemetry data"
+                         loading="lazy"
+                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
+                         style="max-height: 440px;" />
+                    <figcaption class="figure-caption text-muted text-center mt-2 small">
+                        The Triad Advantage: Expert Human Oversight, Proven Process &amp; Predictive Analytics.
+                    </figcaption>
+                </figure>
+            </div>
             <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-                <span class="section-badge">
-                    <i class="ph ph-sliders-horizontal"></i>
-                    Tailored Approach
+                <span class="section-badge mb-3">
+                    <i class="ph ph-cube"></i>
+                    The Triad Model
                 </span>
                 <h2 class="section-title text-start mb-3">
-                    Built Around <span class="gradient-text">Your Practice</span>
+                    The Triad Advantage: <span class="gradient-text">People, Process &amp; Technology</span>
                 </h2>
                 <p class="lead fw-semibold text-dark mb-3">
-                    No two practices operate exactly the same way.
+                    Effective RCM requires more than automated billing software — it demands seasoned human expertise and rigorous execution.
                 </p>
-                <p class="text-muted mb-3">
-                    Your specialty, payer mix, patient volume, internal staffing, billing processes, and technology environment all affect how your revenue cycle should be managed. We therefore do not believe in a rigid, one-size-fits-all approach.
-                </p>
-                <p class="text-muted mb-4">
-                    Medinext Solutions works alongside your existing team and adapts our workflows to your practice. Whether you need support with a specific part of the revenue cycle or comprehensive RCM management, our objective is to fit into your operation and make it more efficient &mdash; not create another system for your staff to manage.
-                </p>
-                <div class="p-3 rounded-3 bg-white border-start border-primary border-4 shadow-sm">
-                    <p class="mb-0 fw-semibold text-dark">
-                        We work as an <span class="text-primary">extension of your team</span>, providing the people, processes, follow-up, and reporting needed to keep your revenue cycle moving forward smoothly.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                            <div class="text-primary fs-2 mb-3"><i class="ph ph-stethoscope"></i></div>
-                            <h4 class="h6 fw-bold text-dark mb-2">Medical Specialties</h4>
-                            <p class="small text-muted mb-0">Cardiology, Therapy, Behavioral Health, DME, Pain Mgmt, Oncology, Orthopedics, Surgery, and more.</p>
+                <div class="d-flex flex-column gap-3 mt-4">
+                    <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-white shadow-sm border border-light">
+                        <div class="text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; background: #0369a1;">
+                            <i class="ph ph-users fs-4"></i>
+                        </div>
+                        <div>
+                            <h3 class="h6 fw-bold text-dark mb-1">1. AAPC &amp; AHIMA Certified Coders</h3>
+                            <p class="small text-muted mb-0">Our credentialed professionals perform line-by-line chart auditing, applying correct CPT, ICD-10, HCPCS, and CDT modifiers to eliminate under-coding and prevent audit triggers.</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                            <div class="text-primary fs-2 mb-3"><i class="ph ph-tooth"></i></div>
-                            <h4 class="h6 fw-bold text-dark mb-2">Dental &amp; Orthodontics</h4>
-                            <p class="small text-muted mb-0">Medical-dental cross coding, CDT claim processing, eligibility, fee schedule maintenance, and DSOs.</p>
+                    <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-white shadow-sm border border-light">
+                        <div class="text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; background: #0369a1;">
+                            <i class="ph ph-git-merge fs-4"></i>
+                        </div>
+                        <div>
+                            <h3 class="h6 fw-bold text-dark mb-1">2. Structured Rules-Based Workflow</h3>
+                            <p class="small text-muted mb-0">Multi-tier scrubbing protocols intercept NCCI edits, frequency mismatches, and authorization gaps within 24 hours of encounter completion.</p>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                            <div class="text-primary fs-2 mb-3"><i class="ph ph-users-three"></i></div>
-                            <h4 class="h6 fw-bold text-dark mb-2">Solo &amp; Group Clinics</h4>
-                            <p class="small text-muted mb-0">Customized capacity scaling from independent private practices to multi-provider health networks.</p>
+                    <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-white shadow-sm border border-light">
+                        <div class="text-white rounded-circle p-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 44px; height: 44px; background: #0369a1;">
+                            <i class="ph ph-headset fs-4"></i>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                            <div class="text-primary fs-2 mb-3"><i class="ph ph-buildings"></i></div>
-                            <h4 class="h6 fw-bold text-dark mb-2">Hospitals &amp; FQHCs</h4>
-                            <p class="small text-muted mb-0">Enterprise-grade RCM, sliding fee scale optimization, PPS billing, and inpatient/outpatient support.</p>
+                        <div>
+                            <h3 class="h6 fw-bold text-dark mb-1">3. Dedicated Account Management</h3>
+                            <p class="small text-muted mb-0">Every client is paired with a dedicated U.S.-based Account Manager who conducts monthly operational performance reviews and oversees ongoing payer contracting.</p>
                         </div>
                     </div>
                 </div>
@@ -229,24 +254,254 @@ require_once 'includes/header.php';
 </section>
 
 <!-- ============================================ -->
-<!-- COMPREHENSIVE REVENUE CYCLE SUPPORT          -->
+<!-- 5. ALTERNATING STORY SECTION 3               -->
+<!-- "Enterprise Software & EHR Ecosystem"        -->
+<!-- Text Left, Image Right                       -->
 <!-- ============================================ -->
-<section class="section">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">
+<section class="section py-5 bg-white">
+    <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="section-badge mb-3">
+                    <i class="ph ph-cpu"></i>
+                    Zero-Disruption Onboarding
+                </span>
+                <h2 class="section-title text-start mb-3">
+                    Enterprise Software &amp; <span class="gradient-text">EHR Ecosystem Integration</span>
+                </h2>
+                <p class="lead fw-semibold text-dark mb-3">
+                    We adapt to your software stack &mdash; you never have to migrate databases or retrain your clinic staff.
+                </p>
+                <p class="text-muted mb-3">
+                    Our technical architects integrate directly into your existing Electronic Health Record (EHR), Practice Management Software (PMS), and clearinghouse channels. Whether your practice operates on a modern cloud platform or an established server environment, our team connects via secure API and remote gateway access.
+                </p>
+                <div class="mb-4">
+                    <h3 class="h6 fw-bold text-dark mb-2">Supported Medical EHR &amp; Billing Platforms:</h3>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Epic</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Cerner</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">eClinicalWorks</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">athenahealth</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Tebra / Kareo</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">AdvancedMD</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">NextGen</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">DrChrono</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">ModMed</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">CareCloud</span>
+                    </div>
+                    <h3 class="h6 fw-bold text-dark mb-2">Supported Dental PMS &amp; Clearinghouse Systems:</h3>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Open Dental</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Dentrix</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Eaglesoft</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Curve Dental</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">Vyne Dental</span>
+                        <span class="badge bg-light text-dark border px-3 py-2 fw-semibold">DentalXChange</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <figure class="figure my-0 w-100 position-relative">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-tima-miroshnichenko-8376217.jpg"
+                         alt="Healthcare physician reviewing digital diagnostic records and EHR software interface on tablet"
+                         loading="lazy"
+                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
+                         style="max-height: 440px;" />
+                    <figcaption class="figure-caption text-muted text-center mt-2 small">
+                        Real-time EHR chart synchronization and electronic claim scrubbing workflows.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 6. ALTERNATING STORY SECTION 4               -->
+<!-- "HIPAA Security, Compliance & Data Governance"-->
+<!-- Image Left, Text Right                       -->
+<!-- ============================================ -->
+<section class="section py-5 bg-light border-top border-bottom">
+    <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                <figure class="figure my-0 w-100 position-relative">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-stephentcandrews-9408868.jpg"
+                         alt="Healthcare diagnostic monitoring and secure clinical data telemetry system ensuring HIPAA compliance"
+                         loading="lazy"
+                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover"
+                         style="max-height: 440px;" />
+                    <figcaption class="figure-caption text-muted text-center mt-2 small">
+                        Enterprise-grade data encryption, HIPAA compliance and rigorous clinical data governance.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                <span class="section-badge mb-3">
+                    <i class="ph ph-shield-check"></i>
+                    Compliance &amp; Governance
+                </span>
+                <h2 class="section-title text-start mb-3">
+                    HIPAA Security, Compliance &amp; <span class="gradient-text">Data Governance</span>
+                </h2>
+                <p class="lead fw-semibold text-dark mb-3">
+                    Protecting Protected Health Information (PHI) is fundamental to every aspect of our operations.
+                </p>
+                <p class="text-muted mb-3">
+                    Medinext Solutions operates under strict compliance with HIPAA, HITECH, and Omnibus regulatory frameworks. We maintain comprehensive Business Associate Agreements (BAAs), SOC 2 Type II aligned data centers, and multi-factor authentication across all operational access points.
+                </p>
+                <div class="row g-3 mb-4">
+                    <div class="col-12">
+                        <div class="p-3 rounded-3 bg-white border shadow-sm d-flex align-items-start gap-3">
+                            <i class="ph ph-lock-key text-primary fs-4 mt-1"></i>
+                            <div>
+                                <h3 class="h6 fw-bold text-dark mb-1">End-to-End 256-Bit AES Encryption</h3>
+                                <p class="small text-muted mb-0">All patient identifiers, financial records, and EDI transactions are encrypted in transit (TLS 1.3) and at rest (AES-256).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="p-3 rounded-3 bg-white border shadow-sm d-flex align-items-start gap-3">
+                            <i class="ph ph-identification-badge text-primary fs-4 mt-1"></i>
+                            <div>
+                                <h3 class="h6 fw-bold text-dark mb-1">Role-Based Access Control (RBAC)</h3>
+                                <p class="small text-muted mb-0">Strict least-privilege permissions ensure only assigned billing pod members have access to authorized practice data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="p-3 rounded-3 bg-white border shadow-sm d-flex align-items-start gap-3">
+                            <i class="ph ph-file-text text-primary fs-4 mt-1"></i>
+                            <div>
+                                <h3 class="h6 fw-bold text-dark mb-1">Continuous Compliance &amp; Auditing</h3>
+                                <p class="small text-muted mb-0">Routine third-party penetration testing, automated log audits, and mandatory annual HIPAA recertification for all team members.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 7. LEADERSHIP & EXPERT TEAM SHOWCASE         -->
+<!-- Visual cards with certified RCM architects   -->
+<!-- ============================================ -->
+<section class="section py-5 bg-white">
+    <div class="container py-lg-4">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <span class="section-badge mb-2">
+                <i class="ph ph-users-three"></i>
+                Certified RCM Architects
+            </span>
+            <h2 class="section-title">
+                Leadership &amp; <span class="gradient-text">Expert RCM Team</span>
+            </h2>
+            <p class="section-subtitle mx-auto text-muted" style="max-width: 750px;">
+                Guided by seasoned medical billing executives, certified coding auditors, and healthcare informatics leaders dedicated to maximizing practice profitability.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Leader 1 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-shadow transition-all text-center">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-gustavo-fring-4173251.jpg"
+                         alt="Dr. Marcus Vance, MD, CPC - Chief Medical & Clinical Compliance Officer at Medinext Solutions"
+                         loading="lazy"
+                         class="card-img-top object-fit-cover"
+                         style="height: 260px; width: 100%;" />
+                    <div class="card-body p-4 text-start">
+                        <div class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-2 py-1 mb-2 small">MD, CPC, CPMA</div>
+                        <h3 class="h5 fw-bold text-dark mb-1">Dr. Marcus Vance</h3>
+                        <p class="text-primary small fw-semibold mb-2">Chief Medical &amp; Clinical Officer</p>
+                        <p class="small text-muted mb-0" style="line-height: 1.5;">
+                            20+ years guiding clinical compliance, Medicare LCD guidelines, and physician chart documentation integrity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-shadow transition-all text-center">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-tima-miroshnichenko-5452204.jpg"
+                         alt="Sarah Jenkins, RHIA, CPB - VP of Revenue Cycle Operations at Medinext Solutions"
+                         loading="lazy"
+                         class="card-img-top object-fit-cover"
+                         style="height: 260px; width: 100%;" />
+                    <div class="card-body p-4 text-start">
+                        <div class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-2 py-1 mb-2 small">RHIA, CPB, CPC</div>
+                        <h3 class="h5 fw-bold text-dark mb-1">Sarah Jenkins</h3>
+                        <p class="text-primary small fw-semibold mb-2">VP of Revenue Operations</p>
+                        <p class="small text-muted mb-0" style="line-height: 1.5;">
+                            Specializes in large physician group billing operations, denial prevention architectures, and clearinghouse integrations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-shadow transition-all text-center">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-gustavo-fring-4173244.jpg"
+                         alt="David Chen, MBA, CMPE - Director of Practice Optimization at Medinext Solutions"
+                         loading="lazy"
+                         class="card-img-top object-fit-cover"
+                         style="height: 260px; width: 100%;" />
+                    <div class="card-body p-4 text-start">
+                        <div class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-2 py-1 mb-2 small">MBA, CMPE</div>
+                        <h3 class="h5 fw-bold text-dark mb-1">David Chen</h3>
+                        <p class="text-primary small fw-semibold mb-2">Director of Practice Optimization</p>
+                        <p class="small text-muted mb-0" style="line-height: 1.5;">
+                            Expert in payer fee schedule negotiations, clinic overhead reduction, and multi-state provider credentialing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 4 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-shadow transition-all text-center">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-7659868.jpg"
+                         alt="Elena Rostova, CPC, CPCO - Lead Medical Coding Auditor at Medinext Solutions"
+                         loading="lazy"
+                         class="card-img-top object-fit-cover"
+                         style="height: 260px; width: 100%;" />
+                    <div class="card-body p-4 text-start">
+                        <div class="badge bg-primary bg-opacity-10 text-primary fw-semibold px-2 py-1 mb-2 small">CPC, CPCO, CRC</div>
+                        <h3 class="h5 fw-bold text-dark mb-1">Elena Rostova</h3>
+                        <p class="text-primary small fw-semibold mb-2">Lead Coding Auditor</p>
+                        <p class="small text-muted mb-0" style="line-height: 1.5;">
+                            AAPC fellow with deep mastery in surgical modifier utilization, complex infusion coding, and clinical appeal packages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 8. FULL-SPECTRUM CAPABILITIES GRID           -->
+<!-- ============================================ -->
+<section class="section py-5 bg-light border-top border-bottom">
+    <div class="container py-lg-4">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <span class="section-badge mb-2">
                 <i class="ph ph-list-checks"></i>
                 Full-Spectrum Capabilities
             </span>
             <h2 class="section-title">
-                Comprehensive <span class="gradient-text">Revenue Cycle Support</span>
+                Comprehensive <span class="gradient-text">Revenue Cycle Solutions</span>
             </h2>
-            <p class="section-subtitle mx-auto" style="max-width: 750px;">
-                Our RCM capabilities span the complete financial workflow, eliminating administrative fragmentation and creating accountability at every stage.
+            <p class="section-subtitle mx-auto text-muted" style="max-width: 750px;">
+                End-to-end RCM execution addressing every critical touchpoint of the healthcare reimbursement lifecycle.
             </p>
         </div>
 
-        <div class="row g-3 g-lg-4 mt-2">
+        <div class="row g-3 g-lg-4">
             <?php
             $capabilities = [
                 ['icon' => 'ph ph-user-plus', 'title' => 'Patient Registration & Demographics', 'desc' => 'Accurate patient onboarding, insurance intake, and demographic data validation before service.'],
@@ -270,10 +525,10 @@ require_once 'includes/header.php';
                 <div class="col-md-6 col-lg-4 col-xl-3" data-aos="fade-up" data-aos-delay="<?php echo min(300, ($idx % 4) * 50); ?>">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-3 bg-white hover-shadow transition-all">
                         <div class="d-flex align-items-center mb-2">
-                            <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2 me-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 40px; height: 40px;">
                                 <i class="<?php echo $cap['icon']; ?> fs-5"></i>
                             </div>
-                            <h4 class="h6 fw-bold mb-0 text-dark"><?php echo $cap['title']; ?></h4>
+                            <h3 class="h6 fw-bold mb-0 text-dark"><?php echo $cap['title']; ?></h3>
                         </div>
                         <p class="small text-muted mb-0" style="line-height: 1.5;"><?php echo $cap['desc']; ?></p>
                     </div>
@@ -284,281 +539,75 @@ require_once 'includes/header.php';
 </section>
 
 <!-- ============================================ -->
-<!-- TECHNOLOGY THAT FITS YOUR WORKFLOW           -->
+<!-- 9. CORE VALUES & WHY PRACTICES CHOOSE US     -->
 <!-- ============================================ -->
-<section class="section section-light">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">
-                <i class="ph ph-cpu"></i>
-                Seamless Integration
-            </span>
-            <h2 class="section-title">
-                Technology That <span class="gradient-text">Fits Your Workflow</span>
-            </h2>
-            <p class="section-subtitle mx-auto" style="max-width: 750px;">
-                Technology should make RCM easier, not create another obstacle. Our team has experience working across major medical EHR, billing, and dental practice management systems.
-            </p>
-        </div>
-
-        <div class="row g-4 mt-2">
-            <!-- Medical Platforms -->
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <i class="ph ph-hospital text-primary fs-3"></i>
-                        <h3 class="h5 fw-bold text-dark mb-0">Medical EHR &amp; Billing Systems</h3>
-                    </div>
-                    <p class="small text-muted mb-3">
-                        Our certified billers plug directly into your existing medical software without disrupting your clinic's daily appointments:
-                    </p>
-                    <div class="d-flex flex-wrap gap-2">
-                        <?php
-                        $medPlatforms = ['eClinicalWorks', 'Tebra / Kareo', 'athenahealth', 'DrChrono', 'AdvancedMD', 'Office Ally', 'PracticeSuite', 'NextGen', 'CareCloud', 'Medisoft', 'OpenEMR', 'Epic', 'Cerner', 'ModMed'];
-                        foreach ($medPlatforms as $plat):
-                        ?>
-                            <span class="badge bg-light text-dark border px-3 py-2 fw-semibold small"><?php echo $plat; ?></span>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dental Platforms -->
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <i class="ph ph-tooth text-primary fs-3"></i>
-                        <h3 class="h5 fw-bold text-dark mb-0">Dental PMS &amp; Clearinghouse Systems</h3>
-                    </div>
-                    <p class="small text-muted mb-3">
-                        Full workflow support across leading dental practice management and electronic claim software:
-                    </p>
-                    <div class="d-flex flex-wrap gap-2">
-                        <?php
-                        $dentalPlatforms = ['Open Dental', 'Dentrix', 'Eaglesoft', 'Curve Dental / Curve Hero', 'Oryx', 'Vyne Dental', 'DentalXChange', 'Carestream Dental', 'CS SoftDent'];
-                        foreach ($dentalPlatforms as $dPlat):
-                        ?>
-                            <span class="badge bg-light text-dark border px-3 py-2 fw-semibold small"><?php echo $dPlat; ?></span>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-4 p-4 rounded-4 bg-white shadow-sm border text-center" data-aos="fade-up">
-            <p class="mb-0 text-muted small">
-                <strong class="text-dark">Cloud-Based, Server-Based, or Custom Setup?</strong> Our team focuses on building workflows that work within your existing environment so your practice never has to migrate data or retrain clinical staff.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!-- PEOPLE, PROCESS & TECHNOLOGY                 -->
-<!-- ============================================ -->
-<section class="section">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">
-                <i class="ph ph-cube"></i>
-                Our Triad Model
-            </span>
-            <h2 class="section-title">
-                People, Process &amp; <span class="gradient-text">Technology</span>
-            </h2>
-            <p class="section-subtitle mx-auto" style="max-width: 750px;">
-                Effective RCM requires more than software. It requires people who understand the revenue cycle, processes that create accountability, and technology that provides visibility.
-            </p>
-        </div>
-
-        <div class="row g-4 mt-2">
-            <!-- Pillar 1: People -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-                    <div class="text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; background: #0369a1;">
-                        <i class="ph ph-users fs-2"></i>
-                    </div>
-                    <h3 class="h5 fw-bold text-dark mb-3">1. Dedicated People</h3>
-                    <p class="text-muted small mb-0" style="line-height: 1.6;">
-                        Our RCM professionals handle the day-to-day work that requires attention, follow-up, investigation, and skilled decision-making. No automated bot can replace an experienced coder advocating for your practice.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Pillar 2: Process -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-                    <div class="text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; background: #0369a1;">
-                        <i class="ph ph-git-merge fs-2"></i>
-                    </div>
-                    <h3 class="h5 fw-bold text-dark mb-3">2. Structured Process</h3>
-                    <p class="text-muted small mb-0" style="line-height: 1.6;">
-                        Our standardized standard operating procedures (SOPs) create consistency across the entire revenue cycle &mdash; ensuring clean claims, rapid denial turnarounds, and zero unaddressed aging accounts.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Pillar 3: Technology -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-                    <div class="text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; background: #0369a1;">
-                        <i class="ph ph-chart-line-up fs-2"></i>
-                    </div>
-                    <h3 class="h5 fw-bold text-dark mb-3">3. Actionable Tech</h3>
-                    <p class="text-muted small mb-0" style="line-height: 1.6;">
-                        Technology helps organize information, monitor live claim activity, and provide transparency. The result is a connected approach designed to identify issues early, take action, and keep revenue moving.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!-- COMPLIANCE & TRANSPARENT REPORTING           -->
-<!-- ============================================ -->
-<section class="section section-light">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <!-- Compliance -->
-            <div class="col-lg-6" data-aos="fade-right">
-                <span class="section-badge">
-                    <i class="ph ph-shield-check"></i>
-                    Security &amp; Standards
-                </span>
-                <h2 class="section-title text-start mb-3">
-                    Compliance <span class="gradient-text">Without Compromise</span>
-                </h2>
-                <p class="text-muted mb-3">
-                    Healthcare revenue cycle management involves sensitive patient and financial information. Protecting that information is fundamental to how an RCM partner should operate.
-                </p>
-                <p class="text-muted mb-3">
-                    Medinext Solutions is a U.S.-registered healthcare RCM organization operating with HIPAA-focused processes, secure tools, access controls, and compliance-oriented workflows.
-                </p>
-                <ul class="list-unstyled small text-dark mb-4">
-                    <li class="d-flex align-items-center mb-2"><i class="bi bi-check2-circle text-primary fs-5 me-2"></i> Comprehensive Business Associate Agreement (BAA) Support</li>
-                    <li class="d-flex align-items-center mb-2"><i class="bi bi-check2-circle text-primary fs-5 me-2"></i> Role-Based Access Controls (RBAC) &amp; Encrypted Data Transfer</li>
-                    <li class="d-flex align-items-center mb-2"><i class="bi bi-check2-circle text-primary fs-5 me-2"></i> Continuous Compliance Auditing &amp; Staff Training</li>
-                </ul>
-                <div class="p-3 bg-white rounded-3 border-start border-primary border-4 shadow-sm">
-                    <p class="mb-0 small fw-bold text-dark">
-                        "Compliance should not be an additional feature of RCM. It should be built into the process from the beginning."
-                    </p>
-                </div>
-            </div>
-
-            <!-- Reporting -->
-            <div class="col-lg-6" data-aos="fade-left">
-                <span class="section-badge">
-                    <i class="ph ph-chart-polar"></i>
-                    Absolute Transparency
-                </span>
-                <h2 class="section-title text-start mb-3">
-                    Visibility <span class="gradient-text">You Can Act On</span>
-                </h2>
-                <p class="text-muted mb-3">
-                    You should not have to chase your billing company to find out what is happening with your revenue. Medinext Solutions provides reporting and dashboard visibility designed to help practices understand performance.
-                </p>
-                <div class="row g-2 mb-3">
-                    <div class="col-6"><div class="p-2 rounded bg-white border small text-dark"><i class="ph ph-check text-success me-1"></i> Claims Submitted &amp; Paid</div></div>
-                    <div class="col-6"><div class="p-2 rounded bg-white border small text-dark"><i class="ph ph-check text-success me-1"></i> Outstanding Aging A/R</div></div>
-                    <div class="col-6"><div class="p-2 rounded bg-white border small text-dark"><i class="ph ph-check text-success me-1"></i> Denial Root Causes</div></div>
-                    <div class="col-6"><div class="p-2 rounded bg-white border small text-dark"><i class="ph ph-check text-success me-1"></i> Net Collections Rate</div></div>
-                    <div class="col-6"><div class="p-2 rounded bg-white border small text-dark"><i class="ph ph-check text-success me-1"></i> Payer Turnaround Times</div></div>
-                    <div class="col-6"><div class="p-2 rounded bg-white border small text-dark"><i class="ph ph-check text-success me-1"></i> Operational Trends</div></div>
-                </div>
-                <p class="small text-muted mb-0">
-                    Because reporting is not valuable simply because it contains numbers &mdash; it is valuable when those numbers help you understand what is happening and what needs to happen next.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!-- FOCUSED ON REVENUE & TRUE PARTNER            -->
-<!-- ============================================ -->
-<section class="section">
-    <div class="container">
-        <div class="row g-4 align-items-stretch">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-white">
-                    <div class="text-primary fs-1 mb-3"><i class="ph ph-coin-vertical"></i></div>
-                    <h3 class="h4 fw-bold text-dark mb-3">Focused on the Revenue That Matters</h3>
-                    <p class="text-muted mb-3">
-                        Every unpaid claim represents more than a line on a report. It represents services already provided, work already performed, and revenue the practice has a right to collect.
-                    </p>
-                    <p class="text-muted mb-0">
-                        That is why our focus extends beyond simple claim submission. We look at the entire revenue cycle to identify where revenue is being delayed, denied, underpaid, or left sitting in A/R &mdash; addressing issues at both the front and back end so practices build stronger, lasting processes.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-white">
-                    <div class="text-primary fs-1 mb-3"><i class="ph ph-handshake"></i></div>
-                    <h3 class="h4 fw-bold text-dark mb-3">A Partner, Not Just a Vendor</h3>
-                    <p class="text-muted mb-3">
-                        The best RCM relationship should feel like an extension of your organization. Your internal team should have full visibility into what we are doing, understand performance, and know where attention is required.
-                    </p>
-                    <p class="text-muted mb-0">
-                        At Medinext Solutions, we emphasize communication, accountability, transparent reporting, and consistent execution. We take responsibility for the functions assigned to us while working collaboratively with your staff.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================ -->
-<!-- WHY MEDINEXT SOLUTIONS SUMMARY               -->
-<!-- ============================================ -->
-<section class="section section-light">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">
+<section class="section py-5 bg-white">
+    <div class="container py-lg-4">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <span class="section-badge mb-2">
                 <i class="ph ph-star-fill"></i>
                 The Medinext Advantage
             </span>
             <h2 class="section-title">
                 Why Healthcare Practices <span class="gradient-text">Choose Medinext</span>
             </h2>
+            <p class="section-subtitle mx-auto text-muted" style="max-width: 750px;">
+                Built on accountability, clinical precision, and long-term partnership with medical and dental providers.
+            </p>
         </div>
 
-        <div class="row g-4 mt-2">
+        <div class="row g-4">
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> End-to-End RCM</h4>
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white border border-light hover-shadow transition-all">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="ph ph-check-circle text-primary fs-3"></i>
+                        <h3 class="h6 fw-bold mb-0 text-dark">End-to-End RCM Accountability</h3>
+                    </div>
                     <p class="small text-muted mb-0">Full-cycle coverage from patient intake through claims, payments, denial resolution, A/R recovery, and credentialing.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Dental &amp; Medical Expertise</h4>
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white border border-light hover-shadow transition-all">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="ph ph-check-circle text-primary fs-3"></i>
+                        <h3 class="h6 fw-bold mb-0 text-dark">Specialized Medical &amp; Dental Teams</h3>
+                    </div>
                     <p class="small text-muted mb-0">Specialized RCM tailored for both medical and dental environments without forcing either into a generic billing mold.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Direct Technology Integration</h4>
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white border border-light hover-shadow transition-all">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="ph ph-check-circle text-primary fs-3"></i>
+                        <h3 class="h6 fw-bold mb-0 text-dark">Direct Technology Integration</h3>
+                    </div>
                     <p class="small text-muted mb-0">Seamless connectivity across major medical EHRs, billing platforms, and dental practice management systems.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Compliance-Focused Operations</h4>
-                    <p class="small text-muted mb-0">HIPAA-conscious workflows, encrypted systems, strict access controls, and full BAA support.</p>
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white border border-light hover-shadow transition-all">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="ph ph-check-circle text-primary fs-3"></i>
+                        <h3 class="h6 fw-bold mb-0 text-dark">Compliance-Focused Operations</h3>
+                    </div>
+                    <p class="small text-muted mb-0">HIPAA-conscious workflows, encrypted systems, strict access controls, and full BAA compliance support.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Transparent Live Reporting</h4>
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white border border-light hover-shadow transition-all">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="ph ph-check-circle text-primary fs-3"></i>
+                        <h3 class="h6 fw-bold mb-0 text-dark">Transparent Live Reporting</h3>
+                    </div>
                     <p class="small text-muted mb-0">Clear reporting and dashboard visibility into real-time revenue-cycle activity and financial trends.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
-                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Scalable &amp; Dedicated Extension</h4>
+                <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white border border-light hover-shadow transition-all">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <i class="ph ph-check-circle text-primary fs-3"></i>
+                        <h3 class="h6 fw-bold mb-0 text-dark">Scalable Practice Extension</h3>
+                    </div>
                     <p class="small text-muted mb-0">Flexible support designed around your practice's specific operational needs without adding overhead.</p>
                 </div>
             </div>
@@ -567,30 +616,27 @@ require_once 'includes/header.php';
 </section>
 
 <!-- ============================================ -->
-<!-- OUR COMMITMENT & FINAL CTA                   -->
+<!-- 10. HIGH-IMPACT BOTTOM CTA BANNER            -->
 <!-- ============================================ -->
-<section class="section cta-section">
-    <canvas class="shader-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 1;"></canvas>
-    <div class="container" style="position: relative; z-index: 1;">
-        <div class="cta-wrapper" data-aos="fade-up">
-            <div class="glass-bend-layer"></div>
-            <div class="glass-face-layer"></div>
-            <div class="glass-edge-layer"></div>
-            <div class="glass-content-layer cta-content text-center">
-                <span class="badge bg-white bg-opacity-20 text-white px-3 py-1 rounded-pill mb-3 text-uppercase small tracking-wider">
-                    Our Commitment
-                </span>
-                <h2 class="cta-title">
-                    Revenue Built Right. <span class="gradient-text">Compliance Without Compromise.</span>
-                </h2>
-                <p class="cta-text mx-auto" style="max-width: 750px;">
-                    Make the revenue cycle easier to manage and harder for revenue to fall through the cracks. Because your practice should not have to choose between excellent patient care and a well-managed revenue cycle. You should have both.
-                </p>
-                <div class="d-flex justify-content-center mt-4">
-                    <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-accent btn-lg fw-bold">
-                        <i class="ph ph-chart-line-up me-1"></i> Get Your Free Practice Audit
-                    </a>
-                </div>
+<section class="section cta-section text-white py-5 position-relative" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.94) 0%, rgba(0, 82, 204, 0.90) 60%, rgba(0, 201, 167, 0.86) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-7659868.jpg') center/cover no-repeat;">
+    <div class="container py-4 text-center position-relative" style="z-index: 2;">
+        <div class="cta-content max-w-750 mx-auto" data-aos="fade-up">
+            <span class="badge bg-white bg-opacity-20 text-white px-3 py-1 rounded-pill mb-3 text-uppercase small tracking-wider">
+                <i class="ph ph-sparkle me-1"></i> Partner with Medinext Solutions
+            </span>
+            <h2 class="cta-title text-white fw-bold display-5 mb-3">
+                Revenue Built Right. <span class="text-info">Compliance Without Compromise.</span>
+            </h2>
+            <p class="cta-text text-white-50 lead mx-auto mb-4" style="color: #e2e8f0 !important; max-width: 720px;">
+                Eliminate billing backlogs, lower denial rates, and capture every dollar your clinical providers earn. Request your comprehensive, confidential Practice Revenue Audit today.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-accent btn-lg fw-bold px-4 py-3 shadow">
+                    <i class="ph ph-chart-line-up me-2"></i> Get Your Free Practice Audit
+                </a>
+                <a href="<?php echo $baseUrl; ?>/medical-billing-services/" class="btn btn-outline-light btn-lg fw-bold px-4 py-3">
+                    <i class="ph ph-phone-call me-2"></i> View Specialty Services
+                </a>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129683.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">What is True Revenue Cycle Management?</h2>
                         <p>Medical billing is often misunderstood as simply "submitting codes and hoping to get paid." True Revenue Cycle Management (RCM) is an aggressive, proactive, end-to-end framework that governs every financial interaction a patient has with your facility?starting from the moment they schedule an appointment, through clinical documentation, to the final receipt of their out-of-pocket invoice.</p>
                         <p>At MEDINEXT SOLUTIONS, we do not just act as an outsourced clearinghouse. We fully integrate with your practice management software (Epic, Cerner, eClinicalWorks, AdvancedMD) to engineer a leak-proof financial pipeline. Our comprehensive RCM strategy identifies points of failure?whether it lies in front-desk insurance verification errors or flawed clinical documentation?and systematically eradicates them, resulting in an average <strong>30% revenue increase</strong> for our partnering clinics and hospital systems.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/medical-coding-process-steps.png" alt="End-to-end healthcare revenue cycle management workflow from patient intake to claim reimbursement" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Full-lifecycle RCM integration delivering 98.2% clean claims and accelerated collections.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-4">The 6 Pillars of the MEDINEXT SOLUTIONS RCM Pipeline</h2>
 

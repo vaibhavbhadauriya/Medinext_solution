@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Internal%20Medicine.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Conquering the Complexities of Adult Medicine Billing</h2>
                         <p>Internal medicine is defined by complex, multi-system disease management. Internists spend significant time deciphering intricate symptoms, coordinating with specialists, and managing extensive medication regimens. Unfortunately, if this high level of Medical Decision Making (MDM) is not explicitly translated into ICD-10 and CPT codes, the practice suffers immense revenue leakage. Insurers routinely downcode complex E/M visits unless the documentation rigidly defends the level of care provided.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> built for the rigorous demands of internal medicine. Our AAPC-certified coders ensure your time and expertise are fully compensated, focusing heavily on accurate E/M leveling, capturing prolonged services, and operationalizing highly profitable care management programs. With initial claim denial rates surging in 2026 to nearly 11.8% industry-wide, our proactive, AI-assisted denial prevention strategies secure a <strong>98% clean claim rate</strong> for our clients.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129104.jpg" alt="Internal medicine physician reviewing complex multi-condition patient chart and medical records" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Accurate evaluation and management (E/M) coding and chronic care documentation for internal medicine.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Optimizing Evaluation and Management (E/M) Coding</h2>
                         <p>The revised E/M guidelines shifted the focus from history and physical exam elements to total time and MDM. This is a massive advantage for internal medicine, provided the documentation is structured correctly.</p>

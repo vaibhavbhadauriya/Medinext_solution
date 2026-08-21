@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/denial%20management.png') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Anatomy of a Denied Claim</h2>
                         <p>In modern healthcare, commercial carriers and Medicare utilize sophisticated, AI-driven adjudication algorithms explicitly designed to delay or deny payment. When an Electronic Remittance Advice (ERA) returns a zero-dollar payment, it is rarely due to a simple typo. More commonly, the claim has tripped a complex National Correct Coding Initiative (NCCI) edit, a Local Coverage Determination (LCD) medical necessity mismatch, or an invisible prior authorization trap.</p>
                         <p>If your internal staff simply relies on hitting the "resubmit" button or indiscriminately writing off aging inventory past 90 days, you are actively losing up to 20% of your total net revenue. MEDINEXT SOLUTIONS deploys a dedicated <a href="revenue-cycle-management/">Denial Management</a> task force that doesn't just chase individual claims?we perform forensic root cause analysis to stop denials from ever happening in the first place.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/medical-coding-process-steps.png" alt="Medical claims denial resolution flowchart and coding audit steps" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Systematic denial analysis, clinical appeal generation, and revenue recovery</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Decoding Standard Denial Reason Codes (CARC/RARC)</h2>
                         <p>Our operational strategy begins with the instant translation and sorting of ANSI Claim Adjustment Reason Codes (CARC).</p>

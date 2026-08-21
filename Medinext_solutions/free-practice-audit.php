@@ -16,12 +16,12 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <!-- 1. PAGE HERO SECTION (Dark Hero Theme)       -->
 <!-- ============================================ -->
-<section class="page-hero">
-    <div class="hero-mesh-gradient">
+<section class="page-hero" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-negativespace-48604.jpg') center/cover no-repeat;">
+    <div class="hero-mesh-gradient" style="opacity: 0.35;">
         <div class="mesh-orb mesh-orb-1"></div>
         <div class="mesh-orb mesh-orb-2"></div>
     </div>
-    <div class="container">
+    <div class="container position-relative" style="z-index: 2;">
         <div class="page-hero-content">
             <!-- Breadcrumb Navigation -->
             <nav class="breadcrumb-nav" data-aos="fade-down" aria-label="Breadcrumb">
@@ -91,6 +91,23 @@ require_once 'includes/header.php';
                         Most healthcare administrators and practice owners do not have full visibility into their exact first-pass clean claim rate, payer-specific aging buckets, or revenue lost to "unspecified" downcoding. Our forensic audit delivers a complete diagnostic X-ray of your financial health.
                     </p>
 
+                    <!-- Inline RCM Audit & Coding Lifecycle Workflow Graphic -->
+                    <div class="card p-3 rounded-4 bg-white border shadow-sm mb-4">
+                        <h3 class="h6 fw-bold text-dark mb-2 text-uppercase tracking-wider">
+                            <i class="ph ph-tree-structure me-1 text-primary"></i> 6-Stage Forensic Audit Lifecycle
+                        </h3>
+                        <figure class="figure mb-0 w-100 text-center">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/medical-coding-process-steps.png"
+                                 alt="6-Stage Medical Coding and Revenue Cycle Management Audit Workflow"
+                                 loading="lazy"
+                                 class="img-fluid rounded-3 w-100 object-fit-contain"
+                                 style="max-height: 280px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">
+                                AAPC-certified review covering charge capture, denial mapping, and reimbursement velocity
+                            </figcaption>
+                        </figure>
+                    </div>
+
                     <!-- 5-Point Forensic Breakdown -->
                     <div class="audit-features-list mb-4">
                         <div class="audit-feature-item d-flex gap-3 mb-3 p-3 rounded-3 bg-white border shadow-sm">
@@ -139,7 +156,12 @@ require_once 'includes/header.php';
                             </div>
                             <div>
                                 <h3 class="h6 fw-bold text-dark mb-1">Payer Fee Schedule Audit</h3>
-                                <p class="small text-muted mb-0">We compare your actual payer remittances against your contracted fee schedules to uncover silent underpayments.</p>
+                                <p class="small text-muted mb-2">We compare your actual payer remittances against your contracted fee schedules to uncover silent underpayments.</p>
+                                <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/fee%20schedule.jpeg"
+                                     alt="Commercial and Medicare Fee Schedule Underpayment Analysis"
+                                     loading="lazy"
+                                     class="img-fluid rounded-3 border w-100 shadow-sm mt-1"
+                                     style="max-height: 180px; object-fit: cover;" />
                             </div>
                         </div>
                     </div>

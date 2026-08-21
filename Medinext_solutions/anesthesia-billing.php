@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-shvetsa-4483340.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Mathematical Precision of Anesthesia Billing</h2>
                         <p>Unlike standard medical billing which relies on flat-fee CPT codes, anesthesia billing is a complex mathematical equation based on Base Units, Time Units, and Modifying Units, all multiplied by an annual Conversion Factor. A single error in calculating time (e.g., misinterpreting exact start/stop times) or a missed physical status modifier results in immediate revenue loss.</p>
                         <p>MEDINEXT SOLUTIONS provides elite <a href="revenue-cycle-management/">revenue cycle management</a> engineered specifically for anesthesiologists and CRNAs. We stay ahead of the curve, immediately integrating the <strong>2026 Anesthesia Conversion Factors ($20.4976 Standard, $20.5998 APM-Qualifying)</strong> into our systems. By rigorously auditing your concurrency and time records, we ensure you capture every rightfully earned dollar while maintaining strict compliance, yielding a <strong>98% clean claim rate</strong>.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/fee%20schedule.jpeg" alt="Anesthesia base unit time calculation ledger and conversion factor fee schedule" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Anesthesia base unit formulas, physical status modifiers, and time-based reimbursement</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the Anesthesia Formula</h2>
                         <p>Total Anesthesia Payment = (Base Units + Time Units + Modifying Units) x Conversion Factor.</p>

@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Orthopedic.webp') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Complexities of Orthopedic Revenue Cycle Management</h2>
                         <p>Orthopedic billing is incredibly complex, characterized by high-dollar surgical procedures, intricate global periods, and frequent use of modifiers. From managing initial consultations to complex multi-surgeon reconstructive operations, a minor coding error can result in thousands of dollars in denied claims and delayed revenue. Navigating the rules surrounding global surgical packages and appropriately unbundling services are major hurdles for orthopedic practices.</p>
                         <p>MEDINEXT SOLUTIONS offers specialized, end-to-end <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for orthopedic surgeons and clinics. Our AAPC-certified coders understand the nuances of musculoskeletal coding, ensuring that every fracture care, joint replacement, and arthroscopic procedure is billed accurately. We maintain a <strong>98% clean claim rate</strong>, significantly reducing AR days and driving higher cash flow for your practice.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-mikhail-nilov-28123697.jpg" alt="Orthopedic surgeon reviewing musculoskeletal X-rays and joint replacement surgical plans" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Accurate coding for fracture care, arthroscopy, joint reconstruction, and global surgical periods.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering Orthopedic CPT Codes and Global Periods</h2>
                         <p>Orthopedic coding requires strict adherence to global surgical package rules and the precise use of modifiers to ensure you are paid for every medically necessary service provided.</p>

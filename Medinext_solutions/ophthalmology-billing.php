@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Ophthalmology.jpeg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Vision vs. Medical Billing Divide</h2>
                         <p>Ophthalmology billing is uniquely challenging because it requires managing two entirely different payer systems: routine vision insurance (e.g., VSP, EyeMed) and standard medical insurance (e.g., Medicare, BCBS). A single mistake in determining whether a patient's visit is primarily for a refractive error (billed to vision) or a medical pathology like glaucoma or macular degeneration (billed to medical) results in immediate denials and frustrated patients.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for ophthalmology practices and ASCs. We seamlessly navigate the dual-insurance landscape and ensure you capture maximum reimbursement for both E/M visits and specialized Eye Codes (92002-92014). With the 2026 regulatory changes significantly impacting surgical reimbursement, our proactive denial management secures a <strong>98% clean claim rate</strong> to protect your bottom line.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-martabranco-31362989.jpg" alt="Ophthalmologist performing precision diagnostic eye exam with phoropter and OCT imaging" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Specialized billing for cataract surgery, bilateral eye procedures, and diagnostic vision testing.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Navigating the 2026 Cataract Surgery Cuts</h2>
                         <p>The 2026 CMS updates brought severe cuts to common ophthalmic procedures. Standard cataract surgery (CPT 66984) saw an <strong>11% reduction in surgeon reimbursement</strong> when performed in a facility setting (ASC or HOPD). Furthermore, there is now an <strong>18% payment gap</strong> between office and facility settings for YAG capsulotomies.</p>

@@ -12,7 +12,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Hospital%20Billing.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -40,6 +40,11 @@ require_once 'includes/header.php';
                         <p>Hospitals and integrated health systems operate the most complex revenue cycles in the healthcare industry. Managing inpatient admissions, emergency department throughput, outpatient surgeries, and affiliated physician groups requires a massive, coordinated effort. When communication breaks down between clinical documentation integrity (CDI) teams, coding departments, and the central billing office, the result is millions of dollars in leaked revenue, inflated AR days, and severe compliance risks.</p>
                         <p>Furthermore, the shift toward value-based purchasing, bundled payments, and intense Recovery Audit Contractor (RAC) scrutiny means hospitals must code with perfect accuracy. Over-coding triggers devastating audits; under-coding starves the facility of the cash it needs to operate.</p>
                         <p>MEDINEXT SOLUTIONS serves as a strategic <a href="revenue-cycle-management/">Revenue Cycle Management</a> partner for acute care hospitals, critical access hospitals (CAHs), and regional health systems. We provide scalable, enterprise-level solutions that bridge the gap between clinical care and financial reimbursement.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-5327865.jpg" alt="Enterprise hospital network and multi-facility clinical revenue cycle management" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Scalable enterprise RCM workflows for integrated health systems and multi-specialty hospital networks.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Inpatient Coding & DRG Optimization</h2>
                         <p>Inpatient reimbursement is primarily driven by the Medicare Severity Diagnosis Related Group (MS-DRG) system. A single missing diagnosis code can shift a case to a lower-weighted DRG, instantly costing the hospital thousands of dollars on a single admission.</p>

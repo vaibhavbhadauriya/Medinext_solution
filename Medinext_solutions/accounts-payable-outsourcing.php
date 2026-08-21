@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/AR.png') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -43,6 +43,11 @@ require_once 'includes/header.php';
                         <p>In growing healthcare practices, surgery centers, and Dental Support Organizations (DSOs), managing vendor invoices often becomes a chaotic, paper-heavy burden. Staff members spend countless hours manually routing paper invoices for approval, tracking down missing packing slips, and cutting physical checks. This manual Accounts Payable (AP) process is not just slow—it is incredibly expensive. Industry studies show that manually processing a single invoice can cost a healthcare organization up to $15 in labor and materials.</p>
                         <p>Furthermore, manual AP processes are highly susceptible to human error, resulting in duplicate payments, missed early-payment discounts, and late fees. When clinical staff and practice managers are bogged down in vendor disputes and invoice data entry, they are pulled away from their primary objective: patient care and revenue generation.</p>
                         <p>MEDINEXT SOLUTIONS offers a comprehensive <a href="healthcare-operations/">Accounts Payable Outsourcing service</a> designed specifically for the complexities of the healthcare industry. By migrating your AP to our digitized, automated platform, we drastically reduce your operational overhead, enforce strict compliance, and provide executives with real-time financial dashboards.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-tima-miroshnichenko-9574536.jpg" alt="Automated healthcare accounts payable ledger and invoice processing analytics" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Automated healthcare accounts payable processing and digital invoice audit trails</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">End-to-End AP Automation and Digitization</h2>
                         <p>We completely eliminate paper from your AP workflow. Our process begins with intelligent invoice capture.</p>

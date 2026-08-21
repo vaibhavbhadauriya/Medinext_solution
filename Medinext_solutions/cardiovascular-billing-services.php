@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/cardio.webp') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">Why Cardiology Billing is Statistically the Most Audited Specialty</h2>
                         <p>Cardiology and cardiovascular billing encompass arguably the most complex set of CPT variables in the entire medical coding dictionary. Ranging from routine electrocardiograms (ECGs) in the office to life-saving multi-vessel cardiac catheterizations and electrophysiology (EP) studies in the hospital, the volume of disparate codes is staggering. Payers monitor cardiology claims mercilessly. A single modifier error or an accidental unbundling of an echo component can instantly trigger RAC (Recovery Audit Contractor) audits and massive revenue clawbacks.</p>
                         <p>MEDINEXT SOLUTIONS specializes in high-acuity <a href="revenue-cycle-management/">revenue cycle management</a> exclusively engineered for cardiovascular practices. Whether you operate an independent cardiology clinic, a dedicated vascular center, or a hospital-anchored EP group, our AAPC-certified specialists deliver a <strong>98% clean claim rate</strong>, shrinking your AR days and recovering revenue that generalist billers routinely leave behind.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/prior%20auth.webp" alt="Cardiovascular diagnostic testing and catheterization prior authorization workflow" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Cardiology procedural prior authorization and medical necessity clearance</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the Cardiology CPT Code Spectrum</h2>
                         <p>Coding cardiovascular procedures requires an intimate understanding of hemodynamics, vascular anatomy, and the precise combination of professional and technical billing components. MEDINEXT SOLUTIONS's coders isolate and capture every billable segment of your physician's work.</p>

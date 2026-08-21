@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Emergency%20Medicine.jpeg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Chaos and Complexity of ER Billing</h2>
                         <p>Emergency medicine operates in a chaotic, high-velocity environment where life-saving clinical decisions happen in minutes. Unfortunately, this often results in fragmented documentation. Because emergency physicians see patients without prior histories and must rule out life-threatening conditions, the cognitive load is immense. However, if the chart fails to explicitly document the Medical Decision Making (MDM) regarding differential diagnoses and independent test interpretations, insurers will ruthlessly downcode high-level visits (99285) to low-level E/Ms (99283).</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for independent ER groups and hospital-employed emergency physicians. We understand the nuances of the 2023/2024 AMA E/M guideline overhauls which dramatically shifted ED leveling away from history and physical exams, focusing purely on MDM. We maintain a <strong>98% clean claim rate</strong>, ensuring your life-saving interventions are fully and compliantly reimbursed.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pixabay-263402.jpg" alt="Hospital emergency department trauma bay entrance with illuminated red emergency sign" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Hospital emergency medicine trauma resuscitation, E/M level 5 acuity, and critical care coding</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering ED E/M Leveling (99281-99285)</h2>
                         <p>Unlike standard outpatient E/M codes, emergency department codes cannot be leveled based on time. They must be leveled strictly on MDM.</p>

@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/PT_billing.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Why Internal PT Billing Is Costing You Money</h2>
                         <p>Physical therapy billing is notoriously relentless. Between enforcing strictly timed service minimums, defending medical necessity for prolonged rehabilitative care, and ensuring absolute compliance with Medicare's shifting threshold guidelines, in-house staff are simply stretched too thin. When administrative staff simultaneously manage patient scheduling, front-desk intake, and complex claim scrubbing, costly errors are inevitable. In PT, a single miscalculated CPT unit translates directly to lost revenue.</p>
                         <p>MEDINEXT SOLUTIONS offers an uncompromising, end-to-end <a href="revenue-cycle-management/">revenue cycle management</a> solution exclusively tailored for physical therapy practices. We function as a seamless extension of your clinic, absorbing the immense administrative weight of PT billing. With a team of AAPC-certified coders leading the charge, we elevate your financial performance, achieving a <strong>98% first-pass clean claim rate</strong> and an average 30% increase in total revenue collected.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-mikhail-nilov-27793082.jpg" alt="Physical therapist guiding patient through therapeutic exercise and musculoskeletal rehabilitation" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Flawless execution of the 8-minute rule, GP modifier compliance, and therapy cap tracking.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Navigating the Core Physical Therapy CPT Codes</h2>
                         <p>A profitable PT practice relies heavily on precision in both untimed evaluation codes and timed therapeutic modalities. MEDINEXT SOLUTIONS's coders meticulously review your clinical documentation to ensure maximum compliant billing of standard physical therapy CPT codes, including:</p>

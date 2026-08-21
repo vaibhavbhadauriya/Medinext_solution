@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129104.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The New Era of Correctional Healthcare Revenue</h2>
                         <p>For decades, the "Inmate Exclusion Policy" meant that the moment an individual was incarcerated, the financial burden for their healthcare shifted entirely to the county or state. Sheriffs' offices and Departments of Corrections have hemorrhaged municipal budgets covering off-site hospitalizations and specialty care. However, federal legislative changes taking full effect in 2026 have radically altered this landscape.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for jails, prisons, and correctional healthcare contractors. We provide aggressive Medicaid enrollment tracking, off-site hospitalization billing, and TPL (Third-Party Liability) recovery. By shifting allowable costs back to Medicaid and commercial payers, we routinely save municipalities <strong>20-40% on their annual inmate healthcare expenditures</strong>.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-officialdesign-africa-2148145889-35043676.jpg" alt="Correctional facility healthcare provider reviewing medical compliance and inmate Medicaid documentation" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Correctional healthcare clinical evaluation, Medicaid reentry waiver tracking, and off-site inpatient billing</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">2026 Medicaid Suspension vs. Termination</h2>
                         <p>The Consolidated Appropriations Act (CAA) mandated a fundamental shift in how states handle Medicaid for incarcerated individuals. Effective January 1, 2026, <strong>all states are federally prohibited from terminating Medicaid enrollment due to incarceration</strong>; they must instead suspend it.</p>

@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/PT_billing.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Complex Realities of Therapy Billing</h2>
                         <p>Therapy billing is widely known as one of the most highly scrutinized sectors in healthcare finance. Medicare, Medicaid, and commercial payers enforce strict regulations regarding treatment caps, medical necessity documentation, and timed service codes. A single omission?like forgetting the GP, GO, or GN modifier, or miscalculating the 8-minute rule?can trigger an immediate, automated claim denial.</p>
                         <p>At MEDINEXT SOLUTIONS, we provide end-to-end <a href="revenue-cycle-management/">revenue cycle management</a> specific to rehabilitative care. Our team of AAPC-certified coders tracks the ever-changing guidelines of therapy billing, guaranteeing a <strong>98% clean claim rate</strong>. By partnering with us, you remove the administrative burden from your clinical staff, enabling them to focus entirely on patient recovery while we ensure you get paid securely and swiftly.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/Speech%20Therapy.jpg" alt="Multidisciplinary rehabilitation clinic providing physical, occupational, and speech therapy" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Integrated multi-disciplinary therapy billing with automated modifier assignment (GP, GO, GN).</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Comprehensive Coverage Across All Rehabilitative Disciplines</h2>
                         <p>Unlike generic billing companies, we have specialized units dedicated to the specific branches of therapy. We know that the CPT codes and rules for an SLP differ wildly from those of a physical therapist. We cover:</p>

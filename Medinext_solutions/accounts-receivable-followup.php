@@ -12,7 +12,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/AR.png') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -40,6 +40,11 @@ require_once 'includes/header.php';
                         <p>Submitting a clean claim is only the first step in the revenue cycle. The true test of a healthcare organization's financial health is its ability to actually collect that revenue. As claims age past 60, 90, and 120 days, the probability of ever collecting payment drops precipitously. According to the MGMA, claims older than 120 days are only collected at a rate of 10-20%.</p>
                         <p>Most in-house billing teams simply do not have the time to systematically work their Accounts Receivable (A/R) reports. They are overwhelmed with the daily grind of verifying insurance, answering patient calls, and posting new payments. Consequently, high-dollar claims sit in a "pending" status indefinitely while insurance companies rely on timely filing limits to legally expire the debt.</p>
                         <p>MEDINEXT SOLUTIONS offers dedicated <a href="healthcare-operations/">A/R Follow-Up services</a> that act as the financial engine of your practice. We do not just resubmit claims; we forensically investigate them, call the payers, negotiate the release of funds, and recover the money you have already earned.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/denial%20management.png" alt="Accounts receivable recovery workflow and denial resolution flowchart" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Comprehensive accounts receivable liquidation and claim resolution process</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Systematic Aging A/R Resolution</h2>
                         <p>We deploy a highly structured, tiered approach to A/R recovery, prioritizing high-yield claims to deliver an immediate influx of cash to your organization.</p>

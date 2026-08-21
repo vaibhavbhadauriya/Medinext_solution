@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Oncology.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Most Complex Restructuring in Decades</h2>
                         <p>Radiation Oncology billing is currently undergoing a massive structural transformation. The 2026 CPT updates have completely rewritten the rules for treatment delivery and image guidance, bundling previously distinct services into comprehensive, complexity-based tiers. Freestanding cancer centers and hospital-based radiation oncology departments using outdated coding templates will face immediate, catastrophic cash flow interruptions.</p>
                         <p>MEDINEXT SOLUTIONS delivers specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for Radiation Oncology. Our RO-certified coding team operates within your oncology-specific EHR (ARIA or MOSAIQ), ensuring every simulation, physics calculation, and daily treatment is captured correctly under the radically altered 2026 guidelines. We maintain a <strong>98% clean claim rate</strong>, shielding your practice from RO Model compliance audits.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-jw-medicare-pvt-ltd-2157283432-34642915.jpg" alt="Radiation oncology linear accelerator treatment planning and dosimetry delivery suite" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Expert coding for IMRT, stereotactic radiosurgery (SRS/SBRT), and complex dosimetry planning.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">The 2026 IMRT and Delivery Overhaul</h2>
                         <p>For 2026, the AMA executed a total overhaul of radiation treatment delivery codes to align with the bundled payments favored by CMS.</p>

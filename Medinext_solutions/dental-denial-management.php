@@ -12,7 +12,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/denial%20management.png') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -39,6 +39,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Hidden Cost of Unworked Denials</h2>
                         <p>In the high-volume environment of a dental practice, claim denials are inevitable. However, how a practice handles these denials dictates its profitability. Often, front-office staff simply lack the time to sit on hold with insurance representatives, write detailed appeal letters, or gather the necessary intraoral photos and periodontal charting to overturn a denial. As a result, thousands of dollars in legitimate production are quietly written off every month.</p>
                         <p>MEDINEXT SOLUTIONS transforms your approach to denied claims. Our specialized dental <a href="denial-management-services/">denial management</a> team operates as an extension of your practice. We don't just resubmit claims blindly; we forensically analyze the root cause of the denial, compile the precise clinical evidence required, and aggressively pursue the insurance carrier until payment is secured. We typically recover up to 40% of aging A/R that internal teams have abandoned.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-iamluisao-12917364.jpg" alt="Dental clinical examination and pediatric restoration procedure documentation" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Dental claim denial appeals, clinical narrative documentation, and x-ray evidence compilation</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Conquering the Most Common Dental Denials</h2>
                         <p>Insurance companies rely on automated algorithms to deny claims for minor infractions. We have the clinical coding expertise to defeat them.</p>

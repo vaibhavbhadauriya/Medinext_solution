@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-7659565.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Enterprise RCM for Multi-Provider Practices</h2>
                         <p>Managing the revenue cycle for a multi-provider physician group is exponentially more complex than billing for a solo practitioner. Credentialing bottlenecks, incorrect NPI mapping on the CMS-1500, and non-compliant Advanced Practice Provider (APP) utilization can result in massive revenue leakage and severe OIG audit risk.</p>
                         <p>MEDINEXT SOLUTIONS delivers enterprise-grade <a href="revenue-cycle-management/">revenue cycle management</a> specifically designed for growing medical groups. We standardize your charge capture workflows across all locations and specialties, ensuring that every provider is properly linked to your Group NPI (Type 2). We maintain a <strong>98% clean claim rate</strong>, ensuring your practice scales without sacrificing cash flow.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-5327865.jpg" alt="Multi-specialty physician group clinical leadership meeting to review practice revenue metrics" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Unified revenue cycle management and centralized billing for multi-specialty medical groups.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Group NPI and Provider Mapping</h2>
                         <p>When a physician joins a group practice, they cannot simply bill under their individual Type 1 NPI. Claims must be submitted with the group's Type 2 NPI as the billing provider, and the individual physician's Type 1 NPI as the rendering provider.</p>

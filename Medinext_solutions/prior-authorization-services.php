@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/prior%20auth.webp') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Critical Bottleneck in Healthcare Revenue</h2>
                         <p>Prior Authorization (PA) or Pre-Certification is the single most obstructive, time-consuming administrative hurdle in modern medicine. Health insurance companies actively utilize grueling authorization workflows to restrict access to high-cost services—such as MRIs, biological infusions, specialized orthotic braces, and unbundled surgical procedures. If a patient receives care before a formal authorization number is issued, the carrier will hit the medical practice with an absolute, unappealable CO-197 denial. You cannot legally bill the patient, and your practice absorbs 100% of the financial loss.</p>
                         <p>MEDINEXT SOLUTIONS's standalone <strong>Prior Authorization Division</strong> rips this burden away from your nursing and front-desk staff. We act as an aggressive intermediary between your clinical notes and the insurance carrier's utilization management portal. We compile heavily sourced clinical packets, navigating step-therapy requirements and strict medical policies to secure authorization numbers fast, keeping your procedure schedules packed and your revenue entirely legally protected.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rsapmech-12820057.jpg" alt="Prior authorization coordination workflow securing payer approval for diagnostic procedures" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Eliminating procedure delays and denial risks with proactive, 24-48 hour pre-authorization clearances.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the Electronic Prior Authorization (ePA) Workflow</h2>
                         <p>Phoning an insurance carrier, waiting on hold for 40 minutes, and hoping to get a representative to verbally approve an MRI is an obsolete, highly dangerous practice. We utilize strict Electronic Prior Authorization (ePA) protocols via direct portal integrations (CoverMyMeds, Availity, eviCore, AIM Specialty Health).</p>

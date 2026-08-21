@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/medical-coding-process-steps.png') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Precision Engine of Healthcare Finance</h2>
                         <p>Medical coding is not data entry; it is the highly regulated, legally binding translation of clinical language into universally accepted alphanumeric codes. A single digit error in an ICD-10 code can change a routine preventative exam into a complex diagnostic workup?instantly rejecting the claim or, worse, triggering a massive Medicare Recovery Audit Contractor (RAC) sweep for upcoding.</p>
                         <p>MEDINEXT SOLUTIONS does not rely on automated "guesswork" software. Our <strong>Medical Coding Division</strong> consists entirely of certified coders credentialed through the AAPC (American Academy of Professional Coders) and AHIMA (American Health Information Management Association). We operate as a tactical firewall, ensuring every single service rendered by your providers is captured, documented, and legally coded for optimal reimbursement.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-tima-miroshnichenko-8376217.jpg" alt="AAPC certified medical coders validating ICD-10-CM, CPT, and HCPCS procedure codes" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">AAPC-certified coders performing rigorous chart abstraction and documentation verification.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the Core Code Sets</h2>
                         <p>Our specialists are fluent across the entire spectrum of modern medical nomenclature, mapping millions of possible procedural and diagnostic permutations.</p>

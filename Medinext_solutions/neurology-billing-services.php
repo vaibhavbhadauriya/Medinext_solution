@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/neurology.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Diagnostic Complexity of Neurology Billing</h2>
                         <p>Neurology stands at the intersection of highly complex Evaluation and Management (E/M) visits and incredibly nuanced diagnostic procedures. Unlike many specialties where a diagnosis is straightforward, neurologists often spend significant time evaluating systemic, multi-faceted neurodegenerative conditions, followed by multi-stage diagnostic testing involving massive arrays of electrodes and hours of video monitoring. Without a meticulously trained billing partner, these specialized diagnostic codes are routinely unbundled, downcoded, or completely denied for lack of specific pathophysiologic documentation.</p>
                         <p>MEDINEXT SOLUTIONS's <a href="revenue-cycle-management/">revenue cycle management</a> team features AAPC-certified coders with deep, sub-specialty experience in neurology. We guarantee the pristine application of technical vs. professional modifiers, navigate the tangled web of sleep study authorizations, and execute a <strong>98% clean claim rate</strong>, ensuring your neurologists are paid for the high-level cognitive and technical expertise they provide.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129152.jpg" alt="Neurologist analyzing diagnostic EEG, EMG, and MRI neuroimaging clinical scans" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Precision billing for advanced neurological procedures, neuroimaging, and nerve conduction studies.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Decoding Routine and Extended EEG Billing (95816?95827, 95719)</h2>
                         <p>Electroencephalography (EEG) billing presents one of the greatest audit risks in a neurology practice. Identifying the exact code requires mapping the duration of the recording, whether the patient was awake or asleep, and if video monitoring was simultaneously captured.</p>

@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-stephentcandrews-9408868.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -43,6 +43,11 @@ require_once 'includes/header.php';
                         <p>Hiring a new associate dentist is a major investment, but that investment yields zero return if the provider cannot legally bill insurance. Dental credentialing is notoriously slow, fraught with bureaucratic red tape, and uniquely complex compared to medical credentialing due to the sheer volume of distinct PPO networks, umbrella networks (like Zelis or Careington), and state-specific Medicaid programs.</p>
                         <p>When an in-house staff member misses a single signature or uploads an expired DEA license to CAQH, a 60-day process instantly becomes a 120-day nightmare. During this time, the associate's patients are billed out-of-network, resulting in massive patient complaints, unpaid claims, and severe cash flow disruption.</p>
                         <p>MEDINEXT SOLUTIONS offers a premier <a href="provider-credentialing-services/">credentialing service</a> designed explicitly for dental practices and DSOs. We assume complete ownership of the enrollment lifecycle. From securing the initial Type 1 NPI to negotiating final fee schedules with Delta Dental, our proactive approach drastically reduces turnaround times, ensuring your providers are active and in-network faster.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-officialdesign-africa-2148145889-35043676.jpg" alt="Dental practitioner enrollment and CAQH credentialing verification interview" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Dental provider PPO network enrollment, CAQH attestation, and DSO credentialing</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Comprehensive CAQH ProView Management</h2>
                         <p>The Council for Affordable Quality Healthcare (CAQH) ProView database is the cornerstone of modern dental credentialing. Almost every major commercial dental payer utilizes CAQH to pull provider data. If this profile is not flawlessly maintained, your cash flow stops.</p>

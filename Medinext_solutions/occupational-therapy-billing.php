@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/PT_billing.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -15,7 +15,7 @@
             <p class="lead mb-4">Protect your clinic's revenue from unjust downcoding and audits. Let our AAPC-certified experts handle complex OT evaluations and GO modifier requirements, so you can focus unconditionally on patient independence.</p>
             <div class="hero-cta">
                 <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark me-3 mb-2">Get Free Practice Audit</a>
-                <a href="tel:8627992199" class="btn btn-outline-light btn-lg mb-2"><i class="ph ph-phone"></i> 862-799-2199</a>
+                <a href="tel:8627992199" class="btn btn-outline-light mb-2"><i class="ph ph-phone"></i> 862-799-2199</a>
             </div>
         </div>
     </header>
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Hidden Pitfalls in Occupational Therapy Billing</h2>
                         <p>Occupational therapy (OT) billing requires a highly specialized understanding of daily living activities, cognitive integration, and complex medical necessity justification. Unlike physical therapy, OT heavily emphasizes functional independence and sensory-motor components, requiring distinct documentation models and CPT code selections. A minor structural error in your claim?such as misjudging the tier of an evaluation or failing to append the correct modifiers?results in automatic denials or detrimental reimbursement downcoding.</p>
                         <p>At MEDINEXT SOLUTIONS, we offer premium <a href="revenue-cycle-management/">revenue cycle management</a> services dedicated specifically to occupational therapy practices. Our AAPC-certified coders understand the exact payer requirements for pediatric clinics, hand therapy specialists, and adult rehabilitative care. We leverage our knowledge to ensure a <strong>98% first-pass clean claim rate</strong>, transforming your billing department from a liability into a high-functioning financial asset.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-mikhail-nilov-27793082.jpg" alt="Occupational therapist assisting patient with therapeutic activities and daily living rehabilitation" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Expert timed code billing and 8-minute rule compliance for outpatient occupational therapy.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Navigating the OT Evaluation Codes (97165 - 97168)</h2>
                         <p>The transition to tiered evaluation codes severely complicated OT billing. CMS requires therapists to determine the exact complexity of an evaluation based on the patient's occupational profile, the number of performance deficits, and the level of clinical decision-making involved. Billing the wrong tier means leaving money on the table or triggering a federal audit.</p>

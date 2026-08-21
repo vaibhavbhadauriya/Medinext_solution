@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Speech%20Therapy.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Challenges of Speech-Language Pathology Billing</h2>
                         <p>Speech therapy and pathology billing is inherently complex because it rarely fits neatly into the standard time-based codes used by physical or occupational therapists. In ST, treatments are predominately categorized as <em>event-based</em> or <em>untimed</em> codes, meaning you are paid a flat fee regardless of whether the session lasts 30 minutes or 60 minutes. Navigating these constraints without underbilling or inappropriately triggering payer audits is a significant challenge for speech-language pathologists (SLPs).</p>
                         <p>MEDINEXT SOLUTIONS understands these unique variables. Through over a decade of dedicated <a href="revenue-cycle-management/">revenue cycle management</a> experience, our AAPC-certified coders systematically protect ST practices from revenue leakage. We manage every detail, from front-end benefit verifications to relentless <a href="denial-management-services/">denial management</a>, freeing your clinicians to focus on helping patients reconnect with their world.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-gustavo-fring-7446669.jpg" alt="Speech-language pathologist conducting cognitive communication and articulation therapy session" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Precise billing for diagnostic swallow evaluations, speech therapy encounters, and GN modifiers.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering ST Evaluation and Treatment CPT Codes</h2>
                         <p>Accurate coding is the bedrock of a profitable speech therapy practice. Mistakes in evaluation codes, re-evaluations, or group therapy definitions will fast-track your claims straight to the denial queue. Our specialized ST coders meticulously process standard and complex CPTs.</p>

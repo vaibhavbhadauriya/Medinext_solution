@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Dermatology.avif') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Nuances of Dermatology Revenue Cycle Management</h2>
                         <p>Dermatology billing represents a unique intersection of medical evaluation and high-volume surgical procedures. The specialty is intensely scrutinized by payers due to the frequent use of same-day Evaluation and Management (E/M) services paired with minor procedures. Whether you are performing routine skin cancer screenings, complex Mohs micrographic surgeries, or billing for specialized dermatopathology, any misapplication of modifiers or anatomical site codes can trigger sweeping payer audits and severe revenue loss.</p>
                         <p>MEDINEXT SOLUTIONS provides elite <a href="revenue-cycle-management/">revenue cycle management</a> tailored exclusively for dermatologists. Our certified coding team navigates the complexities of lesion measurements, benign versus malignant diagnoses, and strict global period rules. By partnering with us, dermatology practices typically see a drastic reduction in claim denials and a <strong>98% clean claim rate</strong> on first pass.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-gustavo-fring-7446669.jpg" alt="Dermatologist examining patient skin lesion with dermatoscope lens" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Clinical dermatoscope examination, Mohs micrographic surgery, and biopsy pathology coding</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering Dermatology CPT Codes</h2>
                         <p>Precision is everything in dermatology coding. Reimbursement is heavily dependent on the exact size, location, and pathology of the lesion treated.</p>

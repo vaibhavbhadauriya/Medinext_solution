@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Family%20Medicine.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Core of Primary Care Revenue Cycle Management</h2>
                         <p>Family medicine practices serve as the frontline of the healthcare system, dealing with a massive volume of patients and an incredibly diverse range of diagnoses. Because family practitioners manage everything from pediatric immunizations to complex geriatric chronic illnesses, the billing requirements are notoriously broad. With initial claim denial rates surging in 2026, practices that rely on outdated coding practices or fail to accurately capture the complexity of their visits are leaving substantial money on the table.</p>
                         <p>MEDINEXT SOLUTIONS provides elite <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for family medicine and primary care clinics. Our AAPC-certified coders use advanced front-end error prevention techniques to guarantee accurate E/M leveling, prevent unbundling denials, and maximize alternative revenue streams like remote monitoring and care management. We maintain a <strong>98% clean claim rate</strong>, ensuring your cash flow remains steady and predictable.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-7659565.jpg" alt="Family medicine physician conducting comprehensive patient consultation and vital signs exam" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Family medicine preventive physicals, chronic disease management, and E/M complexity coding</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering Preventive vs. Problem-Oriented E/M Coding</h2>
                         <p>The most common source of lost revenue in family medicine is the confusion between preventive care and problem-oriented visits, especially when they occur on the same day.</p>

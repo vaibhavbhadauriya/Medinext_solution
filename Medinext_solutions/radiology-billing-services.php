@@ -7,7 +7,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-charlss-gonzhu-433318654-15277947.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -34,6 +34,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Invisible Revenue Leaks in Radiology</h2>
                         <p>Radiology is one of the highest-volume specialties in medicine, yet it frequently suffers from the highest denial rates due to the sheer complexity of the CPT 70000 series. A single omitted anatomical modifier, an incorrectly bundled combination scan, or a failure to document the exact type of contrast material utilized will instantly trigger a commercial payer audit. For independent imaging centers and remote teleradiology groups, these granular documentation requirements dictate the absolute line between profitability and operating at a loss.</p>
                         <p>MEDINEXT SOLUTIONS offers elite <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for diagnostic imaging and interventional radiology. Our AAPC-certified coders isolate every component of your X-ray, Ultrasound, CT, MRI, and PET scans. By deploying automated scrubber logic against NCCI edits before submission, we guarantee a <strong>98% clean claim rate</strong>, dropping your AR days significantly and accelerating your practice's physical and operational cash flow.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-mart-production-7089632.jpg" alt="Radiologist evaluating diagnostic CT, MRI, and fluoroscopy imaging studies at workstation" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Accurate split-billing for professional (-26) and technical (-TC) radiology components.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the Professional (26) vs. Technical (TC) Split</h2>
                         <p>Radiology codes are fundamentally split into two components. Failing to understand this distinction is the fastest way to trigger a massive Medicare clawback.</p>

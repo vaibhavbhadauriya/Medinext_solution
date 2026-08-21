@@ -12,7 +12,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-jonathanborba-13697931.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -40,6 +40,11 @@ require_once 'includes/header.php';
                         <p>Ambulatory Surgery Centers (ASCs) operate in a unique and highly complex billing environment. Unlike physician billing (professional fees), ASCs bill for facility fees to cover overhead, equipment, nursing staff, and surgical supplies. A common mistake made by inexperienced billers is attempting to use physician billing rules for ASC claims, resulting in massive underpayments or immediate denials.</p>
                         <p>ASC reimbursements are governed by strict Medicare Ambulatory Payment Classifications (APCs) and the Outpatient Prospective Payment System (OPPS). Furthermore, billing for implantable devices (like pacemakers, intraocular lenses, or orthopedic hardware) requires exact invoice tracking, HCPCS level II codes, and precise modifier application.</p>
                         <p>MEDINEXT SOLUTIONS provides elite <a href="revenue-cycle-management/">revenue cycle management</a> dedicated specifically to ASCs. We understand the critical difference between the SG modifier, PT modifier, and exactly how the multiple procedure discount rule affects your bottom line. We ensure your facility captures 100% of its rightful reimbursement while remaining compliant with CMS regulations.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-tkirkgoz-17092745.jpg" alt="Ambulatory surgical center modern operating room suite and surgical boom lighting" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Outpatient ambulatory surgery center surgical suite and facility fee management</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering ASC Modifiers</h2>
                         <p>Modifier usage in an ASC is fundamentally different from a physician's office. Applying a professional modifier to a facility claim will cause an immediate rejection. Our certified ASC coders (CASCC) are experts in facility-specific modifiers:</p>

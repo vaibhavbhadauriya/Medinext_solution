@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129141.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Unique Operational Challenges of DME/HME Billing</h2>
                         <p>Billing for Durable Medical Equipment (DME), Prosthetics, Orthotics, and Supplies (DMEPOS) is fundamentally different from standard physician billing. DME suppliers do not merely bill for a single encounter; they manage complex, ongoing lifecycles of rental equipment, rigid face-to-face physician documentation requirements, and geographically sliced Medicare Administrative Contractors (MACs). A single missing signature on a Certificate of Medical Necessity (CMN) or a miscalculated capped rental modifier will absolutely paralyze your revenue stream.</p>
                         <p>MEDINEXT SOLUTIONS understands that DME margins are tight. Our specialized <a href="revenue-cycle-management/">revenue cycle management</a> teams are experts in platforms like BrightTree and Fastrack. We take complete ownership of your order intake validation, prior authorizations, and complex AR follow-ups, ensuring a <strong>98% clean claim rate</strong> so your supply business can scale without expanding your back-office payroll.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-duksi-30769276.jpg" alt="Durable medical equipment monitoring workstation and medical equipment inventory diagnostics" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">DMEPOS equipment rental tracking, HCPCS Level II coding, and Certificate of Medical Necessity management</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering HCPCS Level II Codes & Modifiers</h2>
                         <p>While physicians live in the CPT universe, DME providers live entirely in the alphanumeric reality of HCPCS Level II codes and highly specific equipment modifiers.</p>

@@ -113,7 +113,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ============================================================ -->
 
     <!-- City Hero -->
-    <header class="page-hero text-white py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #0A2647 0%, #0052CC 60%, #00C9A7 100%);">
+    <header class="page-hero text-white py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pixabay-263402.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-4 pb-4">
             <!-- Breadcrumbs -->
             <nav aria-label="Breadcrumb" class="mb-3">
@@ -131,10 +131,10 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="ph ph-map-pin-fill" style="color: #ffd700;"></i>
                         <span>Serving <?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?> &amp; <?php echo htmlspecialchars($county); ?> County</span>
                     </div>
-                    <h1 class="display-4 fw-bold mb-3">
+                    <h1 class="display-4 fw-bold mb-3 text-white">
                         Medical Billing &amp; RCM Services in <span style="color: #ffd700;"><?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?></span>
                     </h1>
-                    <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6;">
+                    <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">
                         Empowering healthcare practices, specialty clinics, and hospital systems in <strong><?php echo htmlspecialchars($cityName); ?></strong> with end-to-end revenue cycle management. AAPC-certified coding, automated claim scrubbing, and aggressive denial recovery to maximize your practice revenue by up to <strong>30%</strong>.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
@@ -147,35 +147,47 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
                 <div class="col-lg-4 d-none d-lg-block">
-                    <div class="card border-0 shadow-lg rounded-4 bg-white text-dark p-4">
-                        <h5 class="fw-bold text-primary mb-3">
-                            <i class="ph ph-shield-check me-1 text-success"></i> <?php echo htmlspecialchars($cityName); ?> Practice Snapshot
-                        </h5>
-                        <ul class="list-unstyled mb-4 small text-muted">
-                            <li class="d-flex justify-content-between py-2 border-bottom">
-                                <span>Clean Claim Rate:</span>
-                                <strong class="text-success">98.2% First-Pass</strong>
-                            </li>
-                            <li class="d-flex justify-content-between py-2 border-bottom">
-                                <span>Average A/R Days:</span>
-                                <strong class="text-primary">&lt; 21 Days</strong>
-                            </li>
-                            <li class="d-flex justify-content-between py-2 border-bottom">
-                                <span>County:</span>
-                                <strong><?php echo htmlspecialchars($county); ?> County</strong>
-                            </li>
-                            <li class="d-flex justify-content-between py-2 border-bottom">
-                                <span>HIPAA Compliance:</span>
-                                <strong class="text-success">100% Guaranteed</strong>
-                            </li>
-                            <li class="d-flex justify-content-between py-2">
-                                <span>Support:</span>
-                                <strong class="text-primary">24/7 Dedicated Team</strong>
-                            </li>
-                        </ul>
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-primary w-100 fw-semibold">
-                            Request Custom Quote
-                        </a>
+                    <div class="card border-0 shadow-lg rounded-4 bg-white text-dark overflow-hidden">
+                        <div class="position-relative">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129104.jpg" 
+                                 alt="Healthcare facility and clinical charting in <?php echo htmlspecialchars($cityName); ?>" 
+                                 loading="lazy" 
+                                 class="img-fluid w-100 object-fit-cover" 
+                                 style="height: 150px;" />
+                            <div class="position-absolute bottom-0 start-0 w-100 p-2 bg-dark bg-opacity-75 text-white small fw-bold">
+                                <i class="ph ph-hospital me-1" style="color: #ffd700;"></i> <?php echo htmlspecialchars($cityName); ?> Clinical Operations
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-primary mb-3">
+                                <i class="ph ph-shield-check me-1 text-success"></i> <?php echo htmlspecialchars($cityName); ?> Practice Snapshot
+                            </h5>
+                            <ul class="list-unstyled mb-4 small text-muted">
+                                <li class="d-flex justify-content-between py-2 border-bottom">
+                                    <span>Clean Claim Rate:</span>
+                                    <strong class="text-success">98.2% First-Pass</strong>
+                                </li>
+                                <li class="d-flex justify-content-between py-2 border-bottom">
+                                    <span>Average A/R Days:</span>
+                                    <strong class="text-primary">&lt; 21 Days</strong>
+                                </li>
+                                <li class="d-flex justify-content-between py-2 border-bottom">
+                                    <span>County:</span>
+                                    <strong class="text-dark"><?php echo htmlspecialchars($county); ?> County</strong>
+                                </li>
+                                <li class="d-flex justify-content-between py-2 border-bottom">
+                                    <span>HIPAA Compliance:</span>
+                                    <strong class="text-success">100% Guaranteed</strong>
+                                </li>
+                                <li class="d-flex justify-content-between py-2">
+                                    <span>Support:</span>
+                                    <strong class="text-primary">24/7 Dedicated Team</strong>
+                                </li>
+                            </ul>
+                            <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-primary w-100 fw-semibold">
+                                Request Custom Quote
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -187,21 +199,21 @@ require_once __DIR__ . '/includes/header.php';
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-white">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
                         <div class="text-primary fs-1 mb-3"><i class="bi bi-graph-up-arrow"></i></div>
                         <h3 class="h5 fw-bold text-dark mb-2">Eliminate Claim Denials in <?php echo htmlspecialchars($cityName); ?></h3>
                         <p class="text-muted small mb-0">Our certified billers scrub every claim against <?php echo htmlspecialchars($stateName); ?> commercial and Medicare MAC guidelines before submission, dropping your denial rates below 2%.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-white">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
                         <div class="text-success fs-1 mb-3"><i class="bi bi-clock-history"></i></div>
                         <h3 class="h5 fw-bold text-dark mb-2">Fast Cash Flow &amp; Aging AR Recovery</h3>
                         <p class="text-muted small mb-0">We aggressively pursue 30-60-90+ day aging accounts from <?php echo htmlspecialchars($stateName); ?> payers, converting locked revenues into immediate cash flow for your clinic.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 p-4 bg-white">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
                         <div class="text-info fs-1 mb-3"><i class="bi bi-cpu"></i></div>
                         <h3 class="h5 fw-bold text-dark mb-2">Direct EHR / PM Software Integration</h3>
                         <p class="text-muted small mb-0">No need to change your existing software. We connect directly into Epic, eClinicalWorks, AdvancedMD, Athena, Kareo, Dentrix, and 40+ systems used in <?php echo htmlspecialchars($cityName); ?>.</p>
@@ -220,24 +232,35 @@ require_once __DIR__ . '/includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">
                             Tailored Revenue Cycle Management for <?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?> Healthcare Providers
                         </h2>
-                        <p>
+                        <p class="text-secondary" style="line-height: 1.7;">
                             Operating a medical or dental practice in <strong><?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateName); ?></strong> requires balancing exceptional patient care with complex healthcare billing regulations. Medical practices throughout <strong><?php echo htmlspecialchars($county); ?> County</strong> frequently encounter mounting administrative burdens, from changing modifier rules to delayed payer authorizations.
                         </p>
-                        <p>
+                        <p class="text-secondary" style="line-height: 1.7;">
                             At <strong>MEDINEXT SOLUTIONS</strong>, we serve as your practice's dedicated, AAPC-certified billing division. We handle patient eligibility verification, complex medical coding, electronic claim transmission, payment posting, and rigorous denial management so you can focus entirely on patient wellness.
                         </p>
 
-                        <div class="card border-0 bg-primary bg-opacity-10 rounded-3 p-4 my-4">
-                            <h3 class="h5 fw-bold text-primary mb-2">
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129104.jpg" 
+                                 alt="Clinical chart review and medical coding compliance in <?php echo htmlspecialchars($cityName); ?>" 
+                                 loading="lazy" 
+                                 class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" 
+                                 style="max-height: 380px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">
+                                Dedicated Revenue Cycle Management &amp; Payer Compliance for <?php echo htmlspecialchars($cityName); ?> Practices
+                            </figcaption>
+                        </figure>
+
+                        <div class="card border-0 bg-primary bg-opacity-10 rounded-4 p-4 my-4">
+                            <h3 class="h5 fw-bold text-primary mb-3">
                                 <i class="ph ph-check-circle-fill text-success me-2"></i> Why Choose MEDINEXT in <?php echo htmlspecialchars($cityName); ?>?
                             </h3>
-                            <ul class="mb-0 small text-muted row g-2">
-                                <li class="col-md-6"><i class="bi bi-check2 text-primary me-1"></i> Dedicated Account Manager</li>
-                                <li class="col-md-6"><i class="bi bi-check2 text-primary me-1"></i> 98% First-Pass Clean Claims</li>
-                                <li class="col-md-6"><i class="bi bi-check2 text-primary me-1"></i> Full HIPAA &amp; HITECH Compliance</li>
-                                <li class="col-md-6"><i class="bi bi-check2 text-primary me-1"></i> 24-48 Hour Denial Appeals</li>
-                                <li class="col-md-6"><i class="bi bi-check2 text-primary me-1"></i> Zero Software Migration Required</li>
-                                <li class="col-md-6"><i class="bi bi-check2 text-primary me-1"></i> Free Baseline Practice Audit</li>
+                            <ul class="mb-0 small text-dark row g-3 list-unstyled">
+                                <li class="col-md-6 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> <span>Dedicated Account Manager</span></li>
+                                <li class="col-md-6 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> <span>98% First-Pass Clean Claims</span></li>
+                                <li class="col-md-6 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> <span>Full HIPAA &amp; HITECH Compliance</span></li>
+                                <li class="col-md-6 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> <span>24-48 Hour Denial Appeals</span></li>
+                                <li class="col-md-6 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> <span>Zero Software Migration Required</span></li>
+                                <li class="col-md-6 d-flex align-items-center"><i class="bi bi-check-circle-fill text-primary me-2"></i> <span>Free Baseline Practice Audit</span></li>
                             </ul>
                         </div>
 
@@ -579,7 +602,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ============================================================ -->
 
     <!-- State Hero -->
-    <header class="page-hero text-white py-5 position-relative" style="background: linear-gradient(135deg, #0A2647 0%, #0052CC 70%, #00C9A7 100%);">
+    <header class="page-hero text-white py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-oluwakoreimage-20020595.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-4 pb-4">
             <nav aria-label="Breadcrumb" class="mb-3">
                 <ol class="breadcrumb mb-0">
@@ -588,24 +611,58 @@ require_once __DIR__ . '/includes/header.php';
                     <li class="breadcrumb-item active text-white fw-bold" aria-current="page"><?php echo htmlspecialchars($stateName); ?></li>
                 </ol>
             </nav>
-            <div class="row align-items-center">
+            <div class="row align-items-center g-4">
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small">
                         <i class="ph ph-flag-fill" style="color: #ffd700;"></i>
                         <span>Statewide Healthcare RCM Coverage &bull; <?php echo number_format((int)$cityCount); ?> Cities &amp; Towns</span>
                     </div>
-                    <h1 class="display-4 fw-bold mb-3">
+                    <h1 class="display-4 fw-bold mb-3 text-white">
                         Medical Billing &amp; RCM Services in <span style="color: #ffd700;"><?php echo htmlspecialchars($stateName); ?></span>
                     </h1>
-                    <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6;">
+                    <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">
                         Delivering tailored medical coding, billing, and credentialing services across <?php echo htmlspecialchars($stateName); ?>. Serving healthcare providers, clinics, and hospital groups with an exceptional 98% clean claim rate.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark">
-                            Get Free Practice Audit
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark shadow-sm">
+                            <i class="ph ph-chart-line-up me-1"></i> Get Free Practice Audit
                         </a>
                         <a href="#state-cities" class="btn btn-outline-light btn-lg">
-                            Browse <?php echo htmlspecialchars($stateName); ?> Cities
+                            <i class="ph ph-buildings me-1"></i> Browse <?php echo htmlspecialchars($stateName); ?> Cities
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card border-0 shadow-lg rounded-4 bg-white text-dark p-4">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-primary bg-opacity-10 text-primary small fw-bold">
+                            <i class="ph ph-shield-check-fill text-primary"></i>
+                            <span><?php echo htmlspecialchars($stateName); ?> Snapshot</span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-3">Statewide Coverage Highlights</h5>
+                        <ul class="list-unstyled mb-4 small text-muted">
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Cities &amp; Towns:</span>
+                                <strong class="text-primary"><?php echo number_format((int)$cityCount); ?>+ Locations</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>First-Pass Rate:</span>
+                                <strong class="text-success">98.2% Clean Claims</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Medicare Jurisdiction:</span>
+                                <strong class="text-dark"><?php echo !empty($macData['code']) ? htmlspecialchars($macData['code']) : 'Active MAC'; ?></strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>A/R Turnaround:</span>
+                                <strong class="text-primary">&lt; 21 Days</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2">
+                                <span>Support:</span>
+                                <strong class="text-dark">Dedicated Account Team</strong>
+                            </li>
+                        </ul>
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-primary w-100 fw-semibold">
+                            Request State Practice Audit
                         </a>
                     </div>
                 </div>
@@ -637,6 +694,17 @@ require_once __DIR__ . '/includes/header.php';
                         </span>
                     </div>
                 </div>
+
+                <figure class="figure my-4 w-100">
+                    <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-karola-g-5207102.jpg" 
+                         alt="Healthcare provider in <?php echo htmlspecialchars($stateName); ?> reviewing clinical documentation and Medicare compliance" 
+                         loading="lazy" 
+                         class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" 
+                         style="max-height: 380px;" />
+                    <figcaption class="figure-caption text-muted text-center mt-2 small">
+                        Medicare Part A/B &amp; Commercial Insurance Compliance for <?php echo htmlspecialchars($stateName); ?> Providers
+                    </figcaption>
+                </figure>
 
                 <!-- MAC Operator & Portal Grid -->
                 <div class="row g-4 mb-4">
@@ -838,7 +906,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ============================================================ -->
 
     <!-- Directory Hero -->
-    <header class="page-hero text-white py-5 position-relative" style="background: linear-gradient(135deg, #0A2647 0%, #0052CC 70%, #00C9A7 100%);">
+    <header class="page-hero text-white py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pixabay-263194.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-4 pb-4">
             <nav aria-label="Breadcrumb" class="mb-3">
                 <ol class="breadcrumb mb-0">
@@ -846,24 +914,58 @@ require_once __DIR__ . '/includes/header.php';
                     <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Locations</li>
                 </ol>
             </nav>
-            <div class="row align-items-center">
+            <div class="row align-items-center g-4">
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small">
                         <i class="ph ph-globe-hemisphere-west-fill" style="color: #ffd700;"></i>
-                        <span>United States Nationwide RCM Directory</span>
+                        <span>United States Nationwide RCM Directory &bull; All 50 States</span>
                     </div>
-                    <h1 class="display-4 fw-bold mb-3">
+                    <h1 class="display-4 fw-bold mb-3 text-white">
                         Medical Billing &amp; RCM Across <span style="color: #ffd700;">All 50 US States</span>
                     </h1>
-                    <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6;">
+                    <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6; color: #e2e8f0;">
                         MEDINEXT SOLUTIONS delivers nationwide medical billing, revenue cycle management, and provider credentialing services across 31,000+ US cities, helping healthcare practices eliminate denials and accelerate cash flow.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark">
-                            Get Free Practice Audit
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark shadow-sm">
+                            <i class="ph ph-chart-line-up me-1"></i> Get Free Practice Audit
                         </a>
                         <a href="#states-grid" class="btn btn-outline-light btn-lg">
-                            Browse All 50 States
+                            <i class="ph ph-list-bullets me-1"></i> Browse All 50 States
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card border-0 shadow-lg rounded-4 bg-white text-dark p-4">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-primary bg-opacity-10 text-primary small fw-bold">
+                            <i class="ph ph-buildings-fill text-primary"></i>
+                            <span>Nationwide Operations</span>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-3">National Network Authority</h5>
+                        <ul class="list-unstyled mb-4 small text-muted">
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>States Covered:</span>
+                                <strong class="text-primary">All 50 US States</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Cities &amp; Towns:</span>
+                                <strong class="text-primary">31,000+ Locations</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>First-Pass Clean Rate:</span>
+                                <strong class="text-success">98.2% Guaranteed</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span>Average A/R Days:</span>
+                                <strong class="text-primary">&lt; 21 Days</strong>
+                            </li>
+                            <li class="d-flex justify-content-between py-2">
+                                <span>HIPAA Compliance:</span>
+                                <strong class="text-success">100% Guaranteed</strong>
+                            </li>
+                        </ul>
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-primary w-100 fw-semibold">
+                            Request National Practice Audit
                         </a>
                     </div>
                 </div>
@@ -874,19 +976,67 @@ require_once __DIR__ . '/includes/header.php';
     <!-- Top US Healthcare Metro Hubs -->
     <section class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge px-3 py-2 rounded-pill fw-bold text-uppercase small" style="background-color: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;">Metropolitan Coverage</span>
-                <h2 class="h2 fw-bold text-dark mt-2">Top US Healthcare Metro Hubs</h2>
-                <p class="text-muted">Explore high-volume medical billing services in major US healthcare markets.</p>
+            <!-- Metro Hub Feature Visual Card -->
+            <div class="row align-items-center mb-5 p-4 p-lg-5 rounded-4 bg-white shadow-sm g-4">
+                <div class="col-lg-7">
+                    <span class="badge px-3 py-2 rounded-pill fw-bold text-uppercase small" style="background-color: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;">Metropolitan Coverage</span>
+                    <h2 class="h2 fw-bold text-dark mt-2 mb-3">Top US Healthcare Metro Hubs</h2>
+                    <p class="text-muted mb-4" style="line-height: 1.7;">
+                        Explore specialized medical billing, coding, and RCM services tailored to high-volume metropolitan healthcare markets. Our certified billing teams ensure strict compliance with regional Medicare Administrative Contractors (MACs) and private commercial payers nationwide.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 p-2 rounded bg-light">
+                                <i class="ph ph-check-circle-fill text-success fs-5"></i>
+                                <span class="small fw-semibold text-dark">Regional MAC Compliance</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 p-2 rounded bg-light">
+                                <i class="ph ph-check-circle-fill text-success fs-5"></i>
+                                <span class="small fw-semibold text-dark">Direct EHR Integration</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 p-2 rounded bg-light">
+                                <i class="ph ph-check-circle-fill text-success fs-5"></i>
+                                <span class="small fw-semibold text-dark">24-48h Denial Appeals</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2 p-2 rounded bg-light">
+                                <i class="ph ph-check-circle-fill text-success fs-5"></i>
+                                <span class="small fw-semibold text-dark">98.2% Clean Claim Target</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <figure class="figure mb-0 w-100">
+                        <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-thirdman-7659868.jpg" 
+                             alt="Healthcare revenue cycle management operations across major US metropolitan medical centers" 
+                             loading="lazy" 
+                             class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" 
+                             style="max-height: 280px;" />
+                        <figcaption class="figure-caption text-muted text-center mt-2 small">
+                            Metropolitan RCM Operations &amp; Clinical Claim Optimization
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-center mb-4">
+                <h3 class="h4 fw-bold text-dark">Explore Major Healthcare Markets</h3>
+                <p class="text-muted small">Select any primary metro hub below for targeted local billing solutions.</p>
             </div>
 
             <div class="row g-3">
                 <?php foreach ($topMetros as $metro): ?>
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($metro['state_slug']); ?>/<?php echo htmlspecialchars($metro['city_slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all">
+                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($metro['state_slug']); ?>/<?php echo htmlspecialchars($metro['city_slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all rounded-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h3 class="h6 fw-bold text-primary mb-1"><?php echo htmlspecialchars($metro['city']); ?>, <?php echo htmlspecialchars($metro['state_id']); ?></h3>
+                                    <h4 class="h6 fw-bold text-primary mb-1"><?php echo htmlspecialchars($metro['city']); ?>, <?php echo htmlspecialchars($metro['state_id']); ?></h4>
                                     <p class="small text-muted mb-0"><?php echo htmlspecialchars($metro['county_name']); ?> County</p>
                                 </div>
                                 <i class="bi bi-chevron-right text-muted"></i>
@@ -910,7 +1060,7 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row g-3">
                 <?php foreach ($allStates as $st): ?>
                     <div class="col-xl-3 col-lg-4 col-md-6">
-                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($st['slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all border-start border-primary border-3">
+                        <a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($st['slug']); ?>/" class="card h-100 border-0 shadow-sm p-3 text-decoration-none text-dark bg-white hover-shadow transition-all border-start border-primary border-3 rounded-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
                                     <h3 class="h6 fw-bold text-dark mb-1"><?php echo htmlspecialchars($st['name']); ?> (<?php echo htmlspecialchars($st['id']); ?>)</h3>

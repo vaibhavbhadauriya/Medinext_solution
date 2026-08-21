@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Oncology.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Extreme Financial Risk in Oncology Billing</h2>
                         <p>In medical oncology and hematology, the financial stakes are higher than in almost any other specialty. Clinics operate on a "buy-and-bill" model for exceptionally expensive chemotherapeutic agents, immunotherapies, and biologics. A single coding error or failed authorization on a medication infusion can result in thousands of dollars in unrecoverable hard costs for your practice.</p>
                         <p>MEDINEXT SOLUTIONS offers an elite <a href="revenue-cycle-management/">revenue cycle management</a> team exclusively trained in the uncompromising rules of oncology billing. We manage every facet of your cash flow?from preemptively securing ironclad authorizations for targeted therapies to expertly calculating complex infusion times and drug waste modifiers. Our focus is ensuring a <strong>98% clean claim rate</strong> so your oncologists can focus entirely on fighting cancer.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-davegarcia-38198207.jpg" alt="Oncology clinical infusion suite administering chemotherapy and biologic specialty therapies" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Comprehensive billing for chemotherapy administration, J-codes, and complex hematology regimens.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the Infusion and Injection Rules (96401 - 96549)</h2>
                         <p>Billing for the administration of antineoplastic agents is incredibly complex. Payer regulations dictate a strict coding hierarchy based on the method of administration (IV push vs. infusion) and the length of time the drug is administered.</p>

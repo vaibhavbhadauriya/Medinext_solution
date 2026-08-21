@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Pain-Management.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Extreme Volatility of Pain Management Billing</h2>
                         <p>Pain management is one of the highest-grossing medical specialties, but it is also one of the most vigorously audited by commercial payers and Medicare. Due to the high cost of interventional procedures, spinal injections, and implantables, insurance companies routinely look for any excuse—be it a missing modifier, a minor documentation discrepancy, or a failed prior authorization?to deny your claims outright.</p>
                         <p>Attempting to handle pain management billing with an in-house team comprised of generalists often leads to massive revenue leakage. At MEDINEXT SOLUTIONS, we provide completely comprehensive <a href="revenue-cycle-management/">revenue cycle management</a> exclusively engineered for the rigorous demands of pain management clinics. Our targeted AAPC-certified specialists boast a <strong>98% clean claim rate</strong>, allowing your physicians to focus on multimodal patient care while we aggressively protect and expand your bottom line.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-leeloothefirst-7163947.jpg" alt="Interventional pain management specialist administering targeted epidural and nerve block injections" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Navigating strict payer guidelines, fluoroscopic guidance documentation, and prior authorizations.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering Interventional Pain Management CPT Codes</h2>
                         <p>Accuracy is the sole differentiator between a fully reimbursed high-end procedure and a total loss. Our specialized coding team ensures absolute precision across the most complex procedural codes:</p>

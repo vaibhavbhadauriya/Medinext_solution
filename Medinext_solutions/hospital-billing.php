@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Hospital%20Billing.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Enterprise RCM for Hospitals & Health Systems</h2>
                         <p>Hospital billing represents the absolute pinnacle of revenue cycle complexity. With the convergence of inpatient (IPPS) and outpatient (OPPS) rules, aggressive Medicare Advantage denials, and constant regulatory upheaval, health systems are leaking millions of dollars through disjointed departmental coding, failed clinical documentation improvement (CDI) efforts, and missed quality reporting metrics.</p>
                         <p>MEDINEXT SOLUTIONS delivers enterprise-grade <a href="revenue-cycle-management/">revenue cycle management</a> for community hospitals, critical access hospitals, and large health systems. Our dual-certified inpatient (CIC) and outpatient (COC) coders bridge the gap between clinical care and DRG/APC assignment. We secure the <strong>2026 IPPS/OPPS 2.6% payment increase</strong> for our clients by ensuring absolute compliance with quality reporting, maintaining a <strong>98% clean claim rate</strong> across all facility claims (UB-04/837I).</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pixabay-263402.jpg" alt="Hospital emergency department and inpatient medical facility billing operations" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Specialized UB-04 institutional claims processing and MS-DRG revenue optimization for hospital systems.</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">The IPO List Phase-Out and Two-Midnight Rule</h2>
                         <p>The regulatory line between inpatient and outpatient status continues to blur, creating massive compliance and revenue risks.</p>

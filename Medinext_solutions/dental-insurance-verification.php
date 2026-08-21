@@ -12,7 +12,7 @@ require_once 'includes/header.php';
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/prior%20auth.webp') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -39,6 +39,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Foundation of Case Acceptance</h2>
                         <p>In modern dentistry, clinical excellence means little if the patient cannot afford the treatment. When a treatment coordinator presents a $5,000 treatment plan based on a generalized "guess" of insurance coverage, case acceptance plummets. Worse, if the patient proceeds and the insurance pays less than estimated due to a hidden frequency limit or missing tooth clause, the practice is left trying to collect a surprise balance from an angry patient.</p>
                         <p>MEDINEXT SOLUTIONS solves this by treating insurance verification as the foundation of your revenue cycle, not an afterthought. Our dedicated verification specialists act as a direct extension of your front office, rigorously pulling detailed benefit breakdowns well before the patient arrives. We guarantee that your treatment coordinators have the exact numbers they need to close cases with absolute financial certainty.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-negativespace-48604.jpg" alt="Dental insurance verification workstation with electronic benefits inquiry and eligibility portal" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Exhaustive dental benefits breakdown, deductible tracking, and pre-treatment estimation</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Beyond Basic Eligibility</h2>
                         <p>Many automated software solutions claim to verify insurance, but they only provide basic eligibility—confirming if the policy is "Active." This is dangerously insufficient for dental billing.</p>

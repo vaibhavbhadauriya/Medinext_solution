@@ -2,7 +2,7 @@
 
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-fr3nks-305568.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -29,6 +29,11 @@
                         <h2 class="h3 fw-bold text-primary mb-3">The Modern Dilemma of Dental Billing</h2>
                         <p>Dental billing is no longer just about submitting standard ADA forms to delta dental plans. As oral care increasingly intersects with overall systemic health, the financial backend has grown exponentially complex. Managing primary versus secondary insurance, navigating annual maximums, and coordinating benefits between dental and medical carriers require an incredibly high level of administrative precision. A single misplaced tooth number or an incorrect quad indicator routinely causes massive delays in cash flow.</p>
                         <p>At MEDINEXT SOLUTIONS, our dedicated dental <a href="revenue-cycle-management/">revenue cycle management</a> division absorbs this burden. We understand the high-volume, fast-paced nature of a dental office. By taking over your coding, pre-treatment estimates, and aggressively handling denied claims, our certified billing specialists guarantee a <strong>98% clean claim rate</strong>, significantly reducing your AR (Accounts Receivable) days and unlocking profit that in-house staff often leave behind due to time constraints.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-xtrovarts-16903641.jpg" alt="Dental clinical operatory hygiene exam and restorative periodontal procedure" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Dental CDT coding, restorative documentation, and medical-dental crossover billing</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Navigating the Labyrinth of CDT Codes</h2>
                         <p>Current Dental Terminology (CDT) codes change annually, and utilizing outdated or improperly sequenced codes immediately triggers carrier audits. Our dental coders are experts at optimizing claims across all categories of oral care:</p>
