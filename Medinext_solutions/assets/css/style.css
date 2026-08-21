@@ -206,13 +206,13 @@ body {
 
 /* Links */
 a {
-    color: var(--primary-light);
+    color: var(--primary-dark);
     text-decoration: none;
     transition: color var(--transition-fast);
 }
 
 a:hover {
-    color: var(--secondary);
+    color: var(--secondary-dark);
 }
 
 /* Images */
@@ -2988,13 +2988,16 @@ p:last-child {
     font-size: var(--fs-4xl);
     font-weight: 800;
     margin-bottom: var(--space-4);
+    color: #ffffff !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .page-hero-subtitle {
     font-size: var(--fs-md);
-    color: var(--text-muted);
+    color: #f1f5f9 !important;
     max-width: 560px;
     margin: 0 auto;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* Breadcrumb */
@@ -3011,36 +3014,38 @@ p:last-child {
     list-style: none;
     padding: var(--space-2) var(--space-4);
     margin: 0;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--radius-full);
     font-size: var(--fs-sm);
 }
 
 .breadcrumb-item a {
-    color: var(--text-muted);
+    color: #f1f5f9;
 }
 
 .breadcrumb-item a:hover {
-    color: var(--primary-light);
+    color: #38bdf8;
 }
 
 .breadcrumb-item.active {
-    color: var(--light);
+    color: #ffffff;
+    font-weight: 700;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
     content: '';
-    color: var(--gray-600);
+    color: rgba(255, 255, 255, 0.6);
     margin-right: var(--space-2);
 }
 
 /* Contact Form */
 .contact-form-wrapper {
-    background: var(--gradient-card);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
     padding: var(--space-8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .form-group {
@@ -3051,7 +3056,7 @@ p:last-child {
     font-family: var(--font-heading);
     font-size: var(--fs-sm);
     font-weight: 600;
-    color: var(--light);
+    color: #0f172a !important;
     margin-bottom: var(--space-2);
     display: flex;
     align-items: center;
@@ -3059,15 +3064,15 @@ p:last-child {
 }
 
 .form-label .required {
-    color: var(--accent);
+    color: #ef4444;
 }
 
 .form-control,
 .form-select {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--border-color);
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
     border-radius: var(--radius-md);
-    color: var(--light);
+    color: #0f172a !important;
     font-family: var(--font-body);
     font-size: var(--fs-base);
     padding: var(--space-3) var(--space-4);
@@ -3075,29 +3080,29 @@ p:last-child {
 }
 
 .form-select option {
-    color: #000;
-    background: #fff;
+    color: #0f172a;
+    background: #ffffff;
 }
 
 .form-control::placeholder {
-    color: var(--gray-600);
+    color: #94a3b8 !important;
 }
 
 .form-control:focus,
 .form-select:focus {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
-    color: var(--light);
+    background: #ffffff !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15) !important;
+    color: #0f172a !important;
 }
 
 .form-control.is-invalid {
-    border-color: #EF4444;
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    border-color: #EF4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
 }
 
 .form-control.is-valid {
-    border-color: var(--secondary);
+    border-color: #10B981 !important;
 }
 
 .invalid-feedback {
@@ -3112,7 +3117,7 @@ p:last-child {
 }
 
 .form-select {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2394A3B8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364748B' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 textarea.form-control {
@@ -3125,16 +3130,18 @@ textarea.form-control {
     display: flex;
     gap: var(--space-4);
     padding: var(--space-5);
-    background: var(--gradient-card);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all var(--transition-smooth);
 }
 
 .contact-info-card:hover {
-    border-color: rgba(var(--primary-rgb), 0.2);
+    border-color: rgba(var(--primary-rgb), 0.3);
     transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .contact-info-icon {
@@ -3145,30 +3152,31 @@ textarea.form-control {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-light);
+    color: var(--primary-dark);
     font-size: 1.3rem;
     flex-shrink: 0;
 }
 
 .contact-info-label {
     font-size: var(--fs-sm);
-    color: var(--text-muted);
+    color: #64748b;
     margin-bottom: var(--space-1);
+    font-weight: 500;
 }
 
 .contact-info-value {
     font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--light);
+    font-weight: 700;
+    color: #0f172a !important;
     font-size: var(--fs-base);
 }
 
 .contact-info-value a {
-    color: var(--light);
+    color: var(--primary-dark) !important;
 }
 
 .contact-info-value a:hover {
-    color: var(--primary-light);
+    color: var(--secondary-dark) !important;
 }
 
 /* Map */
@@ -5979,4 +5987,205 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
     background: #f8fafc;
     border-color: #e2e8f0;
 }
+
+/* ==========================================================
+   19. SITE-WIDE COLOR CONTRAST & VISIBILITY HARDENING ENGINE
+   Ensures WCAG AA contrast compliance and zero text/bg overlap
+   ========================================================== */
+
+/* 1. Global Light/White Content Surfaces (Deep Charcoal Headings & Slate Body) */
+body {
+    color: #334155;
+    background-color: #ffffff;
+}
+
+.bg-white,
+.bg-light,
+.section-light,
+.service-content,
+.main-content,
+article,
+.card,
+.modal-content,
+.dropdown-menu {
+    color: #334155;
+}
+
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+.bg-light h1, .bg-light h2, .bg-light h3, .bg-light h4, .bg-light h5, .bg-light h6,
+.section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6,
+.service-content h1, .service-content h2, .service-content h3, .service-content h4, .service-content h5, .service-content h6,
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+.modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6,
+.dropdown-menu h1, .dropdown-menu h2, .dropdown-menu h3, .dropdown-menu h4, .dropdown-menu h5, .dropdown-menu h6,
+.text-dark {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+.bg-white p, .bg-white li, .bg-white span:not(.badge):not(.gradient-text),
+.bg-light p, .bg-light li, .bg-light span:not(.badge):not(.gradient-text),
+.service-content p, .service-content li,
+.card p, .card li,
+.modal-content p, .modal-content li {
+    color: #334155 !important;
+}
+
+.bg-white .text-muted,
+.bg-light .text-muted,
+.service-content .text-muted,
+.card .text-muted {
+    color: #64748b !important;
+    -webkit-text-fill-color: #64748b !important;
+}
+
+/* 2. Global Dark/Navy/Blue Surfaces (Crisp White Headings & Light Platinum Body) */
+.page-hero,
+.dark-hero,
+.hero-section,
+.cta-section,
+.svc-hero,
+.svc-cta-banner,
+.site-footer,
+.bg-dark,
+.bg-primary,
+.text-white {
+    color: #f8fafc;
+}
+
+.page-hero h1, .page-hero h2, .page-hero h3, .page-hero h4, .page-hero h5, .page-hero h6,
+.dark-hero h1, .dark-hero h2, .dark-hero h3, .dark-hero h4, .dark-hero h5, .dark-hero h6,
+.hero-section h1, .hero-section h2, .hero-section h3, .hero-section h4, .hero-section h5, .hero-section h6,
+.cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4, .cta-section h5, .cta-section h6,
+.svc-hero h1, .svc-hero h2, .svc-hero h3, .svc-hero h4, .svc-hero h5, .svc-hero h6,
+.svc-cta-banner h1, .svc-cta-banner h2, .svc-cta-banner h3, .svc-cta-banner h4, .svc-cta-banner h5, .svc-cta-banner h6,
+.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6,
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6,
+.bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary h4, .bg-primary h5, .bg-primary h6,
+.text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+header.page-hero h1, header.page-hero h2, header.page-hero h3 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.page-hero p, .page-hero .lead,
+.dark-hero p, .dark-hero .lead,
+.hero-section p, .hero-section .lead,
+.cta-section p, .cta-section .lead,
+.svc-hero p, .svc-hero .lead,
+.svc-cta-banner p, .svc-cta-banner .lead,
+.site-footer p,
+.bg-dark p, .bg-dark .lead,
+.bg-primary p, .bg-primary .lead,
+.text-white p, .text-white .lead,
+.text-white-90 {
+    color: #f1f5f9 !important;
+    -webkit-text-fill-color: #f1f5f9 !important;
+}
+
+.text-white-80 {
+    color: #e2e8f0 !important;
+    -webkit-text-fill-color: #e2e8f0 !important;
+}
+
+.text-white-75 {
+    color: #cbd5e1 !important;
+    -webkit-text-fill-color: #cbd5e1 !important;
+}
+
+.page-hero .text-muted,
+.dark-hero .text-muted,
+.cta-section .text-muted,
+.site-footer .text-muted,
+.bg-dark .text-muted,
+.bg-primary .text-muted,
+.text-white .text-muted {
+    color: #cbd5e1 !important;
+    -webkit-text-fill-color: #cbd5e1 !important;
+}
+
+.page-hero .text-primary,
+.dark-hero .text-primary,
+.cta-section .text-primary,
+.site-footer .text-primary,
+.text-white .text-primary {
+    color: #38bdf8 !important;
+    -webkit-text-fill-color: #38bdf8 !important;
+}
+
+/* 3. Global Form Controls (Crisp Dark Text on White Inputs) */
+.form-label,
+label.form-label {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-weight: 600 !important;
+}
+
+.form-control,
+.form-select,
+input.form-control,
+select.form-select,
+textarea.form-control {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+input.form-control:focus,
+select.form-select:focus,
+textarea.form-control:focus {
+    background-color: #ffffff !important;
+    border-color: #0ea5e9 !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15) !important;
+}
+
+.form-control::placeholder,
+textarea.form-control::placeholder {
+    color: #94a3b8 !important;
+    -webkit-text-fill-color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+.input-group-text {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    -webkit-text-fill-color: #475569 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* 4. Breadcrumbs & Badges */
+.breadcrumb-item,
+.breadcrumb-item a {
+    color: #334155;
+}
+
+.page-hero .breadcrumb-item,
+.page-hero .breadcrumb-item a,
+header.text-white .breadcrumb-item,
+header.text-white .breadcrumb-item a {
+    color: #f1f5f9 !important;
+    -webkit-text-fill-color: #f1f5f9 !important;
+}
+
+.page-hero .breadcrumb-item.active,
+header.text-white .breadcrumb-item.active {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* 5. Action Links & Interactive Elements */
+a:not(.btn):not(.nav-link):not(.dropdown-item):not(.text-white) {
+    color: #0284c7;
+}
+
+a:not(.btn):not(.nav-link):not(.dropdown-item):not(.text-white):hover {
+    color: #082f49;
+}
+
 
