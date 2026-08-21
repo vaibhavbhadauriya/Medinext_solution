@@ -10,13 +10,15 @@ require_once 'includes/header.php';
 
 <main id="main-content">
 
-<!-- &mdash;&mdash; Hero Section &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; -->
-<section class="svc-hero">
-  <div class="svc-hero-bg-canvas"></div>
-  <!-- Floating orbs -->
-  <div class="svc-orb svc-orb-1"></div>
-  <div class="svc-orb svc-orb-2"></div>
-  <div class="svc-orb svc-orb-3"></div>
+<!-- —— Hero Section —————————————————————————————————————————————————————————— -->
+<section class="svc-hero" id="svc-hero">
+  <!-- Video Background -->
+  <div class="hero-video-wrapper">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata">
+      <source src="<?php echo $baseUrl; ?>/assets/videos/services.mp4" type="video/mp4">
+    </video>
+    <div class="svc-video-overlay"></div>
+  </div>
 
   <div class="container svc-hero-inner">
     <nav aria-label="Breadcrumb" class="svc-breadcrumb">
@@ -482,23 +484,17 @@ require_once 'includes/header.php';
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 
-/* &mdash;&mdash; Hero &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; */
+/* —— Hero —————————————————————————————————————————————————————————— */
 .svc-hero{
   position:relative;min-height:90vh;display:flex;align-items:center;
-  background:linear-gradient(135deg, #082f49 0%, #0c4a6e 50%, #0ea5e9 100%);
+  background:#082f49;
   overflow:hidden;padding:7rem 0 4rem;
 }
-.svc-hero-bg-canvas{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(255,107,53,.15) 0%,transparent 70%);
-  animation:svc-pulse 6s ease-in-out infinite alternate;
+.svc-video-overlay{
+  position:absolute;inset:0;width:100%;height:100%;
+  background:linear-gradient(135deg, rgba(8, 47, 73, 0.76) 0%, rgba(12, 74, 110, 0.68) 50%, rgba(14, 165, 233, 0.60) 100%);
+  z-index:2;
 }
-@keyframes svc-pulse{0%{opacity:.6}100%{opacity:1}}
-.svc-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.15;animation:svc-float 8s ease-in-out infinite alternate;}
-.svc-orb-1{width:600px;height:600px;background:#0ea5e9;top:-200px;right:-100px;animation-delay:0s;}
-.svc-orb-2{width:400px;height:400px;background:#38bdf8;bottom:-100px;left:-100px;animation-delay:-3s;}
-.svc-orb-3{width:300px;height:300px;background:#fff;top:40%;left:40%;animation-delay:-6s;opacity:.05;}
-@keyframes svc-float{0%{transform:translateY(0)}100%{transform:translateY(-40px)}}
 
 .svc-hero-inner{position:relative;z-index:2;text-align:center;}
 .svc-breadcrumb ol{display:flex;align-items:center;justify-content:center;gap:.5rem;list-style:none;margin:0 0 1.5rem;padding:0;font-size:.8rem;color:rgba(255,255,255,.55);}
