@@ -646,7 +646,14 @@ function getTier4RealWorldSuite(): TestSuite
         Assert::assertStringContains('alert-success', $successPage['html']);
 
         // Step 6: Verify automated confirmation receipt formatting
-        $prospectEmail = "Dear Dr. Rachel Green,\n\nThank you for requesting a Free Practice Revenue Audit for SmileCraft Dental Studio. An RCM architect specializing in Dental billing will contact you within 24 hours.";
+        $prospectEmail = buildEmailPlainText([
+            'full_name' => 'Dr. Rachel Green',
+            'practice_name' => 'SmileCraft Dental Studio',
+            'specialty' => 'Dental (Medical-Dental)',
+            'email' => 'rgreen@smilecraftdental.com',
+            'phone' => '(512) 555-0144',
+            'message' => 'Free practice revenue audit intake'
+        ]);
         Assert::assertStringContains('Dr. Rachel Green', $prospectEmail);
         Assert::assertStringContains('SmileCraft Dental Studio', $prospectEmail);
     });
@@ -885,7 +892,14 @@ function getTier4RealWorldSuite(): TestSuite
         Assert::assertStringContains('3000 monthly visits', $adminHtml);
 
         // Step 6: Format Prospect Confirmation Receipt
-        $prospectEmailText = "Dear Elena Rostova,\n\nThank you for requesting a Free Practice Revenue Audit for Heartland Cardiovascular Specialists. Our senior cardiology RCM analysts have received your metrics and will deliver your customized Executive Summary Report within 24-48 hours.";
+        $prospectEmailText = buildEmailPlainText([
+            'full_name' => 'Elena Rostova',
+            'practice_name' => 'Heartland Cardiovascular Specialists',
+            'specialty' => 'Cardiology',
+            'email' => 'erostova@heartlandcardio.com',
+            'phone' => '(317) 555-0199',
+            'message' => 'Executive Summary Report delivery within 24-48 hours'
+        ]);
         Assert::assertStringContains('Elena Rostova', $prospectEmailText);
         Assert::assertStringContains('Heartland Cardiovascular Specialists', $prospectEmailText);
         Assert::assertStringContains('24-48 hours', $prospectEmailText);

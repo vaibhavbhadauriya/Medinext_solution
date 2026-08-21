@@ -226,7 +226,7 @@ $allCategories = array_unique(array_column($posts, 'category'));
           <h2>Ready to Stop Leaving Money on the Table?</h2>
           <p>Get a FREE practice revenue audit from our AAPC-certified billing experts ? no commitment, no cost.</p>
         </div>
-        <a href="free-practice-audit.php" class="ph-blog-cta-btn" data-cta="blog-cta">
+        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="ph-blog-cta-btn" data-cta="blog-cta">
           Get Free Audit
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>

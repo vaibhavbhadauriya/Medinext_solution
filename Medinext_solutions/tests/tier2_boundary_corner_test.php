@@ -900,11 +900,18 @@ function getTier2BoundarySuite(): TestSuite
         Assert::assertEquals(['denials', 'ar_aging'], $filtered);
     });
 
-    $suite->addTest('F6-B5: Duplicate pain points & mixed array/string deduplication', 'Tier 2', function () {
+    $suite->addTest('F6-B5: Duplicate pain points & mixed array/string deduplication', 'Tier 2', function () use ($projectRoot) {
+        require_once $projectRoot . '/includes/functions.php';
         $duplicates = ['denials', 'ar_aging', 'denials', 'credentialing', 'ar_aging'];
-        $unique = array_values(array_unique($duplicates));
-        Assert::assertCount(3, $unique, "Duplicates must be deduplicated to unique items");
-        Assert::assertEquals(['denials', 'ar_aging', 'credentialing'], $unique);
+        $cleanList = [];
+        foreach ($duplicates as $dp) {
+            $clean = sanitizeInput($dp);
+            if ($clean !== '' && !in_array($clean, $cleanList, true)) {
+                $cleanList[] = $clean;
+            }
+        }
+        Assert::assertCount(3, $cleanList, "Duplicates must be deduplicated to unique items");
+        Assert::assertEquals(['denials', 'ar_aging', 'credentialing'], $cleanList);
     });
 
     // =========================================================================
@@ -1006,15 +1013,23 @@ function getTier2BoundarySuite(): TestSuite
     // =========================================================================
 
     $suite->addTest('F9-B1: Missing CSRF token in POST request rejection', 'Tier 2', function () {
+        $sessionToken = bin2hex(random_bytes(32));
         $res = postBackendEndpoint('api/submit-audit-request.php', [
-            'practiceName' => 'Boundary Clinic',
-            'contactName' => 'Dr. Smith',
+            'practice_name' => 'Boundary Clinic',
+            'contact_name' => 'Dr. Smith',
             'email' => 'smith@testclinic.com',
-            'phone' => '862-799-2199'
+            'phone' => '862-799-2199',
+            'specialty' => 'Cardiology',
+            'patient_volume' => '250 - 500 visits / month',
+            'monthly_revenue' => '$50,000 - $100,000 / month'
             // csrf_token omitted
-        ], ['X-Requested-With' => 'XMLHttpRequest']);
+        ], [
+            'X-Requested-With' => 'XMLHttpRequest'
+        ], [
+            'csrf_token' => $sessionToken
+        ]);
 
-        Assert::assertTrue(in_array($res['statusCode'], [200, 302, 400, 403], true), "Request executed with valid HTTP response");
+        Assert::assertEquals(403, $res['statusCode'], "Missing CSRF token when session has CSRF token must return HTTP 403 Forbidden");
     });
 
     $suite->addTest('F9-B2: Expired session CSRF token validation failure', 'Tier 2', function () use ($projectRoot) {
@@ -1071,35 +1086,59 @@ function getTier2BoundarySuite(): TestSuite
 
     $suite->addTest('F10-B2: 6th submission blocked with rate limit error', 'Tier 2', function () use ($projectRoot) {
         require_once $projectRoot . '/includes/functions.php';
-        $maxAttempts = 5;
-        $attemptCount = 6;
-        $shouldBlock = $attemptCount > $maxAttempts;
-        Assert::assertTrue($shouldBlock, "6th attempt exceeding maxAttempts of 5 must be blocked");
+        $action = 'test_tier2_rate_limit_' . uniqid();
+        for ($i = 0; $i < 5; $i++) {
+            recordRateLimitHit($action);
+        }
+        $isBlocked = isRateLimited($action, 5, 15);
+        Assert::assertTrue($isBlocked, "6th attempt exceeding maxAttempts of 5 must be rate limited by isRateLimited()");
     });
 
     $suite->addTest('F10-B3: Honeypot field populated with URL/text rejection', 'Tier 2', function () {
-        $honeypotValue = "http://spam-site-bot.com/pharmacy";
-        $isBot = !empty($honeypotValue);
-        Assert::assertTrue($isBot, "Populated honeypot must identify spam bot");
+        $res = postBackendEndpoint('api/submit-audit-request.php', [
+            'practice_name' => 'Boundary Spam Clinic',
+            'contact_name' => 'Spam Bot',
+            'email' => 'spambot@testclinic.com',
+            'phone' => '862-799-2199',
+            'specialty' => 'Cardiology',
+            'patient_volume' => '250 - 500 visits / month',
+            'monthly_revenue' => '$50,000 - $100,000 / month',
+            'website_hp' => 'http://spam-site-bot.com/pharmacy'
+        ], [
+            'X-Requested-With' => 'XMLHttpRequest'
+        ]);
+
+        Assert::assertEquals(200, $res['statusCode'], "Populated honeypot must return fake HTTP 200 without creating lead");
+        Assert::assertTrue($res['json']['success'] ?? false, "Honeypot response must report success to mislead bot");
     });
 
     $suite->addTest('F10-B4: Submission completed under 500ms (bot velocity trap)', 'Tier 2', function () {
-        $renderTime = 1000;
-        $submitTime = 1200; // 200ms elapsed
-        $elapsedMs = $submitTime - $renderTime;
-        $isVelocityBot = $elapsedMs < 500;
-        Assert::assertTrue($isVelocityBot, "Submission under 500ms must trigger bot velocity flag");
-        
-        $humanSubmitTime = 6000; // 5000ms elapsed
-        $isHumanVelocity = ($humanSubmitTime - $renderTime) >= 500;
-        Assert::assertTrue($isHumanVelocity, "Submission over 500ms must be accepted as normal user");
+        $res = postBackendEndpoint('api/submit-audit-request.php', [
+            'practice_name' => 'Speed Bot Clinic',
+            'contact_name' => 'Rapid Submitter',
+            'email' => 'rapid@testclinic.com',
+            'phone' => '862-799-2199',
+            'specialty' => 'Cardiology',
+            'patient_volume' => '250 - 500 visits / month',
+            'monthly_revenue' => '$50,000 - $100,000 / month',
+            'form_timestamp' => time() // delta < 1s
+        ], [
+            'X-Requested-With' => 'XMLHttpRequest'
+        ]);
+
+        Assert::assertEquals(400, $res['statusCode'], "Instant speed submission must return HTTP 400 Bad Request");
+        Assert::assertStringContains('too quickly', $res['json']['message'] ?? '');
     });
 
-    $suite->addTest('F10-B5: Rate limit window expiry and counter reset', 'Tier 2', function () {
+    $suite->addTest('F10-B5: Rate limit window expiry and counter reset', 'Tier 2', function () use ($projectRoot) {
+        require_once $projectRoot . '/includes/functions.php';
+        $action = 'test_tier2_expiry_' . uniqid();
         $windowMinutes = 15;
-        $olderTimestamp = time() - (16 * 60); // 16 minutes ago (expired)
-        $isExpired = (time() - $olderTimestamp) > ($windowMinutes * 60);
-        Assert::assertTrue($isExpired, "Attempts older than 15 minutes must expire from window");
+        // Inject expired hit into session
+        $_SESSION['rate_limits'][$action] = [time() - (16 * 60)];
+        
+        $isBlocked = isRateLimited($action, 5, $windowMinutes);
+        Assert::assertFalse($isBlocked, "Attempts older than 15 minutes must expire from window and allow new requests");
     });
 
     // =========================================================================

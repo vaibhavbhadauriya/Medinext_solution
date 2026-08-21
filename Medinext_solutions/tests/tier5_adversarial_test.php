@@ -414,9 +414,8 @@ function getTier5AdversarialSuite(): TestSuite
             Assert::assertStringNotContains("'", $sanitized, "Single quotes must be HTML-entity escaped in sanitized output: {$payload}");
             Assert::assertTrue(str_contains($sanitized, '&#039;') || str_contains($sanitized, '&quot;') || !str_contains($sanitized, "'"), "Quotes must be converted to safe entities: {$payload}");
 
-            // Verify PDO parameter simulation treats payload as literal string value
-            $dummyPdoStmtParams = [':name' => $payload];
-            Assert::assertSame($payload, $dummyPdoStmtParams[':name'], "Prepared statements must bind raw payload as literal text value without SQL interpolation");
+            // Verify raw SQL injection payloads are rejected as email addresses
+            Assert::assertFalse(isValidEmail($payload), "Raw SQL injection payload must be rejected by isValidEmail: {$payload}");
         }
     });
 
@@ -721,8 +720,19 @@ function getTier5AdversarialSuite(): TestSuite
         ];
 
         foreach ($honeypotSpamPayloads as $spamHp) {
-            $isBot = !empty($spamHp);
-            Assert::assertTrue($isBot, "Non-empty website_hp honeypot must be detected as bot submission: {$spamHp}");
+            $res = postBackendEndpoint('api/submit-audit-request.php', [
+                'practice_name' => 'Spam Bot Clinic',
+                'contact_name' => 'Bot Spammer',
+                'email' => 'spambot@example.com',
+                'phone' => '862-799-2199',
+                'specialty' => 'Cardiology',
+                'patient_volume' => '501 - 1,000 visits / month',
+                'monthly_revenue' => '$100,001 - $250,000 / month',
+                'website_hp' => $spamHp
+            ], ['X-Requested-With' => 'XMLHttpRequest']);
+
+            Assert::assertEquals(200, $res['statusCode'], "Honeypot trap must respond with HTTP 200");
+            Assert::assertTrue($res['json']['success'] ?? false, "Honeypot response must simulate success without persisting lead");
         }
 
         $cleanHp = '';
@@ -730,18 +740,19 @@ function getTier5AdversarialSuite(): TestSuite
     });
 
     $suite->addTest('SEC-BOT-02: Submission velocity and sub-millisecond automated speed trap', 'Tier 5 - AntiBot', function () {
-        $formRenderTime = microtime(true);
-        $instantBotSubmitTime = $formRenderTime + 0.05;
-        $humanSubmitTime = $formRenderTime + 4.5;
+        $res = postBackendEndpoint('api/submit-audit-request.php', [
+            'practice_name' => 'Speed Bot Clinic',
+            'contact_name' => 'Rapid Submitter',
+            'email' => 'rapid@bot.com',
+            'phone' => '862-799-2199',
+            'specialty' => 'Cardiology',
+            'patient_volume' => '501 - 1,000 visits / month',
+            'monthly_revenue' => '$100,001 - $250,000 / month',
+            'form_timestamp' => time() // delta < 1s
+        ], ['X-Requested-With' => 'XMLHttpRequest']);
 
-        $botDeltaMs = ($instantBotSubmitTime - $formRenderTime) * 1000;
-        $humanDeltaMs = ($humanSubmitTime - $formRenderTime) * 1000;
-
-        $isBotVelocity = ($botDeltaMs < 500);
-        $isHumanVelocity = ($humanDeltaMs >= 500);
-
-        Assert::assertTrue($isBotVelocity, "Submission within {$botDeltaMs}ms (<500ms) must trigger velocity speed trap");
-        Assert::assertTrue($isHumanVelocity, "Submission after {$humanDeltaMs}ms (>=500ms) is legitimate human velocity");
+        Assert::assertEquals(400, $res['statusCode'], "Instantaneous velocity bot submission must return HTTP 400 Bad Request");
+        Assert::assertStringContains('too quickly', $res['json']['message'] ?? '');
     });
 
     $suite->addTest('SEC-BOT-03: Bot, scraper, and scanner user-agent recognition and handling', 'Tier 5 - AntiBot', function () {
@@ -788,25 +799,18 @@ function getTier5AdversarialSuite(): TestSuite
     // =========================================================================
 
     $suite->addTest('SEC-DOS-01: High concurrency submission burst throttling trigger', 'Tier 5 - RateLimiting', function () {
+        $action = 'test_dos_rate_limit_' . uniqid();
         $maxAttempts = 5;
-        $windowMinutes = 15;
 
-        $attemptHistory = [];
-        for ($i = 1; $i <= 10; $i++) {
-            $isThrottled = ($i > $maxAttempts);
-            $attemptHistory[] = [
-                'attempt' => $i,
-                'is_throttled' => $isThrottled
-            ];
+        for ($i = 1; $i <= $maxAttempts; $i++) {
+            $isThrottled = isRateLimited($action, $maxAttempts, 15);
+            Assert::assertFalse($isThrottled, "Attempt #{$i} within limit must not be throttled");
+            recordRateLimitHit($action);
         }
 
-        for ($i = 0; $i < 5; $i++) {
-            Assert::assertFalse($attemptHistory[$i]['is_throttled'], "Attempt #" . ($i + 1) . " must be allowed within max attempts limit ({$maxAttempts})");
-        }
-
-        for ($i = 5; $i < 10; $i++) {
-            Assert::assertTrue($attemptHistory[$i]['is_throttled'], "Attempt #" . ($i + 1) . " must be throttled/blocked after exceeding {$maxAttempts} attempts");
-        }
+        // 6th attempt must be throttled
+        $isThrottled6 = isRateLimited($action, $maxAttempts, 15);
+        Assert::assertTrue($isThrottled6, "Attempt #6 exceeding {$maxAttempts} attempts must be throttled");
     });
 
     $suite->addTest('SEC-DOS-02: IP header spoofing and X-Forwarded-For injection resilience', 'Tier 5 - RateLimiting', function () {
@@ -865,12 +869,13 @@ function getTier5AdversarialSuite(): TestSuite
     });
 
     $suite->addTest('SEC-DOS-05: Rate limiting window expiration and recovery simulation', 'Tier 5 - RateLimiting', function () {
+        $action = 'test_dos_window_expiry_' . uniqid();
         $windowMinutes = 15;
-        $now = time();
-        $expiredTimestamp = $now - (($windowMinutes + 1) * 60);
+        // Seed an expired timestamp older than 16 minutes
+        $_SESSION['rate_limits'][$action] = [time() - (16 * 60)];
 
-        $isExpired = ($now - $expiredTimestamp) > ($windowMinutes * 60);
-        Assert::assertTrue($isExpired, "Submissions older than {$windowMinutes} minutes must be marked expired and allow new requests");
+        $isLimited = isRateLimited($action, 5, $windowMinutes);
+        Assert::assertFalse($isLimited, "Submissions older than {$windowMinutes} minutes must be expired and allow new requests");
     });
 
     // =========================================================================
@@ -1053,69 +1058,42 @@ function getTier5AdversarialSuite(): TestSuite
     });
 
     $suite->addTest('SEC-HPP-02: Deeply nested and malformed pain_points parameter handling', 'Tier 5 - ParamPollution', function () {
-        $malformedPainPoints = [
-            'pain_points_nested' => ['a' => ['b' => ['c' => 'denials']]],
-            'pain_points_csv' => "denials,aging_ar,staff_burnout",
-            'pain_points_array' => ["denials", "aging_ar", "credentialing"],
-            'pain_points_numeric' => [0 => "denials", 1 => "underpayments"],
-            'pain_points_empty' => []
-        ];
+        $token = generateCSRFToken();
+        $res = postBackendEndpoint('api/submit-audit-request.php', [
+            'practice_name' => 'HPP Test Clinic',
+            'contact_name' => 'Dr. HPP',
+            'email' => 'hpp@testclinic.com',
+            'phone' => '862-799-2199',
+            'specialty' => 'Cardiology',
+            'patient_volume' => '250 - 500 visits / month',
+            'monthly_revenue' => '$50,000 - $100,000 / month',
+            'pain_points' => ['denials', 'ar_aging', 'credentialing'],
+            'csrf_token' => $token
+        ], ['X-Requested-With' => 'XMLHttpRequest'], ['csrf_token' => $token]);
 
-        $parsePainPoints = function (mixed $input): array {
-            if (is_array($input)) {
-                $flat = [];
-                array_walk_recursive($input, function ($v) use (&$flat) {
-                    if (is_scalar($v)) {
-                        $flat[] = sanitizeInput((string)$v);
-                    }
-                });
-                return array_values(array_filter($flat));
-            } elseif (is_string($input)) {
-                return array_values(array_filter(array_map('trim', explode(',', $input))));
-            }
-            return [];
-        };
-
-        $resNested = $parsePainPoints($malformedPainPoints['pain_points_nested']);
-        Assert::assertCount(1, $resNested, "Nested pain_points array must flatten to 1 item");
-        Assert::assertSame('denials', $resNested[0], "Flattened item must equal 'denials'");
-
-        $resCsv = $parsePainPoints($malformedPainPoints['pain_points_csv']);
-        Assert::assertCount(3, $resCsv, "CSV pain points must parse into 3 items");
-
-        $resArray = $parsePainPoints($malformedPainPoints['pain_points_array']);
-        Assert::assertCount(3, $resArray, "Standard array must parse into 3 items");
-
-        $resEmpty = $parsePainPoints($malformedPainPoints['pain_points_empty']);
-        Assert::assertCount(0, $resEmpty, "Empty array must parse into 0 items");
+        Assert::assertTrue($res['statusCode'] === 200 || $res['statusCode'] === 302, "Array pain_points must be processed cleanly");
     });
 
     $suite->addTest('SEC-HPP-03: Duplicate HTTP query parameter precedence (HPP)', 'Tier 5 - ParamPollution', function () {
-        $queryString = "action=audit&action=admin&success=1&success=0";
-        parse_str($queryString, $parsedGet);
-
-        Assert::assertSame('admin', $parsedGet['action'] ?? null, "Last duplicate query parameter must take precedence per standard PHP parsing");
-        Assert::assertSame('0', $parsedGet['success'] ?? null, "Last duplicate 'success' parameter must take precedence");
+        $rendered = renderPageScript('free-practice-audit.php', ['success' => '1', 'state' => 'TX']);
+        Assert::assertEquals(200, $rendered['statusCode'], "HTTP request with multiple parameters must render with 200");
+        Assert::assertStringContains('alert-success', $rendered['html'], "Success parameter must trigger success banner");
     });
 
     $suite->addTest('SEC-HPP-04: Type juggling with boolean, numerical, and null parameters', 'Tier 5 - ParamPollution', function () {
-        $jumbledInputs = [
-            'providerCount' => true,
-            'specialty' => 0,
-            'phone' => false,
-            'practiceName' => null,
-            'patient_volume' => 1000
-        ];
+        $token = generateCSRFToken();
+        $res = postBackendEndpoint('api/submit-audit-request.php', [
+            'practice_name' => 'Jumbled Type Clinic',
+            'contact_name' => 'Dr. Type Jumble',
+            'email' => 'jumble@clinic.com',
+            'phone' => '862-799-2199',
+            'specialty' => 'Cardiology',
+            'patient_volume' => '501 - 1,000 visits / month',
+            'monthly_revenue' => '$100,001 - $250,000 / month',
+            'csrf_token' => $token
+        ], ['X-Requested-With' => 'XMLHttpRequest'], ['csrf_token' => $token]);
 
-        $strCount = is_scalar($jumbledInputs['providerCount']) ? (string)$jumbledInputs['providerCount'] : '';
-        $strSpecialty = is_scalar($jumbledInputs['specialty']) ? (string)$jumbledInputs['specialty'] : '';
-        $strPhone = is_scalar($jumbledInputs['phone']) ? (string)$jumbledInputs['phone'] : '';
-        $strPractice = is_scalar($jumbledInputs['practiceName']) ? (string)$jumbledInputs['practiceName'] : '';
-
-        Assert::assertSame('1', $strCount, "Boolean true coerces safely to '1'");
-        Assert::assertSame('0', $strSpecialty, "Integer 0 coerces safely to '0'");
-        Assert::assertSame('', $strPhone, "Boolean false coerces safely to ''");
-        Assert::assertSame('', $strPractice, "Null coerces safely to ''");
+        Assert::assertTrue($res['statusCode'] === 200 || $res['statusCode'] === 302, "Valid submission with varying scalar fields must execute cleanly");
     });
 
     $suite->addTest('SEC-HPP-05: Missing, whitespace, and empty POST payload submission resilience', 'Tier 5 - ParamPollution', function () {

@@ -30,6 +30,41 @@ CREATE TABLE `contact_submissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================================
+-- Practice Revenue Audit Submissions
+-- ============================================================
+DROP TABLE IF EXISTS `audit_submissions`;
+CREATE TABLE `audit_submissions` (
+    `id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `practice_name` VARCHAR(150) NOT NULL,
+    `contact_name` VARCHAR(100) NOT NULL,
+    `job_title` VARCHAR(100) DEFAULT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `phone` VARCHAR(30) NOT NULL,
+    `street_address` VARCHAR(255) DEFAULT NULL,
+    `city` VARCHAR(100) DEFAULT NULL,
+    `state` VARCHAR(50) DEFAULT NULL,
+    `zip_code` VARCHAR(20) DEFAULT NULL,
+    `specialty` VARCHAR(100) NOT NULL,
+    `patient_volume` VARCHAR(100) NOT NULL,
+    `monthly_revenue` VARCHAR(100) NOT NULL,
+    `current_ehr` VARCHAR(100) DEFAULT NULL,
+    `pain_points` JSON DEFAULT NULL,
+    `additional_notes` TEXT DEFAULT NULL,
+    `message` TEXT DEFAULT NULL,
+    `lead_ref_id` VARCHAR(50) DEFAULT NULL,
+    `ip_address` VARCHAR(45) DEFAULT NULL,
+    `user_agent` TEXT DEFAULT NULL,
+    `status` ENUM('new', 'in_review', 'audit_scheduled', 'completed', 'archived') DEFAULT 'new',
+    `is_read` TINYINT(1) DEFAULT 0,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX `idx_audit_email` (`email`),
+    INDEX `idx_audit_specialty` (`specialty`),
+    INDEX `idx_audit_status` (`status`),
+    INDEX `idx_audit_created` (`created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================================
 -- Newsletter Subscribers
 -- ============================================================
 DROP TABLE IF EXISTS `newsletter_subscribers`;
