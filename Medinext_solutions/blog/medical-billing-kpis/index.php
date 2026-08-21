@@ -263,7 +263,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Stop the Revenue Leakage</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">If you don't confidently know your exact Net Collection Rate right now, you are losing money. Let MEDINEXT SOLUTIONS's RCM analysts run the numbers.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Request a Comprehensive KPI Audit</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Request a Comprehensive KPI Audit</a>
                     </div>
                     
                     

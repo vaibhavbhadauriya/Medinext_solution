@@ -108,7 +108,7 @@
                             <i class="ph-files position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Losing Revenue to Credentialing Delays</h3>
                             <p class="lead mb-4 position-relative">Our specialized enrollment team secures PECOS and commercial approvals faster than internal staff. Let us manage your provider roster.</p>
-                            <a href="contact/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Speak to an Enrollment Expert</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Speak to an Enrollment Expert</a>
                         </div>
 
                         <h2 id="caqh" class="fw-bold mb-3 mt-5">4. Conquering the CAQH ProView Profile</h2>
@@ -199,7 +199,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Accelerate Your Physician Onboarding</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">Bypass the bureaucratic red tape. Let MEDINEXT SOLUTIONS's dedicated enrollment specialists command your payer applications.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Get Credentialing Pricing Today</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Get Credentialing Pricing Today</a>
                     </div>
                     
                     

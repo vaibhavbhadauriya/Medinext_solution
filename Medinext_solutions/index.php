@@ -38,7 +38,7 @@ require_once 'includes/header.php';
                     </h1>
                 </noscript>
                 <div class="hero-v2-cta-wrap hero-fade-in-element">
-                    <a href="<?php echo $baseUrl; ?>/contact/" class="btn-blue-split">
+                    <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn-blue-split">
                         <span class="btn-blue-text">Get Started</span>
                         <span class="btn-blue-arrow"><i class="bi bi-arrow-right"></i></span>
                     </a>
@@ -844,7 +844,7 @@ require_once 'includes/header.php';
                 <p class="cta-text">
                     Let our expert billing team handle the paperwork while you focus on patient care.
                 </p>
-                <a href="contact.php" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg cta-btn">
+                <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg cta-btn">
                     Schedule a Free Consultation
                 </a>
             </div>

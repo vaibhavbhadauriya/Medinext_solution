@@ -228,7 +228,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Optimize Your RCM Workflow</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">Stop leaking revenue to denied claims and delayed A/R. Partner with MEDINEXT SOLUTIONS for an end-to-end RCM transformation.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Speak to an RCM Expert Today</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Speak to an RCM Expert Today</a>
                     </div>
                     
                     

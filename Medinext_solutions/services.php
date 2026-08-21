@@ -34,7 +34,7 @@ require_once 'includes/header.php';
       24+ specialized billing verticals. One trusted partner. Transform your practice revenue with a 98% clean claim rate and 30% average revenue increase.
     </p>
     <div class="svc-hero-ctas" data-aos="fade-up" data-aos-delay="240">
-      <a href="free-practice-audit.php" class="svc-btn-primary">
+      <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="svc-btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         Get Free Practice Audit
       </a>

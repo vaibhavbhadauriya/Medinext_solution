@@ -188,7 +188,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Stop Wasting Your Revenue.</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">Is your practice suffering from a high denial rate or stagnant A/R? Our experts execute a 98% clean claim rate.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Get a Free Revenue Audit Today</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Get a Free Revenue Audit Today</a>
                     </div>
                     
                     

@@ -222,7 +222,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Tired of Subpar Billing Agencies?</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">Experience the difference of partnering with true RCM experts holding a 98% clean claim success rate.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Schedule a Custom Consultation</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Schedule a Custom Consultation</a>
                     </div>
                     
                     

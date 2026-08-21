@@ -146,7 +146,7 @@
                             <i class="ph-phone-call position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Stressing Over Payer Denials</h3>
                             <p class="lead mb-4 position-relative">Our expert psychiatric billers manage the labyrinth of telehealth modifiers and commercial modifiers so you can focus exclusively on patient care.</p>
-                            <a href="contact/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Secure Your Clinic's Cash Flow</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Secure Your Clinic's Cash Flow</a>
                         </div>
 
 
@@ -212,7 +212,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Therapy Billing, Optimized.</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">Eliminate the endless coding headaches. Let MEDINEXT SOLUTIONS's AAPC experts secure the exact therapy revenue you legitimately earned.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Get a Free Revenue Analysis</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Get a Free Revenue Analysis</a>
                     </div>
                     
                     

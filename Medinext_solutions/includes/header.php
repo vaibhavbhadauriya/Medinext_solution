@@ -570,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a class="nav-link <?php echo isActivePage('contact'); ?>" href="<?php echo $baseUrl; ?>/contact/">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn nav-cta uiverse-btn" href="<?php echo $baseUrl; ?>/contact/">
+                        <a class="btn nav-cta uiverse-btn" href="<?php echo $baseUrl; ?>/free-practice-audit/">
                             <div class="uiverse-content">
                                 <span class="uiverse-text">
                                     <span style="--i:1">G</span><span style="--i:2">e</span><span style="--i:3">t</span>
@@ -610,7 +610,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="<?php echo $baseUrl; ?>/contact/" class="<?php echo isActivePage('contact'); ?>"><i class="bi bi-envelope"></i> Contact</a></li>
             </ul>
             <div class="drawer-cta">
-                <a class="btn btn-accent w-100" href="<?php echo $baseUrl; ?>/contact/">
+                <a class="btn btn-accent w-100" href="<?php echo $baseUrl; ?>/free-practice-audit/">
                     <i class="ph ph-calendar-check"></i>
                     Get Free Consultation
                 </a>

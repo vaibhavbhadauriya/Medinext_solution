@@ -1089,6 +1089,666 @@ const TestimonialsShowcaseSwiper = {
 };
 
 /* ==========================================================
+   20. PRACTICE AUDIT FORM CONTROLLER (Milestone 1)
+   ========================================================== */
+const AuditForm = {
+    form: null,
+    submitBtn: null,
+    alertBanner: null,
+    alertMessage: null,
+    successOverlay: null,
+    isSubmitting: false,
+
+    /**
+     * Resilient server JSON response parser.
+     * Extracts JSON safely even if server output buffer leaked PHP warnings.
+     */
+    parseServerJson(responseText) {
+        if (!responseText || typeof responseText !== 'string') {
+            throw new Error('Empty server response');
+        }
+        try {
+            return JSON.parse(responseText);
+        } catch (parseError) {
+            const jsonStart = responseText.lastIndexOf('{"success"');
+            if (jsonStart !== -1) {
+                return JSON.parse(responseText.slice(jsonStart));
+            }
+            throw parseError;
+        }
+    },
+
+    /**
+     * Fallback XHR runner if Fetch API encounters unexpected network rejection.
+     */
+    submitWithXHR(url, formData) {
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.setRequestHeader('Accept', 'application/json');
+
+            xhr.onload = () => {
+                if (xhr.status >= 200 && xhr.status < 500) {
+                    resolve(xhr.responseText || '');
+                } else {
+                    reject(new Error(`Server returned HTTP ${xhr.status}: ${xhr.statusText}`));
+                }
+            };
+
+            xhr.onerror = () => reject(new Error('Network connection failure.'));
+            xhr.ontimeout = () => reject(new Error('Request timed out. Please retry.'));
+            xhr.timeout = 20000;
+            xhr.send(formData);
+        });
+    },
+
+    /**
+     * Format Phone Input as (XXX) XXX-XXXX
+     */
+    formatPhoneNumber(value) {
+        const cleaned = ('' + value).replace(/\D/g, '');
+        const match = cleaned.substring(0, 10);
+        if (match.length >= 7) {
+            return `(${match.substring(0, 3)}) ${match.substring(3, 6)}-${match.substring(6)}`;
+        } else if (match.length >= 4) {
+            return `(${match.substring(0, 3)}) ${match.substring(3)}`;
+        } else if (match.length >= 1) {
+            return `(${match}`;
+        }
+        return '';
+    },
+
+    /**
+     * Real-time Input Masking for Phone and ZIP code
+     */
+    initMasking() {
+        if (!this.form) return;
+
+        // Phone inputs
+        const phoneInputs = this.form.querySelectorAll('input[type="tel"], input[name="phone"], .phone-mask');
+        phoneInputs.forEach(input => {
+            input.addEventListener('input', (e) => {
+                const start = e.target.selectionStart;
+                const prevLen = e.target.value.length;
+                e.target.value = this.formatPhoneNumber(e.target.value);
+                const newLen = e.target.value.length;
+                if (start !== null && start < prevLen) {
+                    e.target.setSelectionRange(start, start);
+                }
+            });
+        });
+
+        // ZIP Code inputs (5 numeric digits)
+        const zipInputs = this.form.querySelectorAll('input[name="zip_code"], .zip-mask');
+        zipInputs.forEach(input => {
+            input.addEventListener('input', (e) => {
+                let val = e.target.value.replace(/\D/g, '');
+                if (val.length > 5) {
+                    val = val.substring(0, 5);
+                }
+                e.target.value = val;
+            });
+        });
+    },
+
+    /**
+     * Interactive Multi-Select Pills (Toggle Active state & Checkbox sync)
+     */
+    initPills() {
+        if (!this.form) return;
+
+        const pillLabels = this.form.querySelectorAll('.pain-point-pill, .audit-pill-label, .audit-pill');
+        pillLabels.forEach(label => {
+            const checkbox = label.querySelector('input[type="checkbox"]');
+            if (!checkbox) return;
+
+            // Set initial state
+            if (checkbox.checked) {
+                label.classList.add('selected', 'active');
+                label.setAttribute('aria-checked', 'true');
+            } else {
+                label.classList.remove('selected', 'active');
+                label.setAttribute('aria-checked', 'false');
+            }
+
+            // Click listener
+            label.addEventListener('click', (e) => {
+                if (e.target !== checkbox) {
+                    e.preventDefault();
+                    checkbox.checked = !checkbox.checked;
+                }
+                if (checkbox.checked) {
+                    label.classList.add('selected', 'active');
+                    label.setAttribute('aria-checked', 'true');
+                } else {
+                    label.classList.remove('selected', 'active');
+                    label.setAttribute('aria-checked', 'false');
+                }
+                checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+            });
+
+            // Keyboard accessibility
+            label.setAttribute('tabindex', '0');
+            label.setAttribute('role', 'checkbox');
+            label.addEventListener('keydown', (e) => {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    checkbox.checked = !checkbox.checked;
+                    if (checkbox.checked) {
+                        label.classList.add('selected', 'active');
+                        label.setAttribute('aria-checked', 'true');
+                    } else {
+                        label.classList.remove('selected', 'active');
+                        label.setAttribute('aria-checked', 'false');
+                    }
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+            });
+        });
+    },
+
+    /**
+     * Live character counter for additional notes / service requirements
+     */
+    initCharCounter() {
+        if (!this.form) return;
+        const notesTextarea = this.form.querySelector('textarea[name="additional_notes"], textarea[name="service_requirements"]');
+        const charCountEl = document.getElementById('charCount');
+        if (notesTextarea && charCountEl) {
+            const updateCount = () => {
+                charCountEl.textContent = notesTextarea.value.length;
+            };
+            notesTextarea.addEventListener('input', updateCount);
+            updateCount();
+        }
+    },
+
+    /**
+     * Validate single field value against schema
+     */
+    validateField(name, value, element) {
+        const val = typeof value === 'string' ? value.trim() : '';
+
+        switch (name) {
+            case 'practice_name':
+            case 'practiceName':
+                if (!val || val.length < 2) return 'Please enter your practice or facility name.';
+                if (val.length > 150) return 'Practice name must be under 150 characters.';
+                return null;
+
+            case 'contact_name':
+            case 'contactName':
+                if (!val || val.length < 2) return 'Please enter primary contact full name.';
+                if (val.length > 100) return 'Name must be under 100 characters.';
+                return null;
+
+            case 'job_title':
+            case 'jobTitle':
+                if (!val || val === '') return 'Please specify your job title or role.';
+                return null;
+
+            case 'email':
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!val || !emailRegex.test(val)) return 'Please enter a valid work email address.';
+                return null;
+
+            case 'phone':
+                const phoneClean = val.replace(/\D/g, '');
+                if (!phoneClean || phoneClean.length < 10) return 'Please enter a valid 10-digit phone number.';
+                return null;
+
+            case 'street_address':
+            case 'address':
+                if (!val || val.length < 3) return 'Please enter your practice street address.';
+                return null;
+
+            case 'city':
+                if (!val || val.length < 2) return 'Please enter your city.';
+                return null;
+
+            case 'state':
+                if (!val || val === '') return 'Please select your state.';
+                return null;
+
+            case 'zip_code':
+            case 'zipCode':
+            case 'zip':
+                const zipClean = val.replace(/\D/g, '');
+                if (!zipClean || (zipClean.length !== 5 && zipClean.length !== 9)) {
+                    return 'Please enter a valid 5-digit ZIP code.';
+                }
+                return null;
+
+            case 'specialty':
+                if (!val || val === '') return 'Please select your primary specialty.';
+                return null;
+
+            case 'patient_volume':
+            case 'patientVolume':
+            case 'volume':
+                if (!val || val === '') return 'Please select monthly patient volume.';
+                return null;
+
+            case 'monthly_revenue':
+            case 'monthlyRevenue':
+            case 'revenue':
+                if (!val || val === '') return 'Please select estimated monthly revenue.';
+                return null;
+
+            case 'current_ehr':
+            case 'currentEhr':
+            case 'ehr_software':
+                if (!val || val === '' || val.length < 2) return 'Please specify your current EHR / PMS software.';
+                return null;
+
+            case 'service_requirements':
+            case 'additional_notes':
+                if (val.length > 2000) return 'Notes cannot exceed 2000 characters.';
+                return null;
+
+            default:
+                return null;
+        }
+    },
+
+    /**
+     * Validate entire form and return error map
+     */
+    validateForm(formData) {
+        const errors = {};
+        const requiredFields = [
+            'practice_name',
+            'contact_name',
+            'job_title',
+            'email',
+            'phone',
+            'street_address',
+            'city',
+            'state',
+            'zip_code',
+            'specialty',
+            'patient_volume',
+            'monthly_revenue',
+            'current_ehr'
+        ];
+
+        requiredFields.forEach(field => {
+            const altField = field === 'practice_name' ? 'practiceName' :
+                             field === 'contact_name' ? 'contactName' :
+                             field === 'job_title' ? 'jobTitle' : field;
+            const value = formData.get(field) ?? formData.get(altField) ?? '';
+            const error = this.validateField(field, value);
+            if (error) {
+                errors[field] = error;
+            }
+        });
+
+        // Optional check for notes
+        const notes = formData.get('additional_notes') ?? formData.get('service_requirements') ?? '';
+        const notesError = this.validateField('service_requirements', notes);
+        if (notesError) {
+            errors.additional_notes = notesError;
+        }
+
+        return errors;
+    },
+
+    /**
+     * Display validation errors on form controls
+     */
+    showErrors(errors) {
+        this.clearErrors();
+
+        let firstInvalidField = null;
+
+        Object.entries(errors).forEach(([field, message]) => {
+            const input = this.form.querySelector(`[name="${field}"], [name="${field}[]"], [id="${field}"]`);
+            if (input) {
+                input.classList.add('is-invalid');
+                input.setAttribute('aria-invalid', 'true');
+
+                const feedback = input.parentElement.querySelector('.invalid-feedback') ||
+                                 input.closest('.form-group')?.querySelector('.invalid-feedback') ||
+                                 input.nextElementSibling;
+
+                if (feedback && feedback.classList.contains('invalid-feedback')) {
+                    feedback.textContent = message;
+                    feedback.style.display = 'block';
+                }
+
+                if (!firstInvalidField) {
+                    firstInvalidField = input;
+                }
+            }
+        });
+
+        // Top alert banner
+        if (this.alertBanner) {
+            const errorCount = Object.keys(errors).length;
+            const msg = errorCount === 1 
+                ? 'Please correct the highlighted field below.'
+                : `Please correct the ${errorCount} highlighted fields below before submitting.`;
+            if (this.alertMessage) {
+                this.alertMessage.textContent = msg;
+            }
+            this.alertBanner.classList.remove('d-none');
+        }
+
+        // Focus and scroll smoothly to first invalid field
+        if (firstInvalidField) {
+            firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstInvalidField.focus();
+        }
+    },
+
+    /**
+     * Clear all error states
+     */
+    clearErrors() {
+        if (!this.form) return;
+        this.form.querySelectorAll('.form-control, .form-select').forEach(field => {
+            field.classList.remove('is-invalid');
+            field.removeAttribute('aria-invalid');
+        });
+        this.form.querySelectorAll('.invalid-feedback').forEach(el => {
+            el.textContent = '';
+            el.style.display = 'none';
+        });
+        if (this.alertBanner) {
+            this.alertBanner.classList.add('d-none');
+        }
+    },
+
+    /**
+     * Mark single field valid
+     */
+    markFieldValid(input) {
+        if (!input) return;
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+        input.removeAttribute('aria-invalid');
+        const feedback = input.parentElement.querySelector('.invalid-feedback') ||
+                         input.closest('.form-group')?.querySelector('.invalid-feedback') ||
+                         input.nextElementSibling;
+        if (feedback && feedback.classList.contains('invalid-feedback')) {
+            feedback.style.display = 'none';
+        }
+    },
+
+    /**
+     * Mark single field invalid
+     */
+    markFieldInvalid(input, message) {
+        if (!input) return;
+        input.classList.remove('is-valid');
+        input.classList.add('is-invalid');
+        input.setAttribute('aria-invalid', 'true');
+        const feedback = input.parentElement.querySelector('.invalid-feedback') ||
+                         input.closest('.form-group')?.querySelector('.invalid-feedback') ||
+                         input.nextElementSibling;
+        if (feedback && feedback.classList.contains('invalid-feedback')) {
+            feedback.textContent = message;
+            feedback.style.display = 'block';
+        }
+    },
+
+    /**
+     * Real-time inline field validation listeners
+     */
+    initRealTimeValidation() {
+        if (!this.form) return;
+
+        const inputs = this.form.querySelectorAll('.form-control, .form-select');
+        inputs.forEach(input => {
+            const fieldName = input.getAttribute('name') || input.id;
+
+            // On Blur: validate field
+            input.addEventListener('blur', () => {
+                if (input.value.trim().length === 0 && !input.required) {
+                    input.classList.remove('is-invalid', 'is-valid');
+                    return;
+                }
+                const error = this.validateField(fieldName, input.value, input);
+                if (error) {
+                    this.markFieldInvalid(input, error);
+                } else if (input.value.trim().length > 0) {
+                    this.markFieldValid(input);
+                }
+            });
+
+            // On Input / Change: clear error if now valid
+            input.addEventListener('input', () => {
+                if (input.classList.contains('is-invalid')) {
+                    const error = this.validateField(fieldName, input.value, input);
+                    if (!error) {
+                        this.markFieldValid(input);
+                    }
+                }
+            });
+
+            input.addEventListener('change', () => {
+                const error = this.validateField(fieldName, input.value, input);
+                if (error) {
+                    this.markFieldInvalid(input, error);
+                } else if (input.value.trim().length > 0) {
+                    this.markFieldValid(input);
+                }
+            });
+        });
+    },
+
+    /**
+     * Set loading spinner on submit button and toggle input disables
+     */
+    setLoading(loading) {
+        this.isSubmitting = loading;
+        if (!this.submitBtn) return;
+
+        const inputs = this.form.querySelectorAll('input, select, textarea, button');
+
+        if (loading) {
+            this.submitBtn.disabled = true;
+            this.submitBtn.dataset.originalText = this.submitBtn.innerHTML;
+            this.submitBtn.innerHTML = `
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                <span>Analyzing Practice Profile...</span>
+            `;
+            inputs.forEach(el => {
+                if (el !== this.submitBtn) el.setAttribute('data-was-disabled', el.disabled);
+                el.disabled = true;
+            });
+        } else {
+            this.submitBtn.disabled = false;
+            this.submitBtn.innerHTML = this.submitBtn.dataset.originalText || '<i class="ph ph-chart-line-up fs-5"></i><span>Generate My Free Practice Audit</span>';
+            inputs.forEach(el => {
+                if (el.getAttribute('data-was-disabled') === 'false' || !el.hasAttribute('data-was-disabled')) {
+                    el.disabled = false;
+                }
+                el.removeAttribute('data-was-disabled');
+            });
+        }
+    },
+
+    /**
+     * Render Animated Success Card & Fill Submission Summary Details
+     */
+    showSuccessState(payload, formData) {
+        const practiceName = formData.get('practice_name') || formData.get('practiceName') || 'Your Practice';
+        const contactName = formData.get('contact_name') || formData.get('contactName') || 'Doctor';
+        const email = formData.get('email') || '';
+        const phone = formData.get('phone') || '';
+        const specialty = formData.get('specialty') || 'Healthcare Specialty';
+        const leadId = payload.data?.lead_id || payload.data?.submission_id || '#AUD-' + Math.floor(100000 + Math.random() * 900000);
+
+        // Populate success elements
+        const nameEl = document.getElementById('successContactName');
+        const leadNameEl = document.getElementById('successLeadName');
+        const practiceEl = document.getElementById('successPracticeName');
+        const leadIdEl = document.getElementById('successLeadId');
+        const specialtyEl = document.getElementById('successSpecialty');
+        const emailEl = document.getElementById('successContactEmail');
+        const phoneEl = document.getElementById('successContactPhone');
+
+        if (nameEl) nameEl.textContent = contactName;
+        if (leadNameEl) leadNameEl.textContent = contactName;
+        if (practiceEl) practiceEl.textContent = practiceName;
+        if (leadIdEl) leadIdEl.textContent = typeof leadId === 'number' ? `#AUD-${leadId}` : leadId;
+        if (specialtyEl) specialtyEl.textContent = specialty;
+        if (emailEl) emailEl.textContent = email;
+        if (phoneEl) phoneEl.textContent = phone;
+
+        // Hide form
+        this.form.style.display = 'none';
+
+        // Display success overlay
+        if (this.successOverlay) {
+            this.successOverlay.style.display = 'block';
+            this.successOverlay.classList.add('active');
+            this.successOverlay.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Trigger custom event for analytics
+        document.dispatchEvent(new CustomEvent('auditFormSubmitted', {
+            detail: { leadId, practiceName, specialty, email }
+        }));
+    },
+
+    /**
+     * Handle Form Submission via AJAX Pipeline
+     */
+    async handleSubmit(e) {
+        e.preventDefault();
+        if (this.isSubmitting) return;
+
+        const formData = new FormData(this.form);
+
+        // Honeypot anti-bot check
+        const honeypot = formData.get('website_hp') || formData.get('audit_form_hp') || formData.get('hp_audit_field') || '';
+        if (honeypot.trim() !== '') {
+            // Simulated fake success for spam bot
+            this.setLoading(true);
+            setTimeout(() => {
+                this.setLoading(false);
+                this.showSuccessState({ success: true, data: { lead_id: 'SPAM-FILTERED' } }, formData);
+            }, 800);
+            return;
+        }
+
+        // Validate client-side
+        const errors = this.validateForm(formData);
+        if (Object.keys(errors).length > 0) {
+            this.showErrors(errors);
+            return;
+        }
+
+        this.clearErrors();
+        this.setLoading(true);
+
+        const targetUrl = this.form.getAttribute('action') || 'api/submit-audit-request.php';
+
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 20000);
+
+            const response = await fetch(targetUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                },
+                signal: controller.signal
+            });
+
+            clearTimeout(timeoutId);
+
+            const responseText = await response.text();
+            let result;
+
+            try {
+                result = this.parseServerJson(responseText);
+            } catch (parseErr) {
+                if (response.ok && responseText.includes('success=1')) {
+                    result = { success: true, message: 'Audit request received successfully.' };
+                } else {
+                    throw new Error('Malformed server response.');
+                }
+            }
+
+            if (result.success) {
+                this.showSuccessState(result, formData);
+                this.form.reset();
+            } else {
+                if (result.errors || (result.data && result.data.errors)) {
+                    const serverErrors = result.errors || result.data.errors;
+                    this.showErrors(serverErrors);
+                } else {
+                    if (this.alertBanner && this.alertMessage) {
+                        this.alertMessage.textContent = result.message || 'An error occurred during submission. Please try again.';
+                        this.alertBanner.classList.remove('d-none');
+                        this.alertBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        alert(result.message || 'Submission failed. Please check your entries.');
+                    }
+                }
+            }
+        } catch (error) {
+            // Attempt XHR Fallback
+            try {
+                const xhrResponseText = await this.submitWithXHR(targetUrl, formData);
+                const fallbackResult = this.parseServerJson(xhrResponseText);
+
+                if (fallbackResult.success) {
+                    this.showSuccessState(fallbackResult, formData);
+                    this.form.reset();
+                    return;
+                }
+
+                if (fallbackResult.errors) {
+                    this.showErrors(fallbackResult.errors);
+                    return;
+                }
+
+                throw new Error(fallbackResult.message || 'XHR submission failed.');
+            } catch (xhrError) {
+                if (this.alertBanner && this.alertMessage) {
+                    this.alertMessage.textContent = 'Connection timeout or network issue. Please verify your connection or call us directly at 862-799-2199.';
+                    this.alertBanner.classList.remove('d-none');
+                    this.alertBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('Network error. Please call us at 862-799-2199 or try again.');
+                }
+            }
+        } finally {
+            this.setLoading(false);
+        }
+    },
+
+    /**
+     * Initialize Module
+     */
+    init() {
+        this.form = document.getElementById('practice-audit-form') || document.getElementById('auditForm') || document.getElementById('auditRequestForm');
+        if (!this.form) return;
+
+        this.submitBtn = this.form.querySelector('button[type="submit"]') || document.getElementById('auditSubmitBtn');
+        this.alertBanner = document.getElementById('auditFormAlert');
+        if (this.alertBanner) {
+            this.alertMessage = this.alertBanner.querySelector('.alert-message') || this.alertBanner;
+        }
+        this.successOverlay = document.getElementById('auditSuccessOverlay') || document.getElementById('formSuccessOverlay');
+
+        this.initMasking();
+        this.initPills();
+        this.initCharCounter();
+        this.initRealTimeValidation();
+
+        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    }
+};
+
+/* ==========================================================
    MASTER INITIALIZATION
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -1113,5 +1773,7 @@ document.addEventListener('DOMContentLoaded', () => {
         MockupAnimation.init();
         ContactForm.init();
         NewsletterForm.init();
+        AuditForm.init();
     }, 100);
 });
+

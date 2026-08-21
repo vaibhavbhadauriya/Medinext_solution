@@ -205,7 +205,7 @@
                     <div class="card bg-dark text-white text-center p-5 mt-5 rounded-4 shadow">
                         <h3 class="h2 fw-bold mb-3">Maximize Your Internal Profit Margins</h3>
                         <p class="lead mb-4 mx-auto" style="max-width: 600px;">Stop leaking administrative costs and unrecovered claim revenue. Contact the AAPC-certified experts at MEDINEXT SOLUTIONS today.</p>
-                        <a href="contact/" class="btn btn-primary btn-lg fw-bold px-5">Get a Pricing Matrix Custom Match</a>
+                        <a href="free-practice-audit/" class="btn btn-primary btn-lg fw-bold px-5">Get a Pricing Matrix Custom Match</a>
                     </div>
                     
                     

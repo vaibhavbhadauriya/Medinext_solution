@@ -5872,3 +5872,111 @@ body.dark-hero .prisma-nav:not(.scrolled) .brand-logo-wrapper img {
         font-size: 1.05rem;
     }
 }
+
+/* ==========================================================
+   PRACTICE REVENUE AUDIT FORM & UI ENHANCEMENTS (Milestone 1)
+   ========================================================== */
+
+/* Glassmorphism Card Container */
+.audit-form-card {
+    background: var(--dark-card, #ffffff);
+    border: 1px solid var(--glass-border, rgba(14, 165, 233, 0.15));
+    transition: transform var(--transition-smooth, 0.3s ease), box-shadow var(--transition-smooth, 0.3s ease);
+}
+
+.audit-card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pain Point Interactive Multi-Select Pills */
+.pain-points-grid,
+.audit-pills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pain-point-pill,
+.audit-pill-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    user-select: none;
+}
+
+.pain-point-pill input[type="checkbox"],
+.audit-pill-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pain-point-pill .pill-content,
+.audit-pill-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    background: #f1f5f9;
+    border: 1.5px solid #e2e8f0;
+    border-radius: var(--radius-full, 9999px);
+    font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+    font-size: var(--fs-xs, 0.8125rem);
+    font-weight: 600;
+    color: var(--gray-600, #475569);
+    transition: all var(--transition-fast, 0.2s ease);
+}
+
+.pain-point-pill:hover .pill-content,
+.audit-pill-label:hover .audit-pill-chip {
+    border-color: var(--primary-light, #38bdf8);
+    color: var(--primary-dark, #0284c7);
+    background: #f0f9ff;
+    transform: translateY(-1px);
+}
+
+.pain-point-pill input[type="checkbox"]:checked + .pill-content,
+.pain-point-pill.active .pill-content,
+.pain-point-pill.selected .pill-content,
+.audit-pill-checkbox:checked + .audit-pill-chip,
+.audit-pill-label.active .audit-pill-chip,
+.audit-pill-label.selected .audit-pill-chip {
+    background: rgba(14, 165, 233, 0.12);
+    border-color: var(--primary, #0ea5e9);
+    color: var(--primary-dark, #0284c7);
+    box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+/* Roadmap Timeline */
+.roadmap-timeline .roadmap-step span.badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Form Input Groups & Icons */
+.audit-form-card .input-group-text {
+    border-color: var(--border-color, #e2e8f0);
+}
+
+.audit-form-card .form-control:focus,
+.audit-form-card .form-select:focus {
+    border-color: var(--primary, #0ea5e9);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+/* Success Checkmark Circle */
+.success-checkmark-circle {
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    animation: scaleInCheckmark 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scaleInCheckmark {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.audit-confirmation-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+}
+

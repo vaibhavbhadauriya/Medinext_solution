@@ -173,7 +173,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <strong class="text-primary">24/7 Dedicated Team</strong>
                             </li>
                         </ul>
-                        <a href="<?php echo $baseUrl; ?>/contact/" class="btn btn-primary w-100 fw-semibold">
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-primary w-100 fw-semibold">
                             Request Custom Quote
                         </a>
                     </div>
