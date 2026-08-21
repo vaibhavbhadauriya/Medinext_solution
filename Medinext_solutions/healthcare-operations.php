@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-mart-production-7089041.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Beyond Billing: Total Practice Optimization</h2>
                         <p>A high-performing revenue cycle is impossible to sustain if the underlying clinical and administrative operations are fractured. High patient no-show rates, inefficient EHR templates, and lack of staff cross-training create bottlenecks that choke cash flow before a claim is ever generated.</p>
                         <p>MEDINEXT SOLUTIONS provides comprehensive healthcare operations consulting and management. We embed our experts into your practice to analyze patient throughput, front-desk collection protocols, and provider documentation habits. We re-engineer your workflows to eliminate redundancies, allowing your clinical staff to see more patients while actually reducing their administrative burden.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-laura-james-6097750.jpg" alt="Healthcare operations management and clinical workflow optimization" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">End-to-end healthcare operations including staffing, compliance, and revenue cycle management</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Workflow Optimization & EHR Tuning</h2>
                         <p>The majority of denied claims originate from front-end operational failures. We implement rigorous, standardized workflows to stop revenue leakage at the source.</p>

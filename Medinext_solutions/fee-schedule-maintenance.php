@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/fee%20schedule.jpeg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -43,6 +43,11 @@ require_once 'includes/header.php';
                         <p>One of the most common—and most expensive—mistakes made by healthcare organizations is adopting a "set it and forget it" approach to their fee schedules. When a practice fails to systematically update its Usual and Customary (U&C) rates (often referred to as the master fee schedule), they unknowingly throttle their own revenue.</p>
                         <p>Insurance companies update their allowable rates annually. If your practice's billed charge for a specific CPT or CDT code falls *below* a newly increased insurance allowable rate, the payer will simply pay your lower billed amount. They will not voluntarily bump up your payment. Over the course of a year, across thousands of claims, this results in massive, unrecoverable revenue leakage.</p>
                         <p>MEDINEXT SOLUTIONS offers specialized <a href="healthcare-operations/">Fee Schedule Maintenance</a>. We act as your strategic financial analysts, constantly monitoring regional charge data, Medicare RVU changes, and commercial payer contract updates to ensure your practice maximizes every single billing opportunity.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-negativespace-48604.jpg" alt="Fee schedule documentation and payer reimbursement rate analysis" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Comprehensive payer fee schedule analysis and contractual rate optimization</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering the U&C Master Fee Schedule</h2>
                         <p>Your master fee schedule is the baseline for all your financial operations. If it is too low, you lose money to insurance allowables. If it is wildly too high, it creates artificial inflation of your Accounts Receivable and generates massive, uncollectible patient balances.</p>

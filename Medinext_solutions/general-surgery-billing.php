@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-pavel-danilyuk-7653115.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">The Surgical Billing Minefield</h2>
                         <p>General surgery encompasses an incredibly broad spectrum of procedures, from minor in-office cyst excisions to life-saving emergency laparotomies and complex oncological resections. Billing for these services requires translating dense, multi-page operative notes into a flawless sequence of CPT and ICD-10 codes. Inaccurate application of the global surgical package rules or failure to append the correct modifiers for multiple same-day procedures leads to massive, unrecoverable revenue loss.</p>
                         <p>MEDINEXT SOLUTIONS delivers highly specialized <a href="revenue-cycle-management/">revenue cycle management</a> for general surgeons and surgical groups. Our AAPC-certified coders meticulously dissect your operative reports to ensure every medically necessary procedure, approach (open vs. laparoscopic), and co-surgeon involvement is captured. With our aggressive denial management, we maintain a <strong>98% clean claim rate</strong> and significantly reduce your days in AR.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-tima-miroshnichenko-9574536.jpg" alt="Surgical procedure documentation and operative report coding" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">General surgery CPT coding with global surgical package and modifier management</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Navigating the Global Surgical Package</h2>
                         <p>CMS and commercial payers bundle pre-operative, intra-operative, and routine post-operative care into a single payment known as the global surgical package. Understanding when you can and cannot bill outside of this package is critical.</p>

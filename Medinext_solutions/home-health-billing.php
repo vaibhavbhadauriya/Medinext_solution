@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/Home%20Health.avif') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Surviving the 2026 Home Health Cuts</h2>
                         <p>Home health agencies are facing unprecedented financial pressure. The CY 2026 CMS final rule implemented a devastating <strong>-1.023% permanent and -3.0% temporary reduction</strong> to the national, standardized 30-day period payment rate. In this hostile reimbursement climate, agencies can no longer afford sloppy PDGM coding, late NOA submissions, or inaccurate OASIS data that fails to capture patient complexity.</p>
                         <p>MEDINEXT SOLUTIONS provides specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for Home Health Agencies (HHAs). Our certified HCS-D and HCS-O experts ensure your clinical documentation perfectly aligns with your billing, maximizing your case-mix weight under the Patient-Driven Groupings Model (PDGM) while strictly adhering to Medicare's rigid compliance timelines. We maintain a <strong>98% clean claim rate</strong>, ensuring your cash flow doesn't freeze due to avoidable RTP (Return to Provider) errors.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-gustavo-fring-7446669.jpg" alt="Home health aide providing in-home patient care and clinical documentation" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">Home health OASIS assessment, PDGM grouper optimization, and episodic billing</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering PDGM and OASIS-E2 Optimization</h2>
                         <p>Your agency's revenue is entirely dependent on the accuracy of your OASIS assessments and ICD-10 coding. If your primary diagnosis doesn't map to a clinical group, or if you fail to capture all comorbidities, you are hemorrhaging revenue.</p>

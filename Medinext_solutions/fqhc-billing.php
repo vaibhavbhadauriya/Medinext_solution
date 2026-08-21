@@ -15,7 +15,7 @@ require_once 'includes/header.php';
 <!-- ============================================ -->
 <main id="main-content">
     <!-- Hero Section -->
-    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, #0056D2, #00C9A7);">
+    <header class="page-hero text-white py-5" style="background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(0, 82, 204, 0.88) 60%, rgba(0, 201, 167, 0.82) 100%), url('<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-gustavo-fring-3985152.jpg') center/cover no-repeat;">
         <div class="container mt-5 pt-5 pb-4">
             <nav aria-label="Breadcrumb">
                 <ol class="breadcrumb">
@@ -42,6 +42,11 @@ require_once 'includes/header.php';
                         <h2 class="h3 fw-bold text-primary mb-3">Navigating the FQHC PPS Maze</h2>
                         <p>Federally Qualified Health Centers (FQHCs) operate under entirely different reimbursement rules than standard physician practices. Billing under the Prospective Payment System (PPS) requires specialized G-codes, specific modifiers, and exact revenue code mapping. A single configuration error in your EHR or clearinghouse can result in an entire month of Medicare and Medicaid encounters being rejected.</p>
                         <p>MEDINEXT SOLUTIONS provides specialized <a href="revenue-cycle-management/">revenue cycle management</a> engineered exclusively for FQHCs and Community Health Centers. Our certified coders understand the nuances of the FQHC PPS methodology (G0466-G0470). We ensure every qualifying visit is accurately captured, modifiers are correctly applied to prevent bundling, and your cost reports are supported by flawless encounter data. We maintain a <strong>98% clean claim rate</strong>, ensuring your grant-funded center remains financially viable.</p>
+
+                        <figure class="figure my-4 w-100">
+                            <img src="<?php echo $baseUrl; ?>/assets/images/decorative%20images/pexels-rdne-6129121.jpg" alt="Community health center patient consultation and federally qualified healthcare facility" loading="lazy" class="img-fluid rounded-4 shadow-sm w-100 object-fit-cover" style="max-height: 420px;" />
+                            <figcaption class="figure-caption text-muted text-center mt-2 small">FQHC prospective payment system (PPS) and encounter-based billing workflows</figcaption>
+                        </figure>
 
                         <h2 class="h3 fw-bold text-primary mt-5 mb-3">Mastering Wrap-Around Payments</h2>
                         <p>When an FQHC provides services to a patient covered by a Medicaid Managed Care Organization (MCO) or a Medicare Advantage (MA) plan, the payment from the health plan is often lower than the center's established PPS encounter rate. FQHCs are legally entitled to a supplemental "wrap-around" payment from the state Medicaid agency or Medicare to make up this difference.</p>
