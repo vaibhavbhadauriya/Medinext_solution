@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Stop bleeding revenue. Master specific CARC codes, uncover root cause tracking, and implement data-driven appeal logic to protect your practice's bottom line.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 14 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -102,7 +102,7 @@
                             <i class="ph-file-dashed position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Wasting Staff Time on Dead Appeals</h3>
                             <p class="lead mb-4 position-relative">Our specialized Denial Task Force recovers up to $200,000 in aging, "unpayable" claims for practices just like yours. Let us rescue your AR.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Request Your Free AR Audit Now</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Request Your Free AR Audit Now</a>
                         </div>
 
                         <h2 id="denial-4" class="fw-bold mb-3 mt-5">4. CARC CO-197: Precertification/Authorization/Notification Absent</h2>
@@ -123,7 +123,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Key Takeaway</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Key Takeaway</h4>
                             <p class="mb-0 text-dark">
                                 Never blindly rebill a denied claim. Insurers heavily penalize repetitive submissions and will rapidly flag your Tax ID for RAC audits. Always execute a formal, paper-backed appeal quoting the specific LCD/NCD governing rule, and append corresponding clinical evidence clearly highlighted.
                             </p>
@@ -150,10 +150,10 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th>CARC Code</th>
-                                        <th>Description Strategy</th>
-                                        <th>Recovery Difficulty</th>
-                                        <th>Action Required</th>
+                                        <th class="text-white">CARC Code</th>
+                                        <th class="text-white">Description Strategy</th>
+                                        <th class="text-white">Recovery Difficulty</th>
+                                        <th class="text-white">Action Required</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -284,7 +284,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Free AR Denial Audit</h3>
                                 <p class="small mb-4">Let our specialized AR Task Force analyze your current aging reports and locate hidden 120+ day recoverable cash.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Claim Free Audit</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Claim Free Audit</a>
                             </div>
                         </div>
 

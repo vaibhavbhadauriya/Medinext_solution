@@ -258,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="loader-text-group">
                 <h3 class="loader-heading">Loading</h3>
-                <p class="loader-desc">Preparing your experience, please wait?</p>
+                <p class="loader-desc">Preparing your experience, please wait...</p>
             </div>
         </div>
     </div>

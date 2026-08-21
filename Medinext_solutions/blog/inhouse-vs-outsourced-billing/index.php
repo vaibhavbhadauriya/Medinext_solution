@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Stop guessing at your overhead costs. We break down precise TCO tables, salary comparisons, and break-even revenue formulas to determine the most profitable RCM structure for your practice.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 15 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -105,7 +105,7 @@
                             <i class="ph-calculator position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Guessing at Your Overhead</h3>
                             <p class="lead mb-4 position-relative">Let MEDINEXT SOLUTIONS analyze your practice ledger. We will generate a precise, custom ROI calculation proving exactly how much revenue an outsourced switch will yield.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Run My Data Comparison</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Run My Data Comparison</a>
                         </div>
 
                         <h2 id="comparison-table" class="fw-bold mb-3 mt-5">4. Direct Cost Comparison Table (Based on $1.2M Annual Revenue)</h2>
@@ -117,9 +117,9 @@
                             <table class="table table-bordered border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 33%;">Financial Category</th>
-                                        <th style="width: 33%;">In-House RCM Operations</th>
-                                        <th style="width: 34%;">Outsourced RCM (At 5%)</th>
+                                        <th class="text-white" style="width: 33%;">Financial Category</th>
+                                        <th class="text-white" style="width: 33%;">In-House RCM Operations</th>
+                                        <th class="text-white" style="width: 34%;">Outsourced RCM (At 5%)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -163,7 +163,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Key Takeaway</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Key Takeaway</h4>
                             <p class="mb-0 text-dark">
                                 Outsourced billing utilizes a variable cost structure. If a major surgeon goes on a month-long sabbatical and surgical revenue instantly drops from $200K to $50K, your overhead billing costs automatically plunge to match the scale. An in-house structure forces you to float the full salary load during massive revenue dips.
                             </p>
@@ -267,7 +267,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Free AR Analysis</h3>
                                 <p class="small mb-4">Discover precisely how much cash our firm could rapidly unlock from your current internal 90+ day aging accounts.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Claim Custom Report</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Claim Custom Report</a>
                             </div>
                         </div>
 

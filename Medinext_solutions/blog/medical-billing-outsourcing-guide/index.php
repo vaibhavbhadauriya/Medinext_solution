@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Everything you need to know about transitioning your healthcare revenue cycle, from cost analysis to selecting the perfect RCM partner.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 12 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -114,7 +114,7 @@
                             <i class="ph-chart-line-up position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Losing 15% of Your Earned Revenue to Avoidable Errors</h3>
                             <p class="lead mb-4 position-relative">MEDINEXT SOLUTIONS's AAPC-certified coders maintain a 98% clean claim pass rate. Let us audit your practice for free and locate your hidden revenue.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Get a Free Revenue Audit Today</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Get a Free Revenue Audit Today</a>
                         </div>
 
                         <h2 id="pros-cons" class="fw-bold mb-4">3. Pros & Cons Comparison Table</h2>
@@ -126,8 +126,8 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 50%;">Pros of Outsourced Billing</th>
-                                        <th style="width: 50%;">Cons / Risks of Outsourced Billing</th>
+                                        <th class="text-white" style="width: 50%;">Pros of Outsourced Billing</th>
+                                        <th class="text-white" style="width: 50%;">Cons / Risks of Outsourced Billing</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -153,7 +153,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Key Takeaway</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Key Takeaway</h4>
                             <p class="mb-0 text-dark">
                                 Outsourcing shifts your billing costs from a fixed overhead expense (salaries) to a variable operational expense (percentage of collections). This means your billing costs naturally adapt downward during slow months and appropriately scale during your busiest surgical seasons without firing or hiring staff.
                             </p>
@@ -305,7 +305,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Free Practice Audit</h3>
                                 <p class="small mb-4">Let our experts analyze your current AR aging report and locate hidden cash flow bottlenecks within 48 hours.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Claim Free Audit</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Claim Free Audit</a>
                             </div>
                         </div>
 

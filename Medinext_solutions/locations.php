@@ -118,9 +118,9 @@ require_once __DIR__ . '/includes/header.php';
             <!-- Breadcrumbs -->
             <nav aria-label="Breadcrumb" class="mb-3">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white-50 text-decoration-none">Home</a></li>
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/" class="text-white-50 text-decoration-none">Locations</a></li>
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($stateSlug); ?>/" class="text-white-50 text-decoration-none"><?php echo htmlspecialchars($stateName); ?></a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/" class="text-white text-decoration-none">Locations</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/<?php echo htmlspecialchars($stateSlug); ?>/" class="text-white text-decoration-none"><?php echo htmlspecialchars($stateName); ?></a></li>
                     <li class="breadcrumb-item active text-white fw-bold" aria-current="page"><?php echo htmlspecialchars($cityName); ?></li>
                 </ol>
             </nav>
@@ -128,17 +128,17 @@ require_once __DIR__ . '/includes/header.php';
             <div class="row align-items-center g-4">
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small">
-                        <i class="ph ph-map-pin-fill text-warning"></i>
+                        <i class="ph ph-map-pin-fill" style="color: #ffd700;"></i>
                         <span>Serving <?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?> &amp; <?php echo htmlspecialchars($county); ?> County</span>
                     </div>
                     <h1 class="display-4 fw-bold mb-3">
-                        Medical Billing &amp; RCM Services in <span class="text-warning"><?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?></span>
+                        Medical Billing &amp; RCM Services in <span style="color: #ffd700;"><?php echo htmlspecialchars($cityName); ?>, <?php echo htmlspecialchars($stateId); ?></span>
                     </h1>
                     <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6;">
                         Empowering healthcare practices, specialty clinics, and hospital systems in <strong><?php echo htmlspecialchars($cityName); ?></strong> with end-to-end revenue cycle management. AAPC-certified coding, automated claim scrubbing, and aggressive denial recovery to maximize your practice revenue by up to <strong>30%</strong>.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary shadow-sm">
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark shadow-sm">
                             <i class="ph ph-chart-line-up me-1"></i> Get Free Practice Audit
                         </a>
                         <a href="tel:8627992199" class="btn btn-outline-light btn-lg">
@@ -583,25 +583,25 @@ require_once __DIR__ . '/includes/header.php';
         <div class="container mt-5 pt-4 pb-4">
             <nav aria-label="Breadcrumb" class="mb-3">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white-50 text-decoration-none">Home</a></li>
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/" class="text-white-50 text-decoration-none">Locations</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/locations/" class="text-white text-decoration-none">Locations</a></li>
                     <li class="breadcrumb-item active text-white fw-bold" aria-current="page"><?php echo htmlspecialchars($stateName); ?></li>
                 </ol>
             </nav>
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small">
-                        <i class="ph ph-flag-fill text-warning"></i>
+                        <i class="ph ph-flag-fill" style="color: #ffd700;"></i>
                         <span>Statewide Healthcare RCM Coverage &bull; <?php echo number_format((int)$cityCount); ?> Cities &amp; Towns</span>
                     </div>
                     <h1 class="display-4 fw-bold mb-3">
-                        Medical Billing &amp; RCM Services in <span class="text-warning"><?php echo htmlspecialchars($stateName); ?></span>
+                        Medical Billing &amp; RCM Services in <span style="color: #ffd700;"><?php echo htmlspecialchars($stateName); ?></span>
                     </h1>
                     <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6;">
                         Delivering tailored medical coding, billing, and credentialing services across <?php echo htmlspecialchars($stateName); ?>. Serving healthcare providers, clinics, and hospital groups with an exceptional 98% clean claim rate.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary">
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark">
                             Get Free Practice Audit
                         </a>
                         <a href="#state-cities" class="btn btn-outline-light btn-lg">
@@ -754,7 +754,7 @@ require_once __DIR__ . '/includes/header.php';
                                     <p class="small text-muted mb-0"><?php echo htmlspecialchars($city['county_name']); ?> County</p>
                                 </div>
                                 <div class="text-end">
-                                    <span class="badge bg-light text-muted border small">
+                                    <span class="badge bg-light text-secondary border small">
                                         Pop: <?php echo number_format((int)$city['population']); ?>
                                     </span>
                                 </div>
@@ -842,24 +842,24 @@ require_once __DIR__ . '/includes/header.php';
         <div class="container mt-5 pt-4 pb-4">
             <nav aria-label="Breadcrumb" class="mb-3">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white-50 text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo $baseUrl; ?>/" class="text-white text-decoration-none">Home</a></li>
                     <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Locations</li>
                 </ol>
             </nav>
             <div class="row align-items-center">
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-white bg-opacity-20 text-white small">
-                        <i class="ph ph-globe-hemisphere-west-fill text-warning"></i>
+                        <i class="ph ph-globe-hemisphere-west-fill" style="color: #ffd700;"></i>
                         <span>United States Nationwide RCM Directory</span>
                     </div>
                     <h1 class="display-4 fw-bold mb-3">
-                        Medical Billing &amp; RCM Across <span class="text-warning">All 50 US States</span>
+                        Medical Billing &amp; RCM Across <span style="color: #ffd700;">All 50 US States</span>
                     </h1>
                     <p class="lead mb-4 text-white-90" style="font-size: 1.15rem; line-height: 1.6;">
                         MEDINEXT SOLUTIONS delivers nationwide medical billing, revenue cycle management, and provider credentialing services across 31,000+ US cities, helping healthcare practices eliminate denials and accelerate cash flow.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary">
+                        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark">
                             Get Free Practice Audit
                         </a>
                         <a href="#states-grid" class="btn btn-outline-light btn-lg">
@@ -875,7 +875,7 @@ require_once __DIR__ . '/includes/header.php';
     <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-bold text-uppercase small">Metropolitan Coverage</span>
+                <span class="badge px-3 py-2 rounded-pill fw-bold text-uppercase small" style="background-color: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;">Metropolitan Coverage</span>
                 <h2 class="h2 fw-bold text-dark mt-2">Top US Healthcare Metro Hubs</h2>
                 <p class="text-muted">Explore high-volume medical billing services in major US healthcare markets.</p>
             </div>
@@ -902,7 +902,7 @@ require_once __DIR__ . '/includes/header.php';
     <section class="py-5" id="states-grid">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-bold text-uppercase small">Nationwide Directory</span>
+                <span class="badge px-3 py-2 rounded-pill fw-bold text-uppercase small" style="background-color: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;">Nationwide Directory</span>
                 <h2 class="h2 fw-bold text-dark mt-2">Browse Medical Billing by State</h2>
                 <p class="text-muted">Select any US state below to view local city locations, regional payer details, and healthcare RCM coverage.</p>
             </div>
@@ -916,7 +916,7 @@ require_once __DIR__ . '/includes/header.php';
                                     <h3 class="h6 fw-bold text-dark mb-1"><?php echo htmlspecialchars($st['name']); ?> (<?php echo htmlspecialchars($st['id']); ?>)</h3>
                                     <p class="small text-muted mb-0"><?php echo number_format((int)$st['city_count']); ?> Cities &amp; Towns</p>
                                 </div>
-                                <span class="badge bg-primary bg-opacity-10 text-primary small">View</span>
+                                <span class="badge small" style="background-color: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd;">View</span>
                             </div>
                         </a>
                     </div>

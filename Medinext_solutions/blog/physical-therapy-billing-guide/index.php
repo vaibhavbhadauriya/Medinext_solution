@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Master the Medicare 8-Minute Rule, precise PT evaluation codes (97161-97163), and Modifier GP usage to completely eliminate physical therapy claim denials and maximize your rehab clinic?s cash flow.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 14 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -90,9 +90,9 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 15%;">CPT Code</th>
-                                        <th style="width: 35%;">Category / Name</th>
-                                        <th style="width: 50%;">Clinical Definition & Intent</th>
+                                        <th class="text-white" style="width: 15%;">CPT Code</th>
+                                        <th class="text-white" style="width: 35%;">Category / Name</th>
+                                        <th class="text-white" style="width: 50%;">Clinical Definition & Intent</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -140,7 +140,7 @@
                             <i class="ph-calculator position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Struggling with the 8-Minute Rule?</h3>
                             <p class="lead mb-4 position-relative">Miscalculating timed units is the leading cause of massive PT claim denials and RAC audits. Let MEDINEXT SOLUTIONS's AAPC experts scrub your coding automatically.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Get a Free Coding Audit</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Get a Free Coding Audit</a>
                         </div>
 
                         <h2 id="timed-untimed" class="fw-bold mb-3 mt-5">3. Untimed vs. Timed Codes</h2>
@@ -180,7 +180,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-math-operations text-warning fs-3 me-2"></i> How to Calculate It</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-math-operations  fs-3 me-2" style="color: #b45309;"></i> How to Calculate It</h4>
                             <p class="mb-0 text-dark">
                                 Submitting excessive volumes of units requires adding together the minutes of ALL timed services. <br><br>
                                 <strong>Scenario:</strong> 25 mins of TherEx (97110) + 10 mins of Manual Therapy (97140) = 35 Total Timed Minutes. <br>
@@ -301,7 +301,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Rehab Billing Audits</h3>
                                 <p class="small mb-4">Losing cash flow to NCCI bundled denials? Request a free practice audit and we will fix your modifier matrices.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Request Assistance</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Request Assistance</a>
                             </div>
                         </div>
 

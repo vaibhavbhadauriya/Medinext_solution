@@ -295,7 +295,7 @@ require_once 'includes/header.php';
                         <p class="form-success-text">
                             Thank you for contacting us. Our team will get back to you within 24 hours.
                         </p>
-                        <a href="index.php" class="btn btn-primary">
+                        <a href="<?php echo $baseUrl ?? ''; ?>/" class="btn btn-primary">
                             <i class="ph ph-house"></i> Back to Home
                         </a>
                     </div>

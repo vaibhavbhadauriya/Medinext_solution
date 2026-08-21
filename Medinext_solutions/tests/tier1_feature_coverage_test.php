@@ -239,7 +239,7 @@ function getTier1FeatureCoverageSuite(): TestSuite
     $suite->addTest('F05-05: Operational metrics section badge and descriptive subtitle', 'Tier 1 - F5', function () use ($projectRoot) {
         $html = file_get_contents($projectRoot . '/free-practice-audit.php');
         Assert::assertStringContains('Operational &amp; Financial Metrics', $html);
-        Assert::assertStringContains('badge bg-primary text-white rounded-pill', $html);
+        Assert::assertStringContains('badge rounded-pill', $html);
     });
 
     // =========================================================================

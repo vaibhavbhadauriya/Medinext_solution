@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Protect your practice's revenue. Use our rigorous 15-point evaluation checklist to confidently vet, select, and onboard the perfect RCM vendor.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 13 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -80,9 +80,9 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 60%;">Evaluation Criterion</th>
-                                        <th style="width: 20%;">Required Standard</th>
-                                        <th style="width: 20%;">MEDINEXT SOLUTIONS</th>
+                                        <th class="text-white" style="width: 60%;">Evaluation Criterion</th>
+                                        <th class="text-white" style="width: 20%;">Required Standard</th>
+                                        <th class="text-white" style="width: 20%;">MEDINEXT SOLUTIONS</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -170,7 +170,7 @@
                             <i class="ph-shield-check position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Settling for "Good Enough" Billing</h3>
                             <p class="lead mb-4 position-relative">MEDINEXT SOLUTIONS scores 15/15 on the national RCM evaluation matrix. Experience a 98% clean claim rate and comprehensive AR recovery.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Request Your Free Practice Analysis</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Request Your Free Practice Analysis</a>
                         </div>
 
                         <h2 id="questions" class="fw-bold mb-3 mt-5">3. Five Hard Questions to Ask Vendors</h2>
@@ -188,7 +188,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Key Takeaway</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Key Takeaway</h4>
                             <p class="mb-0 text-dark">
                                 Never allow a billing company to force you into adopting a rigid, unfamiliar EHR system just to secure their services. The best RCM firms adapt their APIs to securely integrate with your existing technology stack, radically minimizing operational downtime during the transition phase.
                             </p>
@@ -284,7 +284,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Need to Switch Vendors?</h3>
                                 <p class="small mb-4">Transitioning from a bad billing company is terrifying. Let us show you our zero-downtime, safe migration platform.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Discuss Re-Integration</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Discuss Re-Integration</a>
                             </div>
                         </div>
 

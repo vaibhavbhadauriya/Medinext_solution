@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Stop guessing about your clinic's financial health. Discover the exact 12 Revenue Cycle Management (RCM) Key Performance Indicators you must monitor in 2025 to stop revenue leakage and guarantee profitability.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 16 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -82,9 +82,9 @@
                             <table class="table table-bordered table-striped border-dark align-middle text-center">
                                 <thead class="table-dark">
                                     <tr>
-                                        <th style="width: 30%;">Revenue Cycle KPI</th>
-                                        <th style="width: 45%;">Formula (How to Calculate)</th>
-                                        <th style="width: 25%;">Target Benchmark</th>
+                                        <th class="text-white" style="width: 30%;">Revenue Cycle KPI</th>
+                                        <th class="text-white" style="width: 45%;">Formula (How to Calculate)</th>
+                                        <th class="text-white" style="width: 25%;">Target Benchmark</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -186,7 +186,7 @@
                             <i class="ph-chart-line-up position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Is Your Net Collection Rate Below 95%?</h3>
                             <p class="lead mb-4 position-relative">Stop hemorrhaging legitimately earned revenue. Our AAPC-certified billing analysts will audit your KPIs at zero cost and identify exactly where the leakage is occurring.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Claim Your Free KPI Audit</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Claim Your Free KPI Audit</a>
                         </div>
 
                         <h2 id="kpi-5-8" class="fw-bold mb-3 mt-5">4. Liquidity & Cash Flow Metrics (KPIs 5-8)</h2>
@@ -325,7 +325,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Data-Driven RCM</h3>
                                 <p class="small mb-4">Are your A/R Days exceeding 40? Our automated denial management systems rescue stagnant cash flows instantly.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Get a Free Audit</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Get a Free Audit</a>
                             </div>
                         </div>
 

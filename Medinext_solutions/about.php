@@ -57,11 +57,11 @@ require_once 'includes/header.php';
             <div class="col-lg-10">
                 <div class="p-3 rounded-4 bg-white shadow-sm border border-light d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-start">
                     <div class="d-flex align-items-center gap-3">
-                        <div class="bg-primary text-white rounded-circle p-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 54px; height: 54px;">
+                        <div class="text-white rounded-circle p-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width: 54px; height: 54px; background: #0369a1;">
                             <i class="ph ph-target fs-3"></i>
                         </div>
                         <div>
-                            <span class="text-uppercase tracking-wider small fw-bold text-primary d-block">Our Single Goal</span>
+                            <span class="text-uppercase tracking-wider small fw-bold d-block" style="color: #0369a1;">Our Single Goal</span>
                             <span class="fw-semibold text-dark fs-6">Help you capture the revenue you have earned &mdash; accurately, efficiently, and consistently.</span>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ require_once 'includes/header.php';
                 <p class="text-muted mb-3">
                     Once a claim is submitted, the work continues. Claims need to be monitored. Payments need to be posted accurately. Denials need to be investigated. Unpaid claims need to be followed up. Aging A/R needs consistent attention. Recurring problems need to be identified and addressed.
                 </p>
-                <p class="fw-bold text-primary mb-0">
+                <p class="fw-bold mb-0" style="color: #0369a1;">
                     That is where Medinext Solutions comes in. We manage the revenue cycle as a connected process rather than treating each billing task as an isolated activity.
                 </p>
             </div>
@@ -375,7 +375,7 @@ require_once 'includes/header.php';
             <!-- Pillar 1: People -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-                    <div class="bg-primary text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                    <div class="text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; background: #0369a1;">
                         <i class="ph ph-users fs-2"></i>
                     </div>
                     <h3 class="h5 fw-bold text-dark mb-3">1. Dedicated People</h3>
@@ -388,7 +388,7 @@ require_once 'includes/header.php';
             <!-- Pillar 2: Process -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-                    <div class="bg-primary text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                    <div class="text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; background: #0369a1;">
                         <i class="ph ph-git-merge fs-2"></i>
                     </div>
                     <h3 class="h5 fw-bold text-dark mb-3">2. Structured Process</h3>
@@ -401,7 +401,7 @@ require_once 'includes/header.php';
             <!-- Pillar 3: Technology -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-                    <div class="bg-primary text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                    <div class="text-white rounded-circle p-3 d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px; background: #0369a1;">
                         <i class="ph ph-chart-line-up fs-2"></i>
                     </div>
                     <h3 class="h5 fw-bold text-dark mb-3">3. Actionable Tech</h3>
@@ -528,37 +528,37 @@ require_once 'includes/header.php';
         <div class="row g-4 mt-2">
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold text-primary mb-2"><i class="ph ph-check-circle me-1"></i> End-to-End RCM</h4>
+                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> End-to-End RCM</h4>
                     <p class="small text-muted mb-0">Full-cycle coverage from patient intake through claims, payments, denial resolution, A/R recovery, and credentialing.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold text-primary mb-2"><i class="ph ph-check-circle me-1"></i> Dental &amp; Medical Expertise</h4>
+                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Dental &amp; Medical Expertise</h4>
                     <p class="small text-muted mb-0">Specialized RCM tailored for both medical and dental environments without forcing either into a generic billing mold.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold text-primary mb-2"><i class="ph ph-check-circle me-1"></i> Direct Technology Integration</h4>
+                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Direct Technology Integration</h4>
                     <p class="small text-muted mb-0">Seamless connectivity across major medical EHRs, billing platforms, and dental practice management systems.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold text-primary mb-2"><i class="ph ph-check-circle me-1"></i> Compliance-Focused Operations</h4>
+                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Compliance-Focused Operations</h4>
                     <p class="small text-muted mb-0">HIPAA-conscious workflows, encrypted systems, strict access controls, and full BAA support.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold text-primary mb-2"><i class="ph ph-check-circle me-1"></i> Transparent Live Reporting</h4>
+                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Transparent Live Reporting</h4>
                     <p class="small text-muted mb-0">Clear reporting and dashboard visibility into real-time revenue-cycle activity and financial trends.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
                 <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-white">
-                    <h4 class="h6 fw-bold text-primary mb-2"><i class="ph ph-check-circle me-1"></i> Scalable &amp; Dedicated Extension</h4>
+                    <h4 class="h6 fw-bold mb-2" style="color: #0369a1;"><i class="ph ph-check-circle me-1"></i> Scalable &amp; Dedicated Extension</h4>
                     <p class="small text-muted mb-0">Flexible support designed around your practice's specific operational needs without adding overhead.</p>
                 </div>
             </div>

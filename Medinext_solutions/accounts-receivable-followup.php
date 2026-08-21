@@ -24,7 +24,7 @@ require_once 'includes/header.php';
             <h1 class="display-4 fw-bold mb-3">Accounts Receivable (A/R) Follow-Up</h1>
             <p class="lead mb-4">Turn your aging claims into collected revenue. Our aggressive, systematic A/R follow-up teams resolve unpaid claims, accelerate your cash flow, and permanently reduce your days in AR.</p>
             <div class="hero-cta">
-                <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary me-3 mb-2">Get Free A/R Assessment</a>
+                <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark me-3 mb-2">Get Free A/R Assessment</a>
                 <a href="tel:8627992199" class="btn btn-outline-light btn-lg mb-2"><i class="ph ph-phone"></i> 862-799-2199</a>
             </div>
         </div>
@@ -148,7 +148,7 @@ require_once 'includes/header.php';
                             <div class="card-body p-4 text-center">
                                 <h3 class="h5 fw-bold mb-3">Need Immediate Help?</h3>
                                 <p class="small mb-4">Speak with an A/R recovery expert today. Accelerate your cash flow.</p>
-                                <a href="tel:8627992199" class="btn btn-light text-primary w-100 mb-2 py-2 fw-bold"><i class="ph ph-phone-call"></i> Call 862-799-2199</a>
+                                <a href="tel:8627992199" class="btn btn-light text-dark w-100 mb-2 py-2 fw-bold"><i class="ph ph-phone-call"></i> Call 862-799-2199</a>
                                 <a href="contact/" class="btn btn-outline-light w-100 py-2">Contact Us</a>
                             </div>
                         </div>

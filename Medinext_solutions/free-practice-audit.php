@@ -104,7 +104,7 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="audit-feature-item d-flex gap-3 mb-3 p-3 rounded-3 bg-white border shadow-sm">
-                            <div class="feature-icon-box text-warning fs-3 flex-shrink-0">
+                            <div class="feature-icon-box fs-3 flex-shrink-0" style="color: #b45309;">
                                 <i class="ph ph-magnifying-glass"></i>
                             </div>
                             <div>
@@ -114,7 +114,7 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="audit-feature-item d-flex gap-3 mb-3 p-3 rounded-3 bg-white border shadow-sm">
-                            <div class="feature-icon-box text-info fs-3 flex-shrink-0">
+                            <div class="feature-icon-box fs-3 flex-shrink-0" style="color: #0284c7;">
                                 <i class="ph ph-hourglass-high"></i>
                             </div>
                             <div>
@@ -134,7 +134,7 @@ require_once 'includes/header.php';
                         </div>
 
                         <div class="audit-feature-item d-flex gap-3 mb-3 p-3 rounded-3 bg-white border shadow-sm">
-                            <div class="feature-icon-box text-primary fs-3 flex-shrink-0">
+                            <div class="feature-icon-box fs-3 flex-shrink-0" style="color: #0369a1;">
                                 <i class="ph ph-currency-dollar-simple"></i>
                             </div>
                             <div>
@@ -147,23 +147,23 @@ require_once 'includes/header.php';
                     <!-- 4-Step Audit Roadmap -->
                     <div class="audit-roadmap-card p-4 rounded-4 bg-light border mb-4">
                         <h3 class="h6 fw-bold text-dark mb-3 text-uppercase tracking-wider">
-                            <i class="ph ph-git-commit me-1 text-primary"></i> The 4-Step Audit Process
+                            <i class="ph ph-git-commit me-1" style="color: #0369a1;"></i> The 4-Step Audit Process
                         </h3>
                         <div class="roadmap-timeline">
                             <div class="roadmap-step d-flex gap-3 mb-2">
-                                <span class="badge rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">1</span>
+                                <span class="badge rounded-circle text-white d-flex align-items-center justify-content-center" style="background-color: #0369a1; width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">1</span>
                                 <span class="small text-dark fw-medium"><strong>Submit Intake:</strong> Complete the 2-minute practice profile form.</span>
                             </div>
                             <div class="roadmap-step d-flex gap-3 mb-2">
-                                <span class="badge rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">2</span>
+                                <span class="badge rounded-circle text-white d-flex align-items-center justify-content-center" style="background-color: #0369a1; width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">2</span>
                                 <span class="small text-dark fw-medium"><strong>Discovery Briefing:</strong> 15-minute consultation with an RCM Architect.</span>
                             </div>
                             <div class="roadmap-step d-flex gap-3 mb-2">
-                                <span class="badge rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">3</span>
+                                <span class="badge rounded-circle text-white d-flex align-items-center justify-content-center" style="background-color: #0369a1; width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">3</span>
                                 <span class="small text-dark fw-medium"><strong>Sample Analysis:</strong> Forensic review of ERA and aging reports within 48 hours.</span>
                             </div>
                             <div class="roadmap-step d-flex gap-3">
-                                <span class="badge rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">4</span>
+                                <span class="badge rounded-circle text-white d-flex align-items-center justify-content-center" style="background-color: #0369a1; width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0;">4</span>
                                 <span class="small text-dark fw-medium"><strong>Strategy Review:</strong> Executive recovery roadmap and actionable cash plan.</span>
                             </div>
                         </div>
@@ -171,7 +171,7 @@ require_once 'includes/header.php';
 
                     <!-- Client Testimonial Pullquote -->
                     <div class="client-pullquote-card p-4 rounded-4 bg-white border shadow-sm mb-4">
-                        <div class="d-flex align-items-center gap-2 mb-2 text-warning">
+                        <div class="d-flex align-items-center gap-2 mb-2" style="color: #b45309;">
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
                             <i class="bi bi-star-fill"></i>
@@ -186,9 +186,9 @@ require_once 'includes/header.php';
 
                     <!-- HIPAA & NDA Security Box -->
                     <div class="security-guarantee-box p-3 rounded-3 bg-primary bg-opacity-10 border border-primary border-opacity-25 d-flex align-items-center gap-3">
-                        <i class="ph ph-lock-key text-primary display-6 flex-shrink-0"></i>
+                        <i class="ph ph-lock-key display-6 flex-shrink-0" style="color: #0369a1;"></i>
                         <div>
-                            <h4 class="h6 fw-bold text-primary mb-1">100% HIPAA &amp; NDA Protected</h4>
+                            <h4 class="h6 fw-bold mb-1" style="color: #0369a1;">100% HIPAA &amp; NDA Protected</h4>
                             <p class="small text-muted mb-0">All data exchanges are encrypted with 256-bit SSL. Full Business Associate Agreements (BAA) and mutual NDAs executed prior to data review.</p>
                         </div>
                     </div>
@@ -261,7 +261,7 @@ require_once 'includes/header.php';
                             <!-- ============================================ -->
                             <div class="form-section-group mb-4 pb-3 border-bottom">
                                 <div class="d-flex align-items-center gap-2 mb-3">
-                                    <span class="badge bg-primary text-white rounded-pill px-2 py-1 small">1</span>
+                                    <span class="badge rounded-pill px-2 py-1 small text-white" style="background-color: #0369a1;">1</span>
                                     <h3 class="h6 fw-bold text-dark mb-0 text-uppercase tracking-wider">Practice &amp; Contact Profile</h3>
                                 </div>
                                 <div class="row g-3">
@@ -324,7 +324,7 @@ require_once 'includes/header.php';
                             <!-- ============================================ -->
                             <div class="form-section-group mb-4 pb-3 border-bottom">
                                 <div class="d-flex align-items-center gap-2 mb-3">
-                                    <span class="badge bg-primary text-white rounded-pill px-2 py-1 small">2</span>
+                                    <span class="badge rounded-pill px-2 py-1 small text-white" style="background-color: #0369a1;">2</span>
                                     <h3 class="h6 fw-bold text-dark mb-0 text-uppercase tracking-wider">Direct Contact &amp; Physical Location</h3>
                                 </div>
                                 <div class="row g-3">
@@ -464,7 +464,7 @@ require_once 'includes/header.php';
                             <!-- ============================================ -->
                             <div class="form-section-group mb-4 pb-3 border-bottom">
                                 <div class="d-flex align-items-center gap-2 mb-3">
-                                    <span class="badge bg-primary text-white rounded-pill px-2 py-1 small">3</span>
+                                    <span class="badge rounded-pill px-2 py-1 small text-white" style="background-color: #0369a1;">3</span>
                                     <h3 class="h6 fw-bold text-dark mb-0 text-uppercase tracking-wider">Operational &amp; Financial Metrics</h3>
                                 </div>
                                 <div class="row g-3">
@@ -576,7 +576,7 @@ require_once 'includes/header.php';
                             <div class="form-section-group mb-4 pb-3 border-bottom">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
                                     <div class="d-flex align-items-center gap-2">
-                                        <span class="badge bg-primary text-white rounded-pill px-2 py-1 small">4</span>
+                                        <span class="badge rounded-pill px-2 py-1 small text-white" style="background-color: #0369a1;">4</span>
                                         <h3 class="h6 fw-bold text-dark mb-0 text-uppercase tracking-wider">Primary RCM Pain Points &amp; Goals</h3>
                                     </div>
                                     <span class="small text-muted">(Select all that apply)</span>
@@ -628,7 +628,7 @@ require_once 'includes/header.php';
                             <!-- ============================================ -->
                             <div class="form-section-group mb-4">
                                 <div class="d-flex align-items-center gap-2 mb-2">
-                                    <span class="badge bg-secondary text-white rounded-pill px-2 py-1 small">5</span>
+                                    <span class="badge rounded-pill px-2 py-1 small text-white" style="background-color: #0369a1;">5</span>
                                     <label class="h6 fw-bold text-dark mb-0 text-uppercase tracking-wider" for="additional_notes">
                                         Specific Audit Goals / Practice Notes <span class="small text-muted fw-normal">(Optional)</span>
                                     </label>
@@ -726,28 +726,28 @@ require_once 'includes/header.php';
         <div class="row g-4 text-center">
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="50">
                 <div class="trust-metric-box">
-                    <div class="display-5 fw-bold text-primary mb-1">98%</div>
+                    <div class="display-5 fw-bold mb-1" style="color: #0369a1;">98%</div>
                     <h3 class="h6 fw-bold text-dark mb-0">Clean Claim Rate</h3>
                     <p class="small text-muted mb-0">First-pass ICD-10 accuracy</p>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="trust-metric-box">
-                    <div class="display-5 fw-bold text-primary mb-1">500+</div>
+                    <div class="display-5 fw-bold mb-1" style="color: #0369a1;">500+</div>
                     <h3 class="h6 fw-bold text-dark mb-0">Providers Served</h3>
                     <p class="small text-muted mb-0">Across 24+ medical specialties</p>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
                 <div class="trust-metric-box">
-                    <div class="display-5 fw-bold text-primary mb-1">&lt; 25</div>
+                    <div class="display-5 fw-bold mb-1" style="color: #0369a1;">&lt; 25</div>
                     <h3 class="h6 fw-bold text-dark mb-0">Days in A/R</h3>
                     <p class="small text-muted mb-0">Industry benchmark average</p>
                 </div>
             </div>
             <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="trust-metric-box">
-                    <div class="display-5 fw-bold text-primary mb-1">100%</div>
+                    <div class="display-5 fw-bold mb-1" style="color: #0369a1;">100%</div>
                     <h3 class="h6 fw-bold text-dark mb-0">HIPAA Compliant</h3>
                     <p class="small text-muted mb-0">End-to-end data encryption</p>
                 </div>
@@ -779,45 +779,45 @@ require_once 'includes/header.php';
                 <thead class="bg-light">
                     <tr>
                         <th scope="col" class="py-3 px-4 text-dark fw-bold" style="width: 40%;">Diagnostic Assessment Feature</th>
-                        <th scope="col" class="py-3 px-4 text-primary fw-bold text-center" style="width: 30%;">MEDINEXT SOLUTIONS Free Audit</th>
-                        <th scope="col" class="py-3 px-4 text-muted fw-bold text-center" style="width: 30%;">Generic Billing Inquiries</th>
+                        <th scope="col" class="py-3 px-4 fw-bold text-center" style="width: 30%; color: #0369a1;">MEDINEXT SOLUTIONS Free Audit</th>
+                        <th scope="col" class="py-3 px-4 fw-bold text-center" style="width: 30%; color: #475569;">Generic Billing Inquiries</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="py-3 px-4 fw-semibold text-dark">
-                            <i class="ph ph-chart-line-down text-primary me-2"></i> E/M Bell Curve Specialty Benchmarking
+                            <i class="ph ph-chart-line-down me-2" style="color: #0369a1;"></i> E/M Bell Curve Specialty Benchmarking
                         </td>
-                        <td class="py-3 px-4 text-center text-success fw-bold"><i class="ph ph-check-circle fs-5 me-1"></i> Included (Full CMS Match)</td>
-                        <td class="py-3 px-4 text-center text-muted"><i class="ph ph-x-circle fs-5 me-1 text-danger"></i> Not Provided</td>
+                        <td class="py-3 px-4 text-center fw-bold" style="color: #15803d;"><i class="ph ph-check-circle fs-5 me-1"></i> Included (Full CMS Match)</td>
+                        <td class="py-3 px-4 text-center" style="color: #475569;"><i class="ph ph-x-circle fs-5 me-1" style="color: #dc2626;"></i> Not Provided</td>
                     </tr>
                     <tr>
                         <td class="py-3 px-4 fw-semibold text-dark">
-                            <i class="ph ph-file-search text-primary me-2"></i> Denial Code Translation (CO-4, CO-16, CO-97)
+                            <i class="ph ph-file-search me-2" style="color: #0369a1;"></i> Denial Code Translation (CO-4, CO-16, CO-97)
                         </td>
-                        <td class="py-3 px-4 text-center text-success fw-bold"><i class="ph ph-check-circle fs-5 me-1"></i> Root-Cause Mapped</td>
-                        <td class="py-3 px-4 text-center text-muted"><i class="ph ph-x-circle fs-5 me-1 text-danger"></i> High-Level Guesswork</td>
+                        <td class="py-3 px-4 text-center fw-bold" style="color: #15803d;"><i class="ph ph-check-circle fs-5 me-1"></i> Root-Cause Mapped</td>
+                        <td class="py-3 px-4 text-center" style="color: #475569;"><i class="ph ph-x-circle fs-5 me-1" style="color: #dc2626;"></i> High-Level Guesswork</td>
                     </tr>
                     <tr>
                         <td class="py-3 px-4 fw-semibold text-dark">
-                            <i class="ph ph-hourglass-medium text-primary me-2"></i> Aging A/R Recovery Dollar Modeling
+                            <i class="ph ph-hourglass-medium me-2" style="color: #0369a1;"></i> Aging A/R Recovery Dollar Modeling
                         </td>
-                        <td class="py-3 px-4 text-center text-success fw-bold"><i class="ph ph-check-circle fs-5 me-1"></i> Dollar-by-Dollar Projection</td>
-                        <td class="py-3 px-4 text-center text-muted"><i class="ph ph-x-circle fs-5 me-1 text-danger"></i> Generic Estimates</td>
+                        <td class="py-3 px-4 text-center fw-bold" style="color: #15803d;"><i class="ph ph-check-circle fs-5 me-1"></i> Dollar-by-Dollar Projection</td>
+                        <td class="py-3 px-4 text-center" style="color: #475569;"><i class="ph ph-x-circle fs-5 me-1" style="color: #dc2626;"></i> Generic Estimates</td>
                     </tr>
                     <tr>
                         <td class="py-3 px-4 fw-semibold text-dark">
-                            <i class="ph ph-currency-dollar-simple text-primary me-2"></i> Payer Fee Schedule Underpayment Check
+                            <i class="ph ph-currency-dollar-simple me-2" style="color: #0369a1;"></i> Payer Fee Schedule Underpayment Check
                         </td>
-                        <td class="py-3 px-4 text-center text-success fw-bold"><i class="ph ph-check-circle fs-5 me-1"></i> Contract Rate Verification</td>
-                        <td class="py-3 px-4 text-center text-muted"><i class="ph ph-x-circle fs-5 me-1 text-danger"></i> Ignored</td>
+                        <td class="py-3 px-4 text-center fw-bold" style="color: #15803d;"><i class="ph ph-check-circle fs-5 me-1"></i> Contract Rate Verification</td>
+                        <td class="py-3 px-4 text-center" style="color: #475569;"><i class="ph ph-x-circle fs-5 me-1" style="color: #dc2626;"></i> Ignored</td>
                     </tr>
                     <tr>
                         <td class="py-3 px-4 fw-semibold text-dark">
-                            <i class="ph ph-certificate text-primary me-2"></i> Conducted by AAPC-Certified Auditors
+                            <i class="ph ph-certificate me-2" style="color: #0369a1;"></i> Conducted by AAPC-Certified Auditors
                         </td>
-                        <td class="py-3 px-4 text-center text-success fw-bold"><i class="ph ph-check-circle fs-5 me-1"></i> Certified CPB / CPC Experts</td>
-                        <td class="py-3 px-4 text-center text-muted"><i class="ph ph-x-circle fs-5 me-1 text-danger"></i> Sales Representatives</td>
+                        <td class="py-3 px-4 text-center fw-bold" style="color: #15803d;"><i class="ph ph-check-circle fs-5 me-1"></i> Certified CPB / CPC Experts</td>
+                        <td class="py-3 px-4 text-center" style="color: #475569;"><i class="ph ph-x-circle fs-5 me-1" style="color: #dc2626;"></i> Sales Representatives</td>
                     </tr>
                 </tbody>
             </table>

@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Navigate the extreme complexities of psychiatric billing. Master critical CPT codes like 90837, complex telehealth modifiers, and intensive prior authorization rules to stop revenue leakage in your mental health clinic.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 13 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -76,9 +76,9 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 15%;">CPT Code</th>
-                                        <th style="width: 55%;">Description & Application</th>
-                                        <th style="width: 30%;">Time Requirements</th>
+                                        <th class="text-white" style="width: 15%;">CPT Code</th>
+                                        <th class="text-white" style="width: 55%;">Description & Application</th>
+                                        <th class="text-white" style="width: 30%;">Time Requirements</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -123,7 +123,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Warning on 90837</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Warning on 90837</h4>
                             <p class="mb-0 text-dark">
                                 Submitting excessive volumes of 90837 (60-minute therapy) relative to 90834 (45-minute therapy) is a massive algorithmic red flag for commercial payers. Insurers aggressively demand comprehensive medical necessity documentation to justify why the extended duration was clinically imperative.
                             </p>
@@ -146,7 +146,7 @@
                             <i class="ph-phone-call position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Stressing Over Payer Denials</h3>
                             <p class="lead mb-4 position-relative">Our expert psychiatric billers manage the labyrinth of telehealth modifiers and commercial modifiers so you can focus exclusively on patient care.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Secure Your Clinic's Cash Flow</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Secure Your Clinic's Cash Flow</a>
                         </div>
 
 
@@ -274,7 +274,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Maximize Mental Health ROI</h3>
                                 <p class="small mb-4">Are commercial payers constantly rejecting your 90837 claims? We specialize in behavioral health appeal architectures.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Request Assistance</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Request Assistance</a>
                             </div>
                         </div>
 

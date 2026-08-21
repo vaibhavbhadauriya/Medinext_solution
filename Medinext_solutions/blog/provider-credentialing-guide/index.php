@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Master the complex maze of CAQH ProView, Medicare PECOS, and primary source verification. Learn how to prevent catastrophic 90-day cash flow delays during physician onboarding.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 14 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -108,7 +108,7 @@
                             <i class="ph-files position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Stop Losing Revenue to Credentialing Delays</h3>
                             <p class="lead mb-4 position-relative">Our specialized enrollment team secures PECOS and commercial approvals faster than internal staff. Let us manage your provider roster.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Speak to an Enrollment Expert</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Speak to an Enrollment Expert</a>
                         </div>
 
                         <h2 id="caqh" class="fw-bold mb-3 mt-5">4. Conquering the CAQH ProView Profile</h2>
@@ -121,7 +121,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Key Takeaway</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Key Takeaway</h4>
                             <p class="mb-0 text-dark">
                                 Never allow a gap in employment history exceeding 30 days to appear on a provider's CV without explicit, written explanation (e.g., "maternity leave," "sabbatical"). Credentialing committees treat unexplained chronologic gaps as massive red flags representing potential undisclosed disciplinary actions.
                             </p>
@@ -152,8 +152,8 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 30%;">Credentialing Error</th>
-                                        <th style="width: 70%;">Impact & Solution</th>
+                                        <th class="text-white" style="width: 30%;">Credentialing Error</th>
+                                        <th class="text-white" style="width: 70%;">Impact & Solution</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -261,7 +261,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Expedite Enrollment</h3>
                                 <p class="small mb-4">Are your new hires locked out of billing? We possess direct lines to major payer credentialing committees.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Request Assistance</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Request Assistance</a>
                             </div>
                         </div>
 

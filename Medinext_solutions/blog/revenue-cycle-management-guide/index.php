@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Master the complete healthcare revenue cycle. Discover how to bridge the critical gap between front-end patient intake and back-end clinical collections to maximize your practice's profitability.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 15 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -107,7 +107,7 @@
                             <i class="ph-chart-line-up position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Is Your Revenue Cycle Leaking Cash?</h3>
                             <p class="lead mb-4 position-relative">Our expert medical billing teams pinpoint exact front-end and back-end bottlenecks, frequently boosting practice revenue by up to 30%. Get a transparent assessment.</p>
-                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Claim Your Free RCM Audit</a>
+                            <a href="free-practice-audit/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Claim Your Free RCM Audit</a>
                         </div>
 
                         <h2 id="rcm-lifecycle" class="fw-bold mb-3 mt-5">3. The 7-Step RCM Lifecycle</h2>
@@ -126,7 +126,7 @@
 
                         <!-- Key Takeaway Box -->
                         <div class="alert alert-info border-0 border-start border-4 border-info shadow-sm p-4 mb-5">
-                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb text-warning fs-3 me-2"></i> Key Takeaway</h4>
+                            <h4 class="fw-bold text-dark"><i class="ph ph-lightbulb  fs-3 me-2" style="color: #b45309;"></i> Key Takeaway</h4>
                             <p class="mb-0 text-dark">
                                 The overwhelming majority of back-end RCM failures (specifically, devastating commercial claim denials) are directly caused by careless front-end data entry errors at the very first point of patient registration. Upgrading front-desk training yields the highest immediate ROI for cash flow.
                             </p>
@@ -141,9 +141,9 @@
                             <table class="table table-bordered table-striped border-dark align-middle text-center">
                                 <thead class="table-dark">
                                     <tr>
-                                        <th style="width: 25%;">RCM Metric / KPI</th>
-                                        <th style="width: 45%;">Definition</th>
-                                        <th style="width: 30%;">Healthy Benchmark</th>
+                                        <th class="text-white" style="width: 25%;">RCM Metric / KPI</th>
+                                        <th class="text-white" style="width: 45%;">Definition</th>
+                                        <th class="text-white" style="width: 30%;">Healthy Benchmark</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -290,7 +290,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Improve Your Cash Flow</h3>
                                 <p class="small mb-4">Struggling with claims stuck in Accounts Receivable? Our RCM engine maintains a 98% clean claim rate.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Request Assistance</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Request Assistance</a>
                             </div>
                         </div>
 

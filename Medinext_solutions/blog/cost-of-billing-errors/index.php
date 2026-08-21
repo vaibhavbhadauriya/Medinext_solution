@@ -14,7 +14,7 @@
             <p class="lead mb-4 text-light">Medical billing errors don't just delay payments?they actively drain your bank account, trigger devastating federal False Claims Act audits, and permanently alienate your patients. Here is the mathematical reality of coding mistakes.</p>
             <div class="d-flex align-items-center mb-3">
                 <div class="badge bg-primary text-white p-2 me-3">Reading Time: 15 min</div>
-                <div class="text-white-50 small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
+                <div class="text-white small"><i class="ph ph-calendar-blank me-1"></i> Last Updated: January 2025</div>
             </div>
         </div>
     </header>
@@ -81,9 +81,9 @@
                             <table class="table table-bordered table-striped border-dark align-middle">
                                 <thead class="table-dark text-center">
                                     <tr>
-                                        <th style="width: 25%;">Error Type</th>
-                                        <th style="width: 45%;">Description</th>
-                                        <th style="width: 30%;">Financial Consequence</th>
+                                        <th class="text-white" style="width: 25%;">Error Type</th>
+                                        <th class="text-white" style="width: 45%;">Description</th>
+                                        <th class="text-white" style="width: 30%;">Financial Consequence</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -121,7 +121,7 @@
                             <i class="ph-shield-warning position-absolute display-1 opacity-10" style="bottom: -10px; right: 10px;"></i>
                             <h3 class="h2 fw-bold mb-3 position-relative">Protect Your Practice from Audits</h3>
                             <p class="lead mb-4 position-relative">Our AAPC-certified coders systematically eliminate upcoding and downcoding errors, securing your revenue while keeping your practice strictly compliant.</p>
-                            <a href="medical-coding-services/" class="btn btn-light btn-lg fw-bold text-primary px-5 position-relative">Explore Professional Coding Services</a>
+                            <a href="medical-coding-services/" class="btn btn-light btn-lg fw-bold text-dark px-5 position-relative">Explore Professional Coding Services</a>
                         </div>
 
 
@@ -250,7 +250,7 @@
                             <div class="card-body p-4 text-center text-white bg-primary rounded-4">
                                 <h3 class="h5 fw-bold mb-3">Is Your Billing Compliant?</h3>
                                 <p class="small mb-4">Protect yourself from RAC Audits. Let our certified coders analyze your modifier usage and CPT accuracy today.</p>
-                                <a href="free-practice-audit/" class="btn btn-light text-primary fw-bold w-100 mb-2">Request an Audit</a>
+                                <a href="free-practice-audit/" class="btn btn-light text-dark fw-bold w-100 mb-2">Request an Audit</a>
                             </div>
                         </div>
 

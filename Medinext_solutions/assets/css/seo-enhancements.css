@@ -8,18 +8,30 @@
 :root {
     --ph-primary: #2C74B3;
     --ph-primary-dark: #144272;
-    --ph-accent: #00A8CC;
-    --ph-accent-hover: #007A94;
-    --ph-dark: #1a1a2e;
-    --ph-gray: #6B7280;
-    --ph-light: #f8f9fa;
+    --ph-accent: #0284c7;
+    --ph-accent-hover: #0369a1;
+    --ph-dark: #0f172a;
+    --ph-gray: #475569;
+    --ph-light: #f8fafc;
     --ph-white: #ffffff;
-    --ph-success: #10B981;
-    --ph-error: #EF4444;
-    --ph-border: #e5e7eb;
-    --ph-shadow: rgba(0, 82, 204, 0.15);
+    --ph-success: #15803d;
+    --ph-error: #dc2626;
+    --ph-border: #e2e8f0;
+    --ph-shadow: rgba(2, 132, 199, 0.15);
     --ph-radius: 10px;
     --ph-transition: 0.3s ease;
+
+    /* Standardized High-Contrast R2 Palette Tokens */
+    --text-heading: #0f172a;
+    --text-body: #334155;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --text-placeholder: #64748b;
+    --primary-dark: #0284c7;
+    --primary-deep: #0369a1;
+    --text-on-dark-heading: #ffffff;
+    --text-on-dark-body: #e2e8f0;
+    --text-on-dark-accent: #38bdf8;
 }
 
 /* ── 1. Skip Navigation ─────────────────────────────────────────── */
@@ -261,7 +273,8 @@ textarea:focus-visible {
 }
 
 .ph-mobile-cta-audit {
-    background: var(--ph-accent);
+    background: var(--ph-accent, #0284c7) !important;
+    color: #ffffff !important;
 }
 
 @media (max-width: 768px) {
@@ -585,4 +598,39 @@ textarea:focus-visible {
     .ph-reading-progress {
         transition: none;
     }
+}
+
+/* ── 14. Additive High-Contrast & Accessibility Hardening ───────── */
+.bg-light a:not(.btn),
+.bg-white a:not(.btn),
+article.blog-post a:not(.btn),
+.service-content a:not(.btn) {
+    color: var(--primary-deep, #0369a1) !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.bg-light a:not(.btn):hover,
+.bg-white a:not(.btn):hover,
+article.blog-post a:not(.btn):hover,
+.service-content a:not(.btn):hover {
+    color: #0c4a6e !important;
+}
+
+.btn-light.text-primary,
+.btn-light .text-primary,
+.page-hero .btn-light.text-primary,
+.page-hero .btn-light {
+    color: var(--primary-deep, #0369a1) !important;
+    -webkit-text-fill-color: var(--primary-deep, #0369a1) !important;
+    background-color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+article.blog-post thead.table-dark th,
+article.blog-post .table-dark th,
+thead.table-dark th {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background-color: #0f172a !important;
 }

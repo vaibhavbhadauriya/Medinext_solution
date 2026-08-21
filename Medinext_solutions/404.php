@@ -34,46 +34,46 @@ require_once 'includes/header.php';
                 </h1>
 
                 <!-- Error Message -->
-                <h2 style="font-size: var(--fs-2xl); color: var(--light); margin-bottom: 1rem;">
+                <h2 style="font-size: var(--fs-2xl); color: #0f172a; margin-bottom: 1rem; font-weight: 700;">
                     Page Not Found
                 </h2>
 
-                <p style="font-size: var(--fs-md); color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem;">
-                    The page you're looking for doesn't exist or has been moved. Don't worry ? you can find what you need from the links below, or contact our team directly.
+                <p style="font-size: var(--fs-md); color: #334155; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6;">
+                    The page you're looking for doesn't exist or has been moved. Don't worry &mdash; you can find what you need from the links below, or contact our team directly.
                 </p>
 
                 <!-- Search Suggestion -->
                 <div style="margin-bottom: 2.5rem;">
-                    <p style="color: var(--gray-400); margin-bottom: 1.5rem;">Try one of these popular pages:</p>
+                    <p style="color: #334155; margin-bottom: 1.5rem; font-weight: 600;">Try one of these popular pages:</p>
                     <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
-                        <a href="" class="btn btn-primary" style="min-width: 160px;">
+                        <a href="<?php echo $baseUrl ?? ''; ?>/" class="btn btn-primary" style="min-width: 160px;">
                             <i class="ph ph-house"></i> Homepage
                         </a>
-                        <a href="/services.php" class="btn btn-primary" style="min-width: 160px;">
+                        <a href="<?php echo $baseUrl ?? ''; ?>/medical-billing-services/" class="btn btn-primary" style="min-width: 160px;">
                             <i class="ph ph-stethoscope"></i> Our Services
                         </a>
-                        <a href="/about.php" class="btn btn-primary" style="min-width: 160px;">
+                        <a href="<?php echo $baseUrl ?? ''; ?>/about/" class="btn btn-primary" style="min-width: 160px;">
                             <i class="ph ph-users-three"></i> About Us
                         </a>
-                        <a href="/contact.php" class="btn btn-accent" style="min-width: 160px;">
+                        <a href="<?php echo $baseUrl ?? ''; ?>/contact/" class="btn btn-accent" style="min-width: 160px;">
                             <i class="ph ph-phone"></i> Contact Us
                         </a>
                     </div>
                 </div>
 
                 <!-- Additional Help -->
-                <div style="background: var(--dark-card); border: 1px solid var(--border-color); border-radius: 1rem; padding: 2rem; max-width: 500px; margin: 0 auto;">
-                    <h3 style="font-size: var(--fs-lg); color: var(--light); margin-bottom: 0.75rem;">
+                <div style="background: #082f49; border: 1px solid rgba(255,255,255,0.15); border-radius: 1rem; padding: 2rem; max-width: 500px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <h3 style="font-size: var(--fs-lg); color: #ffffff; margin-bottom: 0.75rem; font-weight: 700;">
                         Need Help Right Now?
                     </h3>
-                    <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: var(--fs-sm);">
+                    <p style="color: #e2e8f0; margin-bottom: 1rem; font-size: var(--fs-sm);">
                         Our expert billing team is available 24/7 to assist you.
                     </p>
-                    <a href="tel:+18627992199" style="color: var(--secondary); font-weight: 600; font-size: var(--fs-md); text-decoration: none;">
+                    <a href="tel:+18627992199" style="color: #38bdf8; font-weight: 700; font-size: var(--fs-md); text-decoration: none;">
                         <i class="ph ph-phone-call"></i> (862) 799-2199
                     </a>
                     <br>
-                    <a href="mailto:info@medinextsolutions.com" style="color: var(--secondary-light); font-size: var(--fs-sm); text-decoration: none; margin-top: 0.5rem; display: inline-block;">
+                    <a href="mailto:info@medinextsolutions.com" style="color: #ffffff; font-size: var(--fs-sm); text-decoration: none; margin-top: 0.5rem; display: inline-block;">
                         info@medinextsolutions.com
                     </a>
                 </div>

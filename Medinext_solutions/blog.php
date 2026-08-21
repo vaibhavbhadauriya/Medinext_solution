@@ -238,7 +238,7 @@ $allCategories = array_unique(array_column($posts, 'category'));
 
 <!-- ?? Blog Page CSS  -->
 <style>
-/* ?? CRITICAL: Force dark text in all white-background blog sections ?? */
+/* ── CRITICAL: Force dark text in all white-background blog sections ── */
 /* Site global CSS defaults to white text for dark theme.
    Blog cards/filter/CTA use white/light backgrounds so we must override. */
 .ph-blog-filter-bar,
@@ -258,21 +258,23 @@ $allCategories = array_unique(array_column($posts, 'category'));
 }
 .ph-blog-section p,
 .ph-blog-card-excerpt {
-  color: #6B7280 !important;
+  color: #334155 !important;
 }
 .ph-blog-tab {
-  color: #6B7280 !important;
+  color: #334155 !important;
 }
 .ph-blog-tab.active {
-  color: #0ea5e9 !important;
+  color: #0284c7 !important;
 }
 .ph-blog-tab:hover {
-  color: #0ea5e9 !important;
+  color: #0284c7 !important;
 }
-/* Meta text (date/read time) */
+/* Meta text (date/read time) - WCAG AA compliant >= 4.5:1 on white */
 .ph-blog-card-meta,
-.ph-blog-card-meta * {
-  color: #9CA3AF !important;
+.ph-blog-card-meta *,
+.ph-blog-meta,
+.ph-blog-meta * {
+  color: #475569 !important;
 }
 /* Read more link stays dark */
 .ph-blog-read-more,
@@ -280,18 +282,18 @@ $allCategories = array_unique(array_column($posts, 'category'));
   color: #0c4a6e !important;
 }
 
-/* ?? Variables ——————————— */
+/* ── Variables ── */
 .ph-blog-hero,
 .ph-blog-section,
 .ph-blog-filter-bar,
 .ph-blog-cta-banner {
-  --ph-primary: #0ea5e9;
-  --ph-primary-dark: #0284c7;
+  --ph-primary: #0284c7;
+  --ph-primary-dark: #0369a1;
   --ph-accent: #38bdf8;
   --ph-dark: #0c4a6e;
-  --ph-gray: #6B7280;
+  --ph-gray: #475569;
   --ph-light: #f8f9fa;
-  --ph-border: #e5e7eb;
+  --ph-border: #cbd5e1;
   --ph-white: #ffffff;
   --ph-radius: 0px; /* flat, like the React design */
   --ph-transition: 0.3s ease;
@@ -333,16 +335,16 @@ main,
 .ph-blog-breadcrumb ol {
   display: flex; align-items: center; justify-content: center;
   gap: 0.5rem; list-style: none; margin: 0 0 1.5rem; padding: 0;
-  font-size: 0.82rem; opacity: 0.7;
+  font-size: 0.82rem; opacity: 0.95;
 }
 .ph-blog-breadcrumb a { color: #fff; text-decoration: none; }
 .ph-blog-breadcrumb a:hover { text-decoration: underline; }
-.ph-blog-breadcrumb li:nth-child(2) { opacity: 0.5; }
+.ph-blog-breadcrumb li:nth-child(2) { opacity: 0.85; }
 .ph-blog-breadcrumb li:last-child { color: #fff; }
 
 .ph-blog-eyebrow {
   font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em;
-  color: rgba(255,255,255,0.6); text-transform: uppercase; margin-bottom: 1rem;
+  color: rgba(255,255,255,0.9); text-transform: uppercase; margin-bottom: 1rem;
 }
 .ph-blog-hero-title {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
@@ -351,7 +353,7 @@ main,
 }
 .ph-blog-hero-title span { font-weight: 700; color: #FFD700; }
 .ph-blog-hero-sub {
-  font-size: 1.05rem; color: rgba(255,255,255,0.75);
+  font-size: 1.05rem; color: rgba(255,255,255,0.95);
   max-width: 540px; margin: 0 auto 2.2rem; line-height: 1.7;
 }
 
@@ -359,8 +361,8 @@ main,
 .ph-blog-search {
   display: flex; align-items: center;
   max-width: 460px; margin: 0 auto;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 8px; overflow: hidden;
   backdrop-filter: blur(12px);
 }
@@ -368,7 +370,7 @@ main,
   flex: 1; background: none; border: none; outline: none;
   padding: 0.85rem 1.2rem; color: #fff; font-size: 0.93rem;
 }
-.ph-blog-search input::placeholder { color: rgba(255,255,255,0.55); }
+.ph-blog-search input::placeholder { color: rgba(255,255,255,0.85); }
 .ph-blog-search button {
   background: var(--ph-primary); border: none; color: #fff;
   padding: 0 1.1rem; height: 48px; cursor: pointer;
@@ -543,15 +545,16 @@ main,
   color: #fff; font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 700; margin: 0 0 0.5rem;
 }
-.ph-blog-cta-content p  { color: rgba(255,255,255,0.75); margin: 0; font-size: 0.98rem; }
+.ph-blog-cta-content p  { color: rgba(255,255,255,0.95); margin: 0; font-size: 0.98rem; }
 .ph-blog-cta-btn {
   display: inline-flex; align-items: center; gap: 0.65rem;
-  background: #38bdf8; color: #fff;
+  background: #ffffff; color: #0c4a6e;
   padding: 0.9rem 2rem; font-weight: 700; font-size: 0.95rem;
   text-decoration: none; border-radius: 6px; flex-shrink: 0;
-  transition: background var(--ph-transition), transform var(--ph-transition);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: background var(--ph-transition), transform var(--ph-transition), color var(--ph-transition);
 }
-.ph-blog-cta-btn:hover { background: #E55A2B; transform: translateY(-2px); color: #fff; }
+.ph-blog-cta-btn:hover { background: #f8fafc; transform: translateY(-2px); color: #0284c7; }
 @media (max-width: 640px) {
   .ph-blog-cta-inner { flex-direction: column; text-align: center; }
 }
