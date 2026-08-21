@@ -39,12 +39,9 @@ require_once 'includes/header.php';
             <p class="page-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
                 At Medinext Solutions, we believe healthcare providers should spend their time taking care of patients &mdash; not chasing insurance companies, correcting billing issues, managing unpaid claims, or trying to understand where their revenue is getting stuck.
             </p>
-            <div class="d-flex flex-wrap gap-3 justify-content-center mt-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="d-flex justify-content-center mt-4" data-aos="fade-up" data-aos-delay="150">
                 <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-accent btn-lg fw-bold">
                     <i class="ph ph-chart-line-up me-1"></i> Get Free Practice Audit
-                </a>
-                <a href="<?php echo $baseUrl; ?>/contact/" class="btn btn-outline-light btn-lg">
-                    <i class="ph ph-chat-circle-dots me-1"></i> Speak With an RCM Specialist
                 </a>
             </div>
         </div>
@@ -589,12 +586,9 @@ require_once 'includes/header.php';
                 <p class="cta-text mx-auto" style="max-width: 750px;">
                     Make the revenue cycle easier to manage and harder for revenue to fall through the cracks. Because your practice should not have to choose between excellent patient care and a well-managed revenue cycle. You should have both.
                 </p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+                <div class="d-flex justify-content-center mt-4">
                     <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="btn btn-accent btn-lg fw-bold">
                         <i class="ph ph-chart-line-up me-1"></i> Get Your Free Practice Audit
-                    </a>
-                    <a href="<?php echo $baseUrl; ?>/contact/" class="btn btn-outline-light btn-lg">
-                        <i class="ph ph-calendar-check me-1"></i> Contact Us Today
                     </a>
                 </div>
             </div>

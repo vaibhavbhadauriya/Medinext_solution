@@ -434,8 +434,7 @@ require_once 'includes/header.php';
       <h2 class="svc-cta-title">Stop Leaving Revenue <span class="svc-gradient-text">on the Table</span></h2>
       <p class="svc-cta-sub">Partner with MEDINEXT SOLUTIONS and experience an average 30% revenue increase. Get expert RCM support tailored to your specialty at no upfront cost.</p>
       <div class="svc-cta-btns">
-        <a href="free-practice-audit.php" class="svc-btn-primary">Get Your Free Practice Audit</a>
-        <a href="contact.php" class="svc-btn-outline-light">Schedule Consultation</a>
+        <a href="<?php echo $baseUrl; ?>/free-practice-audit/" class="svc-btn-primary">Get Your Free Practice Audit</a>
       </div>
   </div>
 </section>
